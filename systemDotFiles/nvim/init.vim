@@ -80,3 +80,5 @@ source $HOME/.config/nvim/modules/mySpecialPlugin/myMarkDownBetterViewer.vim
 " Configuration my JupyterNotebook
 source $HOME/.config/nvim/modules/mySpecialPlugin/myJupyterPlugConfig.vim
 
+" Adding Quick terminal faster than Floating Terminal
+source $HOME/.config/nvim/modules/mySpecialScripts/myQuickTerminal.vim
