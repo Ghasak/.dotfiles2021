@@ -144,7 +144,7 @@
     "command": "-workbench.action.togglePanel"
   },
   {
-    "key": "shift+k",
+    "key": "F1",
     "command": "editor.action.showHover",
     "when": "editorTextFocus && neovim.mode != 'insert'"
   },
@@ -167,6 +167,16 @@
     "key": "space+t",
     "command": "whichkey.show",
     "when": "neovim.mode != 'insert'"
+},
+{
+  "key":"shift+k",
+  "command":"editor.action.moveLinesUpAction",
+  "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+},
+{
+  "key":"shift+j",
+  "command":"editor.action.moveLinesDownAction",
+  "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
 },
 //{
 //	"key": "space",
