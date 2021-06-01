@@ -10,7 +10,7 @@
 
 * * * * * echo 'Hello \n ' >> ~/Desktop/Crontest.txt
 * * * * * .GScript/myCronTabScript.sh >> ~/Desktop/Crontest.txt
-#* * * * * rsync  -auxv --progress --checksum --delete -e  /usr/bin/ssh DeepLearningAlgo userName@xxx.xxx.x.x:~/Desktop >> ~/Desktop/Crontest.txt
+#* * * * * rsync  -auxv --progress --checksum --delete -e  /usr/bin/ssh DeepLearningAlgo ghasak@192.168.3.9:~/Desktop >> ~/Desktop/Crontest.txt
 ###### Sample crontab ######
 
 # Empty temp folder every Friday at 5pm
@@ -33,7 +33,7 @@
 
 1 * * * * echo 'Hello my Name is ${hostname} \n ' >> ~/Desktop/Crontest.txt
 1 * * * * .GScript/myCronTabScript.sh >> ~/Desktop/Crontest.txt
-#* * * * * rsync  -auxv --progress --checksum --delete -e  /usr/bin/ssh DeepLearningAlgo ghasak@xxx.xxx.x.x:~/Desktop >> ~/Desktop/Crontest.txt
+#* * * * * rsync  -auxv --progress --checksum --delete -e  /usr/bin/ssh DeepLearningAlgo ghasak@192.168.3.9:~/Desktop >> ~/Desktop/Crontest.txt
 ###### Sample crontab ######
 # Empty temp folder every Friday at 5pm
 #0 5 * * 5 rm -rf /tmp/*
