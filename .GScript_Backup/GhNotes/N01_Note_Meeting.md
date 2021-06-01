@@ -1,14 +1,16 @@
 # Daily Activities and work
 
-## Overivew
+## Overview
+
 Assignments and daily notes including links to the most important doc. and data.
 The purpose is to integrate the notes with my local notes that I can complie any
 time with **pandoc**
 
 ## Tools and requirements
+
 Using the following
 
-- Pandoc which can complie my current document into a pdf file
+- 'Pandoc' which can compile my current document into a pdf file
 - NVIM editor which I am using recently for flexibility and editing faster.
   - Using the formula
 
@@ -16,16 +18,11 @@ Using the following
 ./script.sh &&  pandoc -f markdown N01_Note_Meeting.md -o N01_Note_Meeting.pdf && open N01_Note_Meeting.md
 
 ```
-  - Notes that I am using a script that I wrote in bash to turn-of and turn-off a script.
 
-# Meetings on DOCOM Project
+- Notes that I am using a script that I wrote in bash to turn-of and turn-off a script.
 
-## Meeting of Feb 9th 2021 3:00 pm
+# Meetings Schedule and Discussion
+
+## Meeting of Feb xth 0000:00 pm
 
 ### Objectives:
-
-
-
-
-
-
