@@ -1,3 +1,4 @@
+#------------------------------------------------------------------------------
 #
 # ░█████╗░██╗░░░░░██╗░█████╗░░██████╗███████╗░██████╗
 # ██╔══██╗██║░░░░░██║██╔══██╗██╔════╝██╔════╝██╔════╝
@@ -5,6 +6,9 @@
 # ██╔══██║██║░░░░░██║██╔══██║░╚═══██╗██╔══╝░░░╚═══██╗
 # ██║░░██║███████╗██║██║░░██║██████╔╝███████╗██████╔╝
 # ╚═╝░░╚═╝╚══════╝╚═╝╚═╝░░╚═╝╚═════╝░╚══════╝╚═════╝░
+#
+#------------------------------------------------------------------------------
+#
 # Shortcuts
 alias ch='history | grep "git commit"'
 alias hg='history | grep'
@@ -235,8 +239,6 @@ alias nextword=nextword
 #   Clean all typescript in the directory
 #------------------------------------------------------------------------------
 alias cleanupDS="find . -type f -name '*.typescript' -ls -delete"
-
-
 #------------------------------------------------------------------------------
 # ▒█▀▀▀ █▀▀█ █▀▀█ █▀▀▀ ░▀░ ▀▀█▀▀
 # ▒█▀▀▀ █░░█ █▄▄▀ █░▀█ ▀█▀ ░░█░░
@@ -254,8 +256,6 @@ alias cleanupDS="find . -type f -name '*.typescript' -ls -delete"
 alias ga=ga
 alias glo=glo
 alias grh=grh
-
-
 #------------------------------------------------------------------------------
 #           Show difference between two files
 #           Source: https://github.com/nickjj/dotfiles/blob/\
@@ -279,7 +279,6 @@ vdiff () {
         vim -d "${left}" "${right}"
     fi
 }
-
 #------------------------------------------------------------------------------
 #               Global Packages of NPM package manager
 #               if you want to see local for your given
@@ -289,5 +288,91 @@ vdiff () {
 #                   - npm -g install npm -gui
 #               HINT: the command aliased here to the global packages
 #------------------------------------------------------------------------------
+
 alias npmList="npm-gui localhost:9000"
+#------------------------------------------------------------------------------
+#                           Getting the IP_Address
+#------------------------------------------------------------------------------
+if [ -f ~/.GScript/ip_address.sh ]; then
+  alias IP_address=$(echo $(ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}'))
+else
+  alias  IP_address=$(echo $(~/.GScript/ip_address.sh))
+fi
+
+#------------------------------------------------------------------------------
+#               Project Template Builder in Python
+#       - need the scripts to be setup in the specified directory
+#------------------------------------------------------------------------------
+#alias projectBuilder="make -C ~/.Gscript/project_template_builder"
+alias projectBuilder="cp ~/.GScript/project_template_builder/Makefile ~/.GScript/project_template_builder/basicPackages.txt ~/.GScript/project_template_builder/constructProject.sh ~/.GScript/project_template_builder/cleaningScript.sh . 2>/dev/null && make"
+
+
+alias lazydocker=lazydocker
+alias lazygit=lazygit
+
+
+
+#------------------------------------------------------------------------------
+#
+#            ▒█░░▒█ █░░█ ░▀░ █▀▀ █░░█ 　 ▒█▀▀█ █▀▀█ █▀▀█ ▀▀█▀▀
+#            ▒█▒█▒█ █▀▀█ ▀█▀ █░░ █▀▀█ 　 ▒█▄▄█ █░░█ █▄▄▀ ░░█░░
+#            ▒█▄▀▄█ ▀░░▀ ▀▀▀ ▀▀▀ ▀░░▀ 　 ▒█░░░ ▀▀▀▀ ▀░▀▀ ░░▀░░
+#
+#                 Identify which port is lisening to
+#                 You can see also
+#                 bat (cat) /etc/hosts
+# https://stackoverflow.com/questions/4421633/who-is-listening-on-a-given-tcp-port-on-mac-os-x
+#------------------------------------------------------------------------------
+# On macOS Big Sur and later, use this command:
+# sudo lsof -i -P | grep LISTEN
+# or to just see just IPv4:
+#
+# sudo lsof -nP -i4TCP:$PORT | grep LISTEN
+# On older versions, use one of the following forms:
+#
+# sudo lsof -nP -iTCP:$PORT | grep LISTEN
+# sudo lsof -nP -i:$PORT | grep LISTEN
+# Substitute $PORT with the port number or a comma-separated list of port numbers.
+#
+# Prepend sudo (followed by a space) if you need information on ports below 1024.
+#
+# The -n flag is for displaying IP addresses instead of host names. This makes
+# the command execute much faster, because DNS lookups to get the host names
+# can be slow (several seconds or a minute for many hosts).
+#
+# The -P flag is for displaying raw port numbers instead of resolved names like
+# http, ftp or more esoteric service names like dpserve, socalia.
+#
+# See the comments for more options.
+#
+# For completeness, because frequently used together:
+#
+# To kill the PID:
+#
+# sudo kill -9 <PID>
+# kill -9 60401
+#------------------------------------------------------------------------------
+listening() {
+    if [ $# -eq 0 ]; then
+        sudo lsof -iTCP -sTCP:LISTEN -n -P
+    elif [ $# -eq 1 ]; then
+        sudo lsof -iTCP -sTCP:LISTEN -n -P | grep -i --color $1
+    else
+        echo "Usage: listening [pattern]"
+    fi
+}
+alias whichPort="echo '
+█░█░█ █░█ █ █▀▀ █░█   █▀█ █▀█ █▀█ ▀█▀
+▀▄▀▄▀ █▀█ █ █▄▄ █▀█   █▀▀ █▄█ █▀▄ ░█░l' | boxes | lolcat && sudo lsof -i -P | grep LISTEN | boxes | lolcat"
+alias whichProt2="echo '
+▒█░░▒█ █░░█ ░▀░ █▀▀ █░░█ 　 ▒█▀▀█ █▀▀█ █▀▀█ ▀▀█▀▀
+▒█▒█▒█ █▀▀█ ▀█▀ █░░ █▀▀█ 　 ▒█▄▄█ █░░█ █▄▄▀ ░░█░░
+▒█▄▀▄█ ▀░░▀ ▀▀▀ ▀▀▀ ▀░░▀ 　 ▒█░░░ ▀▀▀▀ ▀░▀▀ ░░▀░░' | boxes |lolcat && listening | boxes |lolcat"
+
+#------------------------------------------------------------------------------
+#           quicklook for file from terminal with Quick Look
+#           Use with:
+#               quick_look <file_name>
+#------------------------------------------------------------------------------
+alias quick_look="qlmanage -p $1"
 
