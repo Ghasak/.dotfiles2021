@@ -44,18 +44,29 @@ autoload -U colors && colors
 #PROMPT='%B%F{20}%1~%f%b %# '
 # https://www.nerdfonts.com/cheat-sheet
 OS_ICON=
-CLOCK_ICON=
-Date_ICON=
+CLOCK_ICON=$'\uf64f'
+#
+Date_ICON=$'\uF073'
 git_ICON=
 Netreno_ICON=
 GEAR_ICON=
 DIR_ICON=
 PS1=$'\n'
 #PS1+="%{$fg[red]%}%n%{$reset_color%} at %{$fg[blue]%}%m %F{226}%~%f  %{$reset_color%}% "
-PS1+="╭─${OS_ICON} %F{208}%n%f  %F{226}%m%  on %F{30}%~%f %F{208} %{$reset_color%} "
-RPROMPT='%B%F{#F4A460}${vcs_info_msg_0_} $(git_prompt_behind)%B%F{#F4A460}${GEAR_ICON} %{$reset_color%} %{$fg[red]%}[${Date_ICON}[ %D{%b %d, %Y - ${CLOCK_ICON} %T}]%{$reset_color%}'
-PS1+=$'\n╰─%F{blue}>%F{226}>%F{red}>$reset_color ';
+
+RPROMPT=$'%B%F{#F4A460}${vcs_info_msg_0_} $(git_prompt_behind)%B%F{#F4A460}${GEAR_ICON} %{$reset_color%} %{$fg[magenta]%}[ ${Date_ICON}  %D{%b %d, %Y - ${CLOCK_ICON}  %T}]%{$reset_color%} '
+PS1+=$'%F{blue}\u256D\U2500${OS_ICON} %F{208}%n%f  %F{226}%m%  on %F{30}%~%f %F{208} %{$reset_color%} '
+# I use \u276f as a heavy arrow instead an icon which will destory the zsh_auto_suggestion
+#PS1+=$'\n╰─%F{blue}\u276f%F{226}\u276f%F{red}\u276f$reset_color ';
+PS1+=$'\n%F{blue}\u2570\U2500%F{blue}\u2192%{$reset_color%} '
+
+#PS+=$'\u2570\U2500 ';
+#PS1+=$'%F{blue}\u276f'F{226}\u276f'F{red}\u276f'reset_color \n';
+#PS1+=$'%F{blue}\u276f';
+#PS1+=$'╰─%F{blue}>%F{226}>%F{red}>$reset_color \n';
 #
 #壟
 #─────
 # For background color: $bg[red]
+# End the left prompt, closes the final segment.
+#
