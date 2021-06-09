@@ -27,12 +27,29 @@ H_ICOND2=$'\uf1dc'
 SYNC_ICON=$'\uf46a'
 GEAR_ICON=$'\uf085'
 GIT_ICON=$'\uf7a3'
+GIT_ICON2=$'\uf7a1'
+HOUR_GLASS_ICON=$'\uf251'
 GIT_BRANCH_ICON=$'\ue725'
-#GEAR_ICON=
+RADIOACTIVE_ICON=$'\ue238'
+ATOM_ICON=$'\ufc66'
+#GEAR_ICON=kk
 #
 Date_ICON=$'\uF073'
 git_ICON=
 Netreno_ICON=
+DESKTOP_TOWER_ICON=$'\uf6c4'
+SERVER_ICON=$'\u'
+DICE_FACE_01_ICON=$'\uf6c9'
+DICE_FACE_02_ICON=$'\uf6ca'
+DICE_FACE_03_ICON=$'\uf6cb'
+DICE_FACE_04_ICON=$'\uf6cc'
+DICE_FACE_05_ICON=$'\uf6cd'
+DICE_FACE_06_ICON=$'\uf6ce'
+DICE_ARRAY=($DICE_FACE_01_ICON $DICE_FACE_02_ICON $DICE_FACE_03_ICON $DICE_FACE_04_ICON $DICE_FACE_05_ICON $DICE_FACE_06_ICON)
+#for ((i=1; i <= 6; i++)); do VAR=$((1 + RANDOM % 6)); echo "${DICE_ARRAY[VAR]}"; done
+RANDOM_DICE=$((1 + RANDOM % 6));
+SELECTED_DICE=$(echo ${DICE_ARRAY[RANDOM_DICE]})
+#selectedexpression=${expressions[$RANDOM % ${#expressions[@]} ]}
 
 # Load version control information
 autoload -Uz vcs_info
@@ -60,6 +77,11 @@ else
     hotpink="%F{red}"
     limegreen="%F{green}"
 fi
+
+COLOR_ARRY=(red blue yellow green )
+RANDOM_COLOR=$((1 + RANDOM % ${#COLOR_ARRY[@]}));
+SELECTED_COLOR=$(echo "${COLOR_ARRY[$RANDOM_COLOR]}")
+#SELECTED_DICE=$(echo ${DICE_ARRAY[RANDOM_DICE]})
 ######
 ZSH_THEME_GIT_PROMPT_PREFIX="$FG[075]($FG[078]"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
@@ -97,10 +119,15 @@ PS1=$'\n'
 #zstyle ':vcs_info:git:*' formats "%B on %u %c ${GIT_ICON} branch:%B[${GIT_BRANCH_ICON} %b] "
 # RPROMPT=$'%B${vcs_info_msg_0_} $(git_prompt_behind)${git_prompt_info} %B%F{#F4A460}${SYNC_ICON} ${GEAR_ICON} %{$reset_color%} %{$fg[magenta]%}[ ${Date_ICON}  %D{%b %d, %Y - ${CLOCK_ICON}  %T}]%{$reset_color%} '
 #zstyle ':vcs_info:*' formats "%B on %u %c ${GIT_ICON} branch:%B[${GIT_BRANCH_ICON} %b] "
-RPROMPT=$'%F{blue}${GIT_ICON}%{$reset_color%} $(git_time_since_commit)$(check_git_prompt_info) %F{yellow}${SYNC_ICON}%{$reset_color%} %{$fg[magenta]%}[ ${Date_ICON}  %D{%b %d, %Y} - ${CLOCK_ICON}  %T]%{$reset_color%}'
+RPROMPT=$'%F{$SELECTED_COLOR}${SELECTED_DICE}%{$reset_color%} $(git_time_since_commit)%F{blue}\ue725%{$reset_color%} $(check_git_prompt_info) %F{yellow}${SYNC_ICON}%{$reset_color%} %{$fg[magenta]%}[ ${Date_ICON}  %D{%b %d, %Y} - ${CLOCK_ICON}  %T]%{$reset_color%}'
 PS1+=$'%F{blue}\u256D\U2500${OS_ICON} %F{208}%n%f${AT_SYMPOLE} ${MAC_ICON}  %F{226}%m%  on %F{30}%~%f %F{208}${FOLDER_ICON} %{$reset_color%}'
 PS1+=$'\n%F{blue}\u2570\U2500%F{blue}\u2192%{$reset_color%} '
 
+#if git tag > /dev/null 2>&1 && [ $? -eq 0 ]; then
+#    echo "Repository exists!";
+#else
+#    echo "No repository here.";
+#fi
 
 # =============================================================================
 #                   Dont change anything under this
@@ -132,7 +159,9 @@ function check_git_prompt_info() {
         if [[ -z $(git_prompt_info) ]]; then
             echo "%{$fg[magenta]%}detached-head%{$reset_color%})"
         else
-            echo "$(git_prompt_info)"
+            #echo "\ue725 $(git_prompt_info)"
+            #echo "\ue725 $(git_prompt_info)" | awk '{print $2}' | awk -F ':' '{print $2}'
+            echo $(git_prompt_info) | awk '{print $1}' | awk -F ':' '{print $2}' | lolcat
         fi
     fi
 }
