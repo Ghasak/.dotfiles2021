@@ -447,4 +447,24 @@ alias quick_look="qlmanage -p $1"
 #                   < nb set editor nvim >
 #------------------------------------------------------------------------------
 alias nb=nb
-
+#------------------------------------------------------------------------------
+#                           BENCH
+#             Utilty to measure the speed of your code
+#             Source: https://github.com/Gabriel439/bench
+#             Example:
+#                 => bench "pypy3 G05_UsingPyPy.py usingPypy --n 10000"
+#------------------------------------------------------------------------------
+alias bench=bench
+#------------------------------------------------------------------------------
+#                       WIFI Signal in Terminal
+#            Utilty to know the channels of all your wifi signals
+#  source: https://apple.stackexchange.com/questions/81221/how-do-i-get-wi-fi-info-from-within-terminal
+#          http://support.moonpoint.com/os/os-x/wireless/wifi-signal-strength
+#  Run first:
+#  sudo ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
+#  you can check:
+#           - airport -s => give you all channels
+#           - airport -h => give you wifi-strength (check argCtlRSSI)
+#  while true; do airport -I | grep agrCtlRSSI; sleep 1 ; done
+#------------------------------------------------------------------------------
+alias airport="airport" # you can use [-s => channels ]

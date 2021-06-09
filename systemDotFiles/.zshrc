@@ -183,11 +183,15 @@ export LESS='-M'
 export HISTSIZE=10000    # Default 500
 export HISTFILESIZE=1000000
 export HISTTIMEFORMAT='%b %d %I:%M %p ' # using strftime format
+#export HISTTIMEFORMAT="%d/%m/%y %T "  # for e.g. “29/02/99 23:59:59”
+#export HISTTIMEFORMAT="%F %T "        # for e.g. “1999-02-29 23:59:59”
 export HISTCONTROL=ignoreboth            # ignoredups+ ignorespace
 export HISTIGNORE="history:pwd:exit:df:df:ls:ls -la:ll"
 alias ll='ls -lahG'
 alias ctree='colorls --tree'
 alias lsd='colorls -lA --sd'
+# To make the history format working with zsh use:
+alias history='history -i'
 
 # New way to show the background you will need to follow
 # https://drasite.com/blog/Pimp%20my%20terminal
@@ -525,8 +529,8 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-alias python='/usr/bin/python'
-alias python3='/Users/ghasak.ibrahim/opt/anaconda3/bin/python'
+#alias python='/usr/bin/python'
+#alias python3='/Users/ghasak.ibrahim/opt/anaconda3/bin/python'
 
 ##################################################
 #       This function is working with ranger
@@ -591,17 +595,6 @@ else
     print "Now Try again .. Restart your terminal "
 
 fi
-
-###################################################
-#           To knwo the IP_Address
-###################################################
-#
-if [ -f ~/.GScript/ip_address.sh ]; then
-  alias  IP_address=$(echo $(~/.GScript/ip_address.sh))
-else
-  alias IP_address=$(echo $(ifconfig | grep "inet" | grep -Fv 127.0.0.1 | awk '{print $2}'))
-fi
-
 ###################################################
 #           Predicting the nextword
 #           also working for coc-nextword
@@ -639,3 +632,20 @@ export PATH="$HOME/neovide/target/release/:$PATH"
 export PATH="$HOME/.config/yabai/:$PATH"
 export PATH="$HOME/.config/skhd/:$PATH"
 
+###################################################
+#       Google Driver for Seleinum
+#       Web Scraping and Automation
+###################################################
+export PATH="$HOME/.myServices/:$PATH"
+
+###################################################
+#       Project Template Builder
+#    Script to autoamte python project template
+###################################################
+export PATH="$HOME/.GScript/project_template_builder/:$PATH"
+
+###################################################
+#             gitstatus from
+#     the creator of the powerlevel10k
+###################################################
+#source /usr/local/opt/gitstatus/gitstatus.prompt.zsh

@@ -1,9 +1,43 @@
+# =============================================================================
+#
+# =============================================================================
+#https://www.nerdfonts.com/cheat-sheet
+#OS_ICON=
+OS_ICON=$'\uf179'
+MAC_ICON=$'\uf6c3'
+FOLDER_ICON=$'\uf07c'
+#DIR_ICON=
+MAC_FINDER_ICON=$'\uf535'
+CLOCK_ICON=$'\uf64f'
+AT_SYMPOLE=$'\uf1fa'
+ROBIN_HOOD_ICON=$'\uf2ae'
+SINGEL_GEAR_ICON=$'\uf013'
+IRON_MAN_ICON=$'\uf1d1'
+REACT_ICON=$'\ue7ba'
+ELECTRON_ICON=$'\ue62e'
+CONNECTION_ICON=$'\uf20e'
+REFRESH_ICON=$'\u'
+APPLE_KEYBOARD=$'\ufb32'
+CAMPASS_ICON=$'\uf68b'
+CAMPASS_ICON2=$'\uf14e'
+GOOGLE_ICON=$'\uf7ac'
+ERRORCAST_ICON=$'\uf2da'
+H_ICOND=$'\uf0fd'
+H_ICOND2=$'\uf1dc'
+SYNC_ICON=$'\uf46a'
+GEAR_ICON=$'\uf085'
+GIT_ICON=$'\uf7a3'
+GIT_BRANCH_ICON=$'\ue725'
+#GEAR_ICON=
+#
+Date_ICON=$'\uF073'
+git_ICON=
+Netreno_ICON=
+
 # Load version control information
 autoload -Uz vcs_info
 precmd() { vcs_info }
 
-# Format the vcs_info_msg_0_ variable
-zstyle ':vcs_info:git:*' formats "%B%F{#9370DB} on  branch:%B%F{#E066FF}[ %b] "
 
 # Set up the prompt (with git branch name)
 setopt PROMPT_SUBST
@@ -29,7 +63,7 @@ fi
 ######
 ZSH_THEME_GIT_PROMPT_PREFIX="$FG[075]($FG[078]"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
-ZSH_THEME_GIT_PROMPT_DIRTY="$my_orange*%{$reset_color%}"
+#ZSH_THEME_GIT_PROMPT_DIRTY="$my_orange*%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="$FG[075])%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[cyan]%} ✈"
 ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[yellow]%} ✭"
@@ -37,36 +71,124 @@ ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%} ✗"
 ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[blue]%} ➦"
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[magenta]%} ✂"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[grey]%} ✱"
+#adding here some
+
+#PROMPT='%{$fg[$NCOLOR]%}%c ➤ %{$reset_color%}'
 # Adding color to my zsh
 autoload -U colors && colors
-# % echo $TERM
-# xterm-256color
-#PROMPT='%B%F{20}%1~%f%b %# '
-# https://www.nerdfonts.com/cheat-sheet
-OS_ICON=
-CLOCK_ICON=$'\uf64f'
-#
-Date_ICON=$'\uF073'
-git_ICON=
-Netreno_ICON=
-GEAR_ICON=
-DIR_ICON=
 PS1=$'\n'
 #PS1+="%{$fg[red]%}%n%{$reset_color%} at %{$fg[blue]%}%m %F{226}%~%f  %{$reset_color%}% "
+# =============================================================================
+# Customization of the Git in the righ prompt
+# Format the vcs_info_msg_0_ variable
+#zstyle ':vcs_info:git:*' formats "%B%F{#9370DB} => ${GIT_ICON} branch:%B%F{#E066FF}[${GIT_BRANCH_ICON} %b] "
+#zstyle ':vcs_info:git:*' formats"%B %u %c ${GIT_ICON}branch:%B[${GIT_BRANCH_ICON} %b] "
+#RPROMPT='%{$fg[$NCOLOR]%} $(git_prompt_info)%{$reset_color%}'
 
-RPROMPT=$'%B%F{#F4A460}${vcs_info_msg_0_} $(git_prompt_behind)%B%F{#F4A460}${GEAR_ICON} %{$reset_color%} %{$fg[magenta]%}[ ${Date_ICON}  %D{%b %d, %Y - ${CLOCK_ICON}  %T}]%{$reset_color%} '
-PS1+=$'%F{blue}\u256D\U2500${OS_ICON} %F{208}%n%f  %F{226}%m%  on %F{30}%~%f %F{208} %{$reset_color%} '
-# I use \u276f as a heavy arrow instead an icon which will destory the zsh_auto_suggestion
-#PS1+=$'\n╰─%F{blue}\u276f%F{226}\u276f%F{red}\u276f$reset_color ';
-PS1+=$'\n%F{blue}\u2570\U2500%F{blue}\u2192%{$reset_color%} '
+# Customization of the Git in the righ prompt
+#PS1+=$'%F{blue}\u256D\U2500${OS_ICON} %F{208}%n%f${AT_SYMPOLE} ${MAC_ICON}  %F{226}%m%  on %F{30}%~%f %F{208}${FOLDER_ICON} %{$reset_color%} '
+#$(git_prompt_behind)${git_prompt_info}'
 
-#PS+=$'\u2570\U2500 ';
-#PS1+=$'%F{blue}\u276f'F{226}\u276f'F{red}\u276f'reset_color \n';
-#PS1+=$'%F{blue}\u276f';
-#PS1+=$'╰─%F{blue}>%F{226}>%F{red}>$reset_color \n';
+
 #
 #壟
 #─────
-# For background color: $bg[red]
-# End the left prompt, closes the final segment.
 #
+#zstyle ':vcs_info:git:*' formats "%B on %u %c ${GIT_ICON} branch:%B[${GIT_BRANCH_ICON} %b] "
+# RPROMPT=$'%B${vcs_info_msg_0_} $(git_prompt_behind)${git_prompt_info} %B%F{#F4A460}${SYNC_ICON} ${GEAR_ICON} %{$reset_color%} %{$fg[magenta]%}[ ${Date_ICON}  %D{%b %d, %Y - ${CLOCK_ICON}  %T}]%{$reset_color%} '
+#zstyle ':vcs_info:*' formats "%B on %u %c ${GIT_ICON} branch:%B[${GIT_BRANCH_ICON} %b] "
+RPROMPT=$'%F{blue}${GIT_ICON}%{$reset_color%} $(git_time_since_commit)$(check_git_prompt_info) %F{yellow}${SYNC_ICON}%{$reset_color%} %{$fg[magenta]%}[ ${Date_ICON}  %D{%b %d, %Y} - ${CLOCK_ICON}  %T]%{$reset_color%}'
+PS1+=$'%F{blue}\u256D\U2500${OS_ICON} %F{208}%n%f${AT_SYMPOLE} ${MAC_ICON}  %F{226}%m%  on %F{30}%~%f %F{208}${FOLDER_ICON} %{$reset_color%}'
+PS1+=$'\n%F{blue}\u2570\U2500%F{blue}\u2192%{$reset_color%} '
+
+
+# =============================================================================
+#                   Dont change anything under this
+# =============================================================================
+#PROMPT='%{$fg[blue]%}%n%{$reset_color%} on %{$fg[red]%}%M%{$reset_color%} in %{$fg[blue]%}%~%b%{$reset_color%}$(git_time_since_commit)$(check_git_prompt_info)
+#$ '
+
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[white]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%})"
+
+# Text to display if the branch is dirty
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}*%{$reset_color%}"
+
+# Text to display if the branch is clean
+ZSH_THEME_GIT_PROMPT_CLEAN=""
+
+# Colors vary depending on time lapsed.
+ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT="%{$fg[green]%}"
+ZSH_THEME_GIT_TIME_SHORT_COMMIT_MEDIUM="%{$fg[yellow]%}"
+ZSH_THEME_GIT_TIME_SINCE_COMMIT_LONG="%{$fg[red]%}"
+ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL="%{$fg[cyan]%}"
+
+
+# Git sometimes goes into a detached head state. git_prompt_info doesn't
+# return anything in this case. So wrap it in another function and check
+# for an empty string.
+function check_git_prompt_info() {
+    if git rev-parse --git-dir > /dev/null 2>&1; then
+        if [[ -z $(git_prompt_info) ]]; then
+            echo "%{$fg[magenta]%}detached-head%{$reset_color%})"
+        else
+            echo "$(git_prompt_info)"
+        fi
+    fi
+}
+
+# Determine if we are using a gemset.
+function rvm_gemset() {
+    if hash rvm 2>/dev/null; then
+        GEMSET=`rvm gemset list | grep '=>' | cut -b4-`
+        if [[ -n $GEMSET ]]; then
+            echo "%{$fg[yellow]%}$GEMSET%{$reset_color%}|"
+        fi
+    fi
+}
+
+# Determine the time since last commit. If branch is clean,
+# use a neutral color, otherwise colors will vary according to time.
+function git_time_since_commit() {
+    if git rev-parse --git-dir > /dev/null 2>&1; then
+        # Only proceed if there is actually a commit.
+        if [[ $(git log 2>&1 > /dev/null | grep -c "^fatal: bad default revision") == 0 ]]; then
+            # Get the last commit.
+            last_commit=`git log --pretty=format:'%at' -1 2> /dev/null`
+            now=`date +%s`
+            seconds_since_last_commit=$((now-last_commit))
+
+            # Totals
+            MINUTES=$((seconds_since_last_commit / 60))
+            HOURS=$((seconds_since_last_commit/3600))
+
+            # Sub-hours and sub-minutes
+            DAYS=$((seconds_since_last_commit / 86400))
+            SUB_HOURS=$((HOURS % 24))
+            SUB_MINUTES=$((MINUTES % 60))
+
+            if [[ -n $(git status -s 2> /dev/null) ]]; then
+                if [ "$MINUTES" -gt 30 ]; then
+                    COLOR="$ZSH_THEME_GIT_TIME_SINCE_COMMIT_LONG"
+                elif [ "$MINUTES" -gt 10 ]; then
+                    COLOR="$ZSH_THEME_GIT_TIME_SHORT_COMMIT_MEDIUM"
+                else
+                    COLOR="$ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT"
+                fi
+            else
+                COLOR="$ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL"
+            fi
+
+            if [ "$HOURS" -gt 24 ]; then
+                echo "($(rvm_gemset)$COLOR${DAYS}d${SUB_HOURS}h${SUB_MINUTES}m%{$reset_color%}|"
+            elif [ "$MINUTES" -gt 60 ]; then
+                echo "($(rvm_gemset)$COLOR${HOURS}h${SUB_MINUTES}m%{$reset_color%}|"
+            else
+                echo "($(rvm_gemset)$COLOR${MINUTES}m%{$reset_color%}|"
+            fi
+        else
+            COLOR="$ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL"
+            echo "($(rvm_gemset)$COLOR~|"
+        fi
+    fi
+}
