@@ -1,5 +1,8 @@
 # =============================================================================
 #
+# ▒█▀▀▀█ ▒█▀▀▀█ ▒█░▒█ ▒█▀▀█ ▒█▀▀█       ░░ ▒█▀▀█ █▀▀█ █▀▀█ █▀▄▀█ █▀▀█ █▀▀█ ▀▀█▀▀
+# ░▄▄▄▀▀ ░▀▀▀▄▄ ▒█▀▀█ ▒█▄▄▀ ▒█    ░░░   ▀▀ ▒█▄▄█ █▄▄▀ █░░█ █░▀░█ █░░█ █░░█ ░░█░░
+# ▒█▄▄▄█ ▒█▄▄▄█ ▒█░▒█ ▒█░▒█ ▒█▄▄█       ░░ ▒█░░░ ▀░▀▀ ▀▀▀▀ ▀░░░▀ █▀▀▀ ▀▀▀▀ ░░▀░░
 # =============================================================================
 #https://www.nerdfonts.com/cheat-sheet
 #OS_ICON=
@@ -32,6 +35,7 @@ HOUR_GLASS_ICON=$'\uf251'
 GIT_BRANCH_ICON=$'\ue725'
 RADIOACTIVE_ICON=$'\ue238'
 ATOM_ICON=$'\ufc66'
+SERVER_ICON2=$'\uf6d5'
 #GEAR_ICON=kk
 #
 Date_ICON=$'\uF073'
@@ -119,8 +123,8 @@ PS1=$'\n'
 #zstyle ':vcs_info:git:*' formats "%B on %u %c ${GIT_ICON} branch:%B[${GIT_BRANCH_ICON} %b] "
 # RPROMPT=$'%B${vcs_info_msg_0_} $(git_prompt_behind)${git_prompt_info} %B%F{#F4A460}${SYNC_ICON} ${GEAR_ICON} %{$reset_color%} %{$fg[magenta]%}[ ${Date_ICON}  %D{%b %d, %Y - ${CLOCK_ICON}  %T}]%{$reset_color%} '
 #zstyle ':vcs_info:*' formats "%B on %u %c ${GIT_ICON} branch:%B[${GIT_BRANCH_ICON} %b] "
-RPROMPT=$'%F{$SELECTED_COLOR}${SELECTED_DICE}%{$reset_color%} $(git_time_since_commit)%F{blue}\ue725%{$reset_color%} $(check_git_prompt_info) %F{yellow}${SYNC_ICON}%{$reset_color%} %{$fg[magenta]%}[ ${Date_ICON}  %D{%b %d, %Y} - ${CLOCK_ICON}  %T]%{$reset_color%}'
-PS1+=$'%F{blue}\u256D\U2500${OS_ICON} %F{208}%n%f${AT_SYMPOLE} ${MAC_ICON}  %F{226}%m%  on %F{30}%~%f %F{208}${FOLDER_ICON} %{$reset_color%}'
+RPROMPT=$'%F{$SELECTED_COLOR}${SELECTED_DICE} %{$reset_color%} $(git_time_since_commit)$(check_git_prompt_info) %F{yellow}${SYNC_ICON}%{$reset_color%} %{$fg[magenta]%}[ ${Date_ICON}  %D{%b %d, %Y} - ${CLOCK_ICON}  %T]%{$reset_color%}'
+PS1+=$'%F{blue}\u256D\U2500${OS_ICON} %F{208}%n%f${AT_SYMPOLE} ${MAC_ICON}  %F{226}%m%  on %F{30}%~%f %F{208}${FOLDER_ICON} %{$reset_color%} '
 PS1+=$'\n%F{blue}\u2570\U2500%F{blue}\u2192%{$reset_color%} '
 
 #if git tag > /dev/null 2>&1 && [ $? -eq 0 ]; then
@@ -161,7 +165,9 @@ function check_git_prompt_info() {
         else
             #echo "\ue725 $(git_prompt_info)"
             #echo "\ue725 $(git_prompt_info)" | awk '{print $2}' | awk -F ':' '{print $2}'
-            echo $(git_prompt_info) | awk '{print $1}' | awk -F ':' '{print $2}' | lolcat
+            temp_var=$(echo $(git_prompt_info) | awk -F ':' '{print $2}')
+            #echo $(git_prompt_info) | awk '{print $1}' | awk -F ':' '{print $2}' | lolcat
+            echo "%F{blue}\ue725 %{$fg[cyan]%}$temp_var%{$reset_color%}"
         fi
     fi
 }
@@ -217,7 +223,7 @@ function git_time_since_commit() {
             fi
         else
             COLOR="$ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL"
-            echo "($(rvm_gemset)$COLOR~|"
+            echo "($(rvm_gemset)$COLOR~| "
         fi
     fi
 }
