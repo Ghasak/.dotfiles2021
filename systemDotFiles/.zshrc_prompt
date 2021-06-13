@@ -71,8 +71,6 @@ RIGHT_SEGMENT_SEPARATOR='\u2B82'                   # ⮂
 
 
 # Load version control information
-
-
 # Set up the prompt (with git branch name)
 setopt PROMPT_SUBST
 #PROMPT='%n in ${PWD/#$HOME/~} ${} > '
@@ -127,16 +125,8 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[grey]%} ✱"
 #$(git_prompt_behind)${git_prompt_info}'
 #
 # =============================================================================
-#                      Battery checking status
-# =============================================================================
-if [ -f ~/.GScript/.batcharge.py ]; then
-  BATTARY_STATUS=$(echo "$(~/.GScript/.batcharge.py)" | awk '{print $1}')
-  BATTARY_PERCENTAGE=$(echo "$(~/.GScript/.batcharge.py)" | awk '{print $2 $3}')
-  #BATTARY_VARIABLE=$(echo "%F{#9370DB}$(~/.GScript/.batcharge.py)% %{$reset_color%}")
-  BATTARY_VARIABLE=$(echo "%F{#9370DB}$BATTARY_STATUS %{$reset_color%}%F{red}  $BATTARY_PERCENTAGE %% %{$reset_color%}")
-else
-  BATTARY_VARIABLE=""
-fi
+#
+
 # =============================================================================
 #                     Inside or outside a repo
 # =============================================================================
@@ -317,6 +307,9 @@ print_epoch() { date  '+%s' }
 
 
 
+# =============================================================================
+#                       Checking directry and flip the icon
+# =============================================================================
 function Iam_at_home(){
   local temp_var=$(echo $(git branch 2>/dev/null)) # Send the error message to not be printed.
 
@@ -339,19 +332,10 @@ function Iam_at_home(){
   unset MYDIR
 }
 
-function running_docker(){
-  local temp_var=$(echo $(docker container ps -a -q))
-  local temp_current_running_container_name=$(echo $(docker ps --format '{{.Names}}'))
-
-  if [ -z "${temp_var}" ]; then
-    echo ""
-  else
-    local CONTAINER_IS_RUNNING='\ue7b0'
-    echo "$CONTAINER_IS_RUNNING (${temp_current_running_container_name})"
-  fi
-}
-
-
+# =============================================================================
+#                       ELLAPS_TIME FUNCTION
+#               Calculate the time between two prompt (hitting inter)
+#                   Main precmd function with first arg.
 # =============================================================================
 zmodload zsh/datetime
 
@@ -417,13 +401,75 @@ function dice()
 autoload -Uz add-zsh-hook
 add-zsh-hook precmd dice
 #setopt promptsubst
-PROMPT=$'\n'
-PROMPT+=$'%F{%(0?.green.red)} $(Iam_at_home) $(running_docker) => %f'
-PROMPT+=$'\n =>'
-RPROMPT=$'%F{cyan}\ufa1a${prompt_elapsed_time} %F{16}$(date "+%F %T %z")%F{none} %v'
+#PROMPT=$'\n'
+#PROMPT=$'\n%F{%(0?.green.red)} $(Iam_at_home) $(running_docker)%f'
+#PROMPT+=$'\n => '
+#RPROMPT=$'%F{cyan}\ufa1a${prompt_elapsed_time} %F{16}$(date "+%F %T %z")%F{none} %v'
+# =============================================================================
+#                      Battery checking status
+# =============================================================================
+def battary_charge_percentage(){
+  if [ -f ~/.GScript/.batcharge.py ]; then
+    BATTARY_STATUS=$(echo "$(~/.GScript/.batcharge.py)" | awk '{print $1}')
+    BATTARY_PERCENTAGE=$(echo "$(~/.GScript/.batcharge.py)" | awk '{print $2 $3}')
+    #BATTARY_VARIABLE=$(echo "%F{#9370DB}$(~/.GScript/.batcharge.py)% %{$reset_color%}")
+    BATTARY_VARIABLE=$(echo "%F{#9370DB}$BATTARY_STATUS %{$reset_color%}%F{red}  $BATTARY_PERCENTAGE %% %{$reset_color%}")
+
+    #psvar[2]=$(echo "${BATTARY_VARIABLE}")
+    psvar[2]=$(echo "$BATTARY_STATUS")
+    psvar[3]=$(echo "$BATTARY_PERCENTAGE")
+  else
+    BATTARY_VARIABLE=""
+    psvar[2]=$(echo "${BATTARY_VARIABLE}")
+  fi
+}
+
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd battary_charge_percentage
+
+# =============================================================================
+#                       DOCKER CONTAINER FUNCTION
+#               Check the docker containers if they are running
+# =============================================================================
+
+
+function running_docker(){
+  local temp_var=$(echo $(docker container ps -a -q))
+  local temp_current_running_container_name=$(echo $(docker ps --format '{{.Names}}'))
+
+  if [ -z "${temp_var}" ]; then
+    psvar[4]=""
+  else
+    How_many_containers=$(echo $(docker ps -q | wc -l))
+    if [ $How_many_containers != 0 ]; then
+      local CONTAINER_IS_RUNNING=$(for ((i = 0; i < $How_many_containers; i++)); do echo -n '\ue7b0  ' ; done | awk -F '$' '{print $1}')
+    else
+      local CONTAINER_IS_RUNNING=""
+    fi
+    #local CONTAINER_IS_RUNNING=$(echo $(repeatChar '\ue7b0' $How_many_containers))
+    #echo $CONTAINER_IS_RUNNING
+    #echo "$CONTAINER_IS_RUNNING (${temp_current_running_container_name})"
+    psvar[4]=$(echo "$CONTAINER_IS_RUNNING")
+  fi
+}
+
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd running_docker
+#add-zsh-hook preexec running_docker
+# =============================================================================
+# =============================================================================
+function CPU_USAGE(){
+  MAX_CPU_USAGE=$(ps aux | head | sort -nrk3,3 | awk '{print $3,$11}' |head -n1 | awk '{print $1}')
+  CPU_JOB_NAME=$(ps aux | head | sort -nrk3,3 | awk '{print $3,$11}' |head -n1 | awk '{print $2}')
+  psvar[5]=$(echo "$MAX_CPU_USAGE")
+  psvar[6]=$(echo "$CPU_JOB_NAME")
+
+}
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd  CPU_USAGE
 # =============================================================================
 # PROMPT=$'\n'
-# PS1+=$'%F{blue}\u256D\U2500${OS_ICON} %F{208}%n%f${AT_SYMPOLE} ${MAC_ICON}  %F{226}%m%  on %F{30}%~%f $(prompt_char) ${BATTARY_VARIABLE} ${CHECKER}${ELLAPS_TIME}$(print_epoch)'
-# PS1+=$'\n%F{blue}\u2570\U2500%F{blue}\u2192%{$reset_color%} '
-# RPROMPT=$'%F{$SELECTED_COLOR}${SELECTED_DICE} %{$reset_color%} $(git_time_since_commit)$(check_git_prompt_info) %F{yellow}${SYNC_ICON}%{$reset_color%} %{$fg[magenta]%}[ ${Date_ICON}  %D{%b %d, %Y}- ${CLOCK_ICON}  %D{%L:%M:%S %p}]%{$reset_color%}'
+PROMPT=$'\n%F{blue}\u256D\U2500${OS_ICON} %F{208}%n%f${AT_SYMPOLE} ${MAC_ICON}  %F{226}%m%  on %F{30}%~%f%F{%(0?.green.red)} %(0?.\uf11e.\uf071)  $(Iam_at_home)  %4v%f%F{120} %2v%F{180} %3v \uf0e4  %5v %6v'
+PS1+=$'\n%F{blue}\u2570\U2500%F{blue}\u2192%{$reset_color%} '
+RPROMPT=$'%F{blue}\ufa1a${prompt_elapsed_time} %F{yellow}%1v%{$reset_color%} $(git_time_since_commit)$(check_git_prompt_info) %F{yellow}${SYNC_ICON}%{$reset_color%} %{$fg[magenta]%}[ ${Date_ICON}  %D{%b %d, %Y}- ${CLOCK_ICON}  %D{%L:%M:%S %p}]%{$reset_color%}'
 

@@ -366,7 +366,9 @@ fi
 #       - need the scripts to be setup in the specified directory
 #------------------------------------------------------------------------------
 #alias projectBuilder="make -C ~/.Gscript/project_template_builder"
-alias projectBuilder="cp ~/.GScript/project_template_builder/Makefile ~/.GScript/project_template_builder/basicPackages.txt ~/.GScript/project_template_builder/constructProject.sh ~/.GScript/project_template_builder/cleaningScript.sh . 2>/dev/null && make"
+fucntion projectBuilder(){
+  "cp ~/.GScript/project_template_builder/Makefile ~/.GScript/project_template_builder/basicPackages.txt ~/.GScript/project_template_builder/constructProject.sh ~/.GScript/project_template_builder/cleaningScript.sh . 2>/dev/null && make"
+  }
 
 
 alias lazydocker=lazydocker
@@ -474,11 +476,12 @@ alias airport="airport" # you can use [-s => channels ]
 #                  SAVING SAFARI TABS
 #                  Safari Saving tabs in terminal and use them as
 #                  bookmarks session
+#                  Source: https://apple.stackexchange.com/questions/389090/how-to-save-list-of-open-safari-tabs-in-a-text-file
 #------------------------------------------------------------------------------
 #List the URL of all tabs in the frontmost window:
-alias safari_save_current_tabs="osascript -e{'set text item delimiters to linefeed','tell app\"safari\"to(url of tabs of window 1)as text'} | boxes | lolcat"
+function safari_save_current_tabs(){"osascript -e{'set text item delimiters to linefeed','tell app\"safari\"to(url of tabs of window 1)as text'} | boxes | lolcat"}
 #List the URL of all tabs in all windows:
-alias safari_save_all_tabs="osascript -e{'set text item delimiters to linefeed','tell app\"safari\"to(url of tabs of windows)as text'}"
+function safari_save_all_tabs(){"osascript -e{'set text item delimiters to linefeed','tell app\"safari\"to(url of tabs of windows)as text'} | boxes | lolcat"}
 #List the URL and title of all tabs in the frontmost window:
-alias safari_save_all_tabs_with_title="osascript -e{'set o to""','tell app\"safari\"','repeat with t in tabs of window 1','set o to o&url of t&" "&name of t&\"\n\"',end,end,o}|sed \$d"
+function safari_save_current_tabs_with_title(){osascript -e{'set o to""','tell app"safari"','repeat with t in tabs of window 1','set o to o&url of t&" "&name of t&"\n"',end,end,o}|sed \$d | boxes | lolcat}
 
