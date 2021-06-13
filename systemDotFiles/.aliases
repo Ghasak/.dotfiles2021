@@ -468,3 +468,17 @@ alias bench=bench
 #  while true; do airport -I | grep agrCtlRSSI; sleep 1 ; done
 #------------------------------------------------------------------------------
 alias airport="airport" # you can use [-s => channels ]
+
+
+#------------------------------------------------------------------------------
+#                  SAVING SAFARI TABS
+#                  Safari Saving tabs in terminal and use them as
+#                  bookmarks session
+#------------------------------------------------------------------------------
+#List the URL of all tabs in the frontmost window:
+alias safari_save_current_tabs="osascript -e{'set text item delimiters to linefeed','tell app\"safari\"to(url of tabs of window 1)as text'} | boxes | lolcat"
+#List the URL of all tabs in all windows:
+alias safari_save_all_tabs="osascript -e{'set text item delimiters to linefeed','tell app\"safari\"to(url of tabs of windows)as text'}"
+#List the URL and title of all tabs in the frontmost window:
+alias safari_save_all_tabs_with_title="osascript -e{'set o to""','tell app\"safari\"','repeat with t in tabs of window 1','set o to o&url of t&" "&name of t&\"\n\"',end,end,o}|sed \$d"
+

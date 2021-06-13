@@ -4,11 +4,16 @@
 # ░▄▄▄▀▀ ░▀▀▀▄▄ ▒█▀▀█ ▒█▄▄▀ ▒█    ░░░   ▀▀ ▒█▄▄█ █▄▄▀ █░░█ █░▀░█ █░░█ █░░█ ░░█░░
 # ▒█▄▄▄█ ▒█▄▄▄█ ▒█░▒█ ▒█░▒█ ▒█▄▄█       ░░ ▒█░░░ ▀░▀▀ ▀▀▀▀ ▀░░░▀ █▀▀▀ ▀▀▀▀ ░░▀░░
 # =============================================================================
+#
+# - [] How man files have been added since you start committing (github)
+autoload -U colors && colors
+autoload -Uz vcs_info
+#precmd() { vcs_info }
+# - [] Adding douple sandwich layer while enter and exit a repo -> -<>- <- regular dir / repo dir.
 #https://www.nerdfonts.com/cheat-sheet
-#OS_ICON=
+OS_ICON=
 OS_ICON=$'\uf179'
 MAC_ICON=$'\uf6c3'
-FOLDER_ICON=$'\uf07c'
 #DIR_ICON=
 MAC_FINDER_ICON=$'\uf535'
 CLOCK_ICON=$'\uf64f'
@@ -43,21 +48,29 @@ git_ICON=
 Netreno_ICON=
 DESKTOP_TOWER_ICON=$'\uf6c4'
 SERVER_ICON=$'\u'
-DICE_FACE_01_ICON=$'\uf6c9'
-DICE_FACE_02_ICON=$'\uf6ca'
-DICE_FACE_03_ICON=$'\uf6cb'
-DICE_FACE_04_ICON=$'\uf6cc'
-DICE_FACE_05_ICON=$'\uf6cd'
-DICE_FACE_06_ICON=$'\uf6ce'
-DICE_ARRAY=($DICE_FACE_01_ICON $DICE_FACE_02_ICON $DICE_FACE_03_ICON $DICE_FACE_04_ICON $DICE_FACE_05_ICON $DICE_FACE_06_ICON)
-#for ((i=1; i <= 6; i++)); do VAR=$((1 + RANDOM % 6)); echo "${DICE_ARRAY[VAR]}"; done
-RANDOM_DICE=$((1 + RANDOM % 6));
-SELECTED_DICE=$(echo ${DICE_ARRAY[RANDOM_DICE]})
-#selectedexpression=${expressions[$RANDOM % ${#expressions[@]} ]}
+GO_BACK_ARROWS_ICON=$'\u2B82'
+
+MULTILINE_FIRST_PROMPT_PREFIX=$'\u256D\U2500'      # ╭─
+MULTILINE_NEWLINE_PROMPT_PREFIX=$'\u251C\U2500'    # ├─
+MULTILINE_LAST_PROMPT_PREFIX=$'\u2570\U2500 '      # ╰─
+RULER_CHAR=$'\u2500'                               #  ─
+CARRIAGE_RETURN_ICON=$'\u21B5'                     # ↵
+PROXY_ICON=$'\u2194'                               # ↔
+VCS_REMOTE_BRANCH_ICON=$'\u2192'                   # →
+DIRENV_ICON=$'\u25BC'                              # ▼
+ETC_ICON=$'\u2699'                                 # ⚙
+VCS_UNSTAGED_ICON=$'\u25CF'                        # ●
+VCS_STASH_ICON=$'\u235F'                           # ⍟
+VCS_INCOMING_CHANGES_ICON=$'\u2193'                # ↓
+VCS_OUTGOING_CHANGES_ICON=$'\u2191'                # ↑
+VCS_REMOTE_BRANCH_ICON=$'\u2192'                   # →
+VCS_BOOKMARK_ICON=$'\u263F'                        # ☿
+LEFT_SEGMENT_SEPARATOR='\u2B80'                    # ⮀
+RIGHT_SEGMENT_SEPARATOR='\u2B82'                   # ⮂
+
+
 
 # Load version control information
-autoload -Uz vcs_info
-precmd() { vcs_info }
 
 
 # Set up the prompt (with git branch name)
@@ -101,8 +114,6 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[grey]%} ✱"
 
 #PROMPT='%{$fg[$NCOLOR]%}%c ➤ %{$reset_color%}'
 # Adding color to my zsh
-autoload -U colors && colors
-PS1=$'\n'
 #PS1+="%{$fg[red]%}%n%{$reset_color%} at %{$fg[blue]%}%m %F{226}%~%f  %{$reset_color%}% "
 # =============================================================================
 # Customization of the Git in the righ prompt
@@ -114,45 +125,71 @@ PS1=$'\n'
 # Customization of the Git in the righ prompt
 #PS1+=$'%F{blue}\u256D\U2500${OS_ICON} %F{208}%n%f${AT_SYMPOLE} ${MAC_ICON}  %F{226}%m%  on %F{30}%~%f %F{208}${FOLDER_ICON} %{$reset_color%} '
 #$(git_prompt_behind)${git_prompt_info}'
-
-
-#
-#壟
-#─────
 #
-#zstyle ':vcs_info:git:*' formats "%B on %u %c ${GIT_ICON} branch:%B[${GIT_BRANCH_ICON} %b] "
-# RPROMPT=$'%B${vcs_info_msg_0_} $(git_prompt_behind)${git_prompt_info} %B%F{#F4A460}${SYNC_ICON} ${GEAR_ICON} %{$reset_color%} %{$fg[magenta]%}[ ${Date_ICON}  %D{%b %d, %Y - ${CLOCK_ICON}  %T}]%{$reset_color%} '
-#zstyle ':vcs_info:*' formats "%B on %u %c ${GIT_ICON} branch:%B[${GIT_BRANCH_ICON} %b] "
-RPROMPT=$'%F{$SELECTED_COLOR}${SELECTED_DICE} %{$reset_color%} $(git_time_since_commit)$(check_git_prompt_info) %F{yellow}${SYNC_ICON}%{$reset_color%} %{$fg[magenta]%}[ ${Date_ICON}  %D{%b %d, %Y} - ${CLOCK_ICON}  %T]%{$reset_color%}'
-PS1+=$'%F{blue}\u256D\U2500${OS_ICON} %F{208}%n%f${AT_SYMPOLE} ${MAC_ICON}  %F{226}%m%  on %F{30}%~%f %F{208}${FOLDER_ICON} %{$reset_color%} '
-PS1+=$'\n%F{blue}\u2570\U2500%F{blue}\u2192%{$reset_color%} '
+# =============================================================================
+#                      Battery checking status
+# =============================================================================
+if [ -f ~/.GScript/.batcharge.py ]; then
+  BATTARY_STATUS=$(echo "$(~/.GScript/.batcharge.py)" | awk '{print $1}')
+  BATTARY_PERCENTAGE=$(echo "$(~/.GScript/.batcharge.py)" | awk '{print $2 $3}')
+  #BATTARY_VARIABLE=$(echo "%F{#9370DB}$(~/.GScript/.batcharge.py)% %{$reset_color%}")
+  BATTARY_VARIABLE=$(echo "%F{#9370DB}$BATTARY_STATUS %{$reset_color%}%F{red}  $BATTARY_PERCENTAGE %% %{$reset_color%}")
+else
+  BATTARY_VARIABLE=""
+fi
+# =============================================================================
+#                     Inside or outside a repo
+# =============================================================================
+FOLDER_ICON=$'\uf07c'
+GIT_DIR=$'\uf408'
+#SERVER_HUB_ICONT=''
+function prompt_char {
+  git branch >/dev/null 2>/dev/null && echo "%F{yellow}$GIT_DIR  ± %{$reset_color%}" && return
+    hg root >/dev/null 2>/dev/null && echo "$FOLDER_ICON ☿" && return
+    echo "○  %F{208}${FOLDER_ICON} %{$reset_color%} "
+}
 
-#if git tag > /dev/null 2>&1 && [ $? -eq 0 ]; then
-#    echo "Repository exists!";
-#else
-#    echo "No repository here.";
-#fi
+# =============================================================================
+#
+# =============================================================================
 
+# =============================================================================
+
+#PS1=$'\n'
+#PS1+=$'%F{blue}\u256D\U2500${OS_ICON} %F{208}%n%f${AT_SYMPOLE} ${MAC_ICON}  %F{226}%m%  on %F{30}%~%f $(prompt_char) ${BATTARY_VARIABLE} '
+#PS1+=$'\n%F{blue}\u2570\U2500%F{blue}\u2192%{$reset_color%} '
+
+#RPROMPT=$'%F{$SELECTED_COLOR}${SELECTED_DICE} %{$reset_color%} $(git_time_since_commit)$(check_git_prompt_info) %F{yellow}${SYNC_ICON}%{$reset_color%} %{$fg[magenta]%}[ ${Date_ICON}  %D{%b %d, %Y} - ${CLOCK_ICON}  %T]%{$reset_color%}'
 # =============================================================================
 #                   Dont change anything under this
 # =============================================================================
 #PROMPT='%{$fg[blue]%}%n%{$reset_color%} on %{$fg[red]%}%M%{$reset_color%} in %{$fg[blue]%}%~%b%{$reset_color%}$(git_time_since_commit)$(check_git_prompt_info)
 #$ '
-
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[white]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%})"
-
 # Text to display if the branch is dirty
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}*%{$reset_color%}"
-
 # Text to display if the branch is clean
 ZSH_THEME_GIT_PROMPT_CLEAN=""
-
 # Colors vary depending on time lapsed.
 ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT="%{$fg[green]%}"
 ZSH_THEME_GIT_TIME_SHORT_COMMIT_MEDIUM="%{$fg[yellow]%}"
 ZSH_THEME_GIT_TIME_SINCE_COMMIT_LONG="%{$fg[red]%}"
 ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL="%{$fg[cyan]%}"
+
+# Modify Git prompt
+ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[green]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY=""
+ZSH_THEME_GIT_PROMPT_CLEAN=""
+
+ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%} ✚"
+ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[blue]%} ✹"
+ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%} ✖"
+ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[magenta]%} ➜"
+ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%} ═"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} ✭"
+
 
 
 # Git sometimes goes into a detached head state. git_prompt_info doesn't
@@ -165,7 +202,10 @@ function check_git_prompt_info() {
         else
             #echo "\ue725 $(git_prompt_info)"
             #echo "\ue725 $(git_prompt_info)" | awk '{print $2}' | awk -F ':' '{print $2}'
-            temp_var=$(echo $(git_prompt_info) | awk -F ':' '{print $2}')
+            # This variable will bring us (main*)
+            #temp_var=$(echo $(git_prompt_info) | awk -F ':' '{print $2}')
+            # This variable will bring us (main with uni-code of git commit icon [\uf417])
+            temp_var=$(echo $(git_prompt_info) | awk '{print $1}' | awk -F ':' '{print $2}' | sed $'s/*/ \uf417 /g')
             #echo $(git_prompt_info) | awk '{print $1}' | awk -F ':' '{print $2}' | lolcat
             echo "%F{blue}\ue725 %{$fg[cyan]%}$temp_var%{$reset_color%}"
         fi
@@ -227,3 +267,163 @@ function git_time_since_commit() {
         fi
     fi
 }
+
+secs_to_human() {
+    if [[ -z ${1} || ${1} -lt 60 ]] ;then
+        min=0 ; secs="${1}"
+    else
+        time_mins=$(echo "scale=2; ${1}/60" | bc)
+        min=$(echo ${time_mins} | cut -d'.' -f1)
+        secs="0.$(echo ${time_mins} | cut -d'.' -f2)"
+        secs=$(echo ${secs}*60|bc|awk '{print int($1+0.5)}')
+    fi
+    echo "Time Elapsed : ${min} minutes and ${secs} seconds."
+}
+
+
+# =============================================================================
+# Time at the session started
+# =============================================================================
+typeset -g date1=$(date +"%s")
+
+# =============================================================================
+# =============================================================================
+CHECKER=$(if [ $? = "0" ]; then echo ""; else echo "\u263F"; fi)
+# =============================================================================
+# =============================================================================
+RANDOM_DICE=$((1 + RANDOM % 6));
+SELECTED_DICE=$(echo ${DICE_ARRAY[RANDOM_DICE]})
+#RPROMPT='[%D{%L:%M:%S %p}]'
+typeset -g date2=$(date +"%s")
+typeset -g DIFF=$(($date2-$date1))
+typeset -g ELLAPS_TIME=$(echo "%F{150}\ufa1a$(($DIFF / 3600 ))h:$((($DIFF % 3600) / 60))m:$(($DIFF % 60))s %{$reset_color%}")
+
+# =============================================================================
+# =============================================================================
+#TMOUT=1
+#TRAPALRM() {
+#  zle reset-prompt
+#  }
+# =============================================================================
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+}
+print_epoch() { date  '+%s' }
+print_epoch() { date  '+%s' }
+
+#setopt PROMPT_SUBST
+#autoload -U colors && colors
+#export PROMPT='%n %~ %F{blue}🌿$(parse_git_branch)%f > '
+
+
+
+function Iam_at_home(){
+  local temp_var=$(echo $(git branch 2>/dev/null)) # Send the error message to not be printed.
+
+  if [ "$PWD" = "$HOME" ]; then
+    local MYDIR='\uf015'
+    echo $MYDIR
+  elif [ "$PWD" = "$HOME/Desktop" ]; then
+     local MYDIR='\uf498'
+    echo $MYDIR
+
+#  elif [ -z $(git branch >/dev/null 2>/dev/null) ]; then
+  elif [ ! -z "${temp_var}" ]; then
+     local MYDIR='\ue5fb'
+      echo $MYDIR
+  else
+     local MYDIR='\uf07b'
+    echo $MYDIR
+  fi
+
+  unset MYDIR
+}
+
+function running_docker(){
+  local temp_var=$(echo $(docker container ps -a -q))
+  local temp_current_running_container_name=$(echo $(docker ps --format '{{.Names}}'))
+
+  if [ -z "${temp_var}" ]; then
+    echo ""
+  else
+    local CONTAINER_IS_RUNNING='\ue7b0'
+    echo "$CONTAINER_IS_RUNNING (${temp_current_running_container_name})"
+  fi
+}
+
+
+# =============================================================================
+zmodload zsh/datetime
+
+prompt_preexec() {
+  prompt_prexec_realtime=${EPOCHREALTIME}
+}
+
+prompt_precmd() {
+  if (( prompt_prexec_realtime )); then
+    local -rF elapsed_realtime=$(( EPOCHREALTIME - prompt_prexec_realtime ))
+    local -rF s=$(( elapsed_realtime%60 ))
+    local -ri elapsed_s=${elapsed_realtime}
+    local -ri m=$(( (elapsed_s/60)%60 ))
+    local -ri h=$(( elapsed_s/3600 ))
+    if (( h > 0 )); then
+      printf -v prompt_elapsed_time '%ih%im' ${h} ${m}
+    elif (( m > 0 )); then
+      printf -v prompt_elapsed_time '%im%is' ${m} ${s}
+    elif (( s >= 10 )); then
+      printf -v prompt_elapsed_time '%.2fs' ${s} # 12.34s
+    elif (( s >= 1 )); then
+      printf -v prompt_elapsed_time '%.3fs' ${s} # 1.234s
+    else
+      printf -v prompt_elapsed_time '%ims' $(( s*1000 ))
+    fi
+    unset prompt_prexec_realtime
+ else
+    # Clear previous result when hitting ENTER with no command to execute
+    unset prompt_elapsed_time
+  fi
+}
+
+setopt nopromptbang prompt{cr,percent,sp,subst}
+
+autoload -Uz add-zsh-hook
+add-zsh-hook preexec prompt_preexec
+add-zsh-hook precmd prompt_precmd
+
+#RPS1='%F{cyan}${prompt_elapsed_time}%F{none}'
+
+# =============================================================================
+
+
+function dice()
+{
+    DICE_ARRAY[1]=$'\uf6c9';
+    DICE_ARRAY[2]=$'\uf6ca';
+    DICE_ARRAY[3]=$'\uf6cb';
+    DICE_ARRAY[4]=$'\uf6cc';
+    DICE_ARRAY[5]=$'\uf6cd';
+    DICE_ARRAY[6]=$'\uf6ce';
+
+    nb=$[$RANDOM % 6 + 1];
+    #RPROMPT="${DICE_ARRAY[$nb]}";
+    TEMP_DIC="${DICE_ARRAY[$nb]}";
+    psvar[1]=${TEMP_DIC}
+
+}
+
+# =============================================================================
+# We adding here the zsh hook that specified as function type, we can pass variables using %v, if you want to use other variable use %2v %3v
+# See more here: https://stackoverflow.com/questions/36192523/zsh-prompt-customization
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd dice
+#setopt promptsubst
+PROMPT=$'\n'
+PROMPT+=$'%F{%(0?.green.red)} $(Iam_at_home) $(running_docker) => %f'
+PROMPT+=$'\n =>'
+RPROMPT=$'%F{cyan}\ufa1a${prompt_elapsed_time} %F{16}$(date "+%F %T %z")%F{none} %v'
+# =============================================================================
+# PROMPT=$'\n'
+# PS1+=$'%F{blue}\u256D\U2500${OS_ICON} %F{208}%n%f${AT_SYMPOLE} ${MAC_ICON}  %F{226}%m%  on %F{30}%~%f $(prompt_char) ${BATTARY_VARIABLE} ${CHECKER}${ELLAPS_TIME}$(print_epoch)'
+# PS1+=$'\n%F{blue}\u2570\U2500%F{blue}\u2192%{$reset_color%} '
+# RPROMPT=$'%F{$SELECTED_COLOR}${SELECTED_DICE} %{$reset_color%} $(git_time_since_commit)$(check_git_prompt_info) %F{yellow}${SYNC_ICON}%{$reset_color%} %{$fg[magenta]%}[ ${Date_ICON}  %D{%b %d, %Y}- ${CLOCK_ICON}  %D{%L:%M:%S %p}]%{$reset_color%}'
+
