@@ -33,3 +33,4 @@ bin/stow_checking_script.sh
 bin
 .stow-local-ignore
 #README.md
+nonStowConfigFiles
