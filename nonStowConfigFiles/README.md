@@ -2,6 +2,7 @@
 
 Here I store the configurations that are hard to be configured by the command `stow` which are
 
+- [x] Daily customized applications
 - [x] General font directory
 - [x] Piglet and lolcat configurations with the font of ASCII
 - [x] Applications list
