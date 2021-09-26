@@ -31,6 +31,8 @@ misc
 ^/.*\.org
 bin/stow_checking_script.sh
 bin
+.bin
+stow_checking_script.sh
 .stow-local-ignore
 #README.md
 nonStowConfigFiles
