@@ -153,6 +153,37 @@ nmap k <plug>(accelerated_jk_gk_position)
 
 -- open a link in vim in browser: in linux use : xdg-open instead of open (for mac).
 -- source: "https://stackoverflow.com/questions/9458294/open-url-under-cursor-in-vim-with-browser"
---vim.cmd[[
---nnoremap <silent> gx :execute 'silent! !xdg-open ' . shellescape(expand('<cWORD>'), 1)<cr>
---]]
+-- nnoremap <silent> gx :execute 'silent! !open ' . shellescape(expand('<cWORD>'), 1)<cr>
+
+-- let path="/Applications/Safari.app", the web-link should have soome space
+-- with quotation like " www.something.com ", not "www.something.com"
+vim.cmd[[
+
+function! OpenUrlUnderCursor()
+    let path="/Applications/Firefox.app"
+    execute "normal BvEy"
+    let url=matchstr(@0, '[a-z]*:\/\/[^ >,;]*')
+    if url != ""
+        silent exec "!open -a ".path." '".url."'" | redraw!
+        echo "opened ".url
+    else
+        echo "No URL under cursor."
+    endif
+endfunction
+nmap <leader>gu :call OpenUrlUnderCursor()<CR>
+nmap gx :call OpenUrlUnderCursor()<CR>
+
+]]
+
+vim.cmd[[
+nmap <leader>gw :call Google()<CR>
+fun! Google()
+    let keyword = expand("<cword>")
+    let url = "http://www.google.com/search?q=" . keyword
+    let path="/Applications/Firefox.app"
+    "let path = "C:/Program Files/Mozilla Firefox/"
+    "exec 'silent ! path url'
+    silent exec "!open -a ".path." '".url."'" | redraw!
+endfun
+
+]]

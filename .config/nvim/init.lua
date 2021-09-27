@@ -17,3 +17,4 @@ end
 -- Configurations of the neovide
 require("modules.neovideConfig").neovide_config()
 
+

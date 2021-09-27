@@ -11,6 +11,9 @@ This is the first thing to make for the current file.,
 - Right now I am using a neovim build (5.0), build with the requirements shown here.
 
 - [Neovim build from the source](https://github.com/neovim/neovim/wiki/Building-Neovim)
+- plugin directory will be at same directory of our nvim, I have tried to change this directory, but it causes many problems. When you do a fresh installtion, try to delete the following two directories:
+  - ~/.config/plugin
+  - ~/.local/share/nvim
 
 # Creating file or directory in vim without plugin
 
@@ -18,12 +21,18 @@ You can use the following,
 
 ### Formula
 
-In the command prompt of `Nvim`, you can use the following configurations.
+1. In the command prompt of `Nvim`, you can use the following configurations.
 
 ```sh
 ! cd /directory/direcotyr_2/direcotry_3
 ! mkdir <name>
 ! touch <name>.extention
+
+```
+2. Accessing the probet to open browser
+
+```sh
+!open -a "Safari" <link, e.g www.google.com>
 
 ```
 

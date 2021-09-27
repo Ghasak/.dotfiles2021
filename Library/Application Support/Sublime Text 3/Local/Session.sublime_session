@@ -12,7 +12,7 @@
 		"/Users/ghasak.ibrahim/Documents/ALPFILES"
 	],
 	"last_version": 4113,
-	"last_window_id": 114,
+	"last_window_id": 116,
 	"log_indexing": false,
 	"settings":
 	{
@@ -204,7 +204,7 @@
 			{
 			}
 		},
-		"new_window_width": 1880.0
+		"new_window_width": 2520.0
 	},
 	"windows":
 	[
@@ -384,7 +384,7 @@
 				"height": 0.0
 			},
 			"pinned_build_system": "Packages/Python/Python.sublime-build",
-			"position": "29 0 2580 34 1880 1015 2560 0 1920 1055 ",
+			"position": "4 0 20 20 2520 1015 0 0 2560 1055 ",
 			"project": "",
 			"replace":
 			{
@@ -431,7 +431,7 @@
 			"template_settings":
 			{
 			},
-			"window_id": 114,
+			"window_id": 116,
 			"workspace_name": ""
 		}
 	],

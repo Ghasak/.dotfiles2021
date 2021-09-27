@@ -140,7 +140,7 @@ local list = {
 -- following options are the default
 require'nvim-tree'.setup {
   -- disables netrw completely
-  disable_netrw       = false,
+  disable_netrw       = false,   -- default is true, changed to allow open url with g+x , since netrw was disable
   -- hijack netrw window on startup
   hijack_netrw        = true,
   -- open the tree when running this setup function

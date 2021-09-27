@@ -17,6 +17,19 @@ stow . --verbose=1
 stow -D .
 
 ```
+# To-do
+
+Here I store the configurations that are hard to be configured by the command `stow` which are
+
+- [x] Daily customized applications
+- [x] General font directory
+- [x] Piglet and lolcat configurations with the font of ASCII
+- [x] Applications list
+- [x] Pip list
+- [x] Node-js global libraries list
+- [x] jupyterNotebook configurations
+- [x] Stow files structure for better restoration.
+- [ ] Create bash script to automate installing the necessary libraries and packages.
 
 # Restore non-stow command files
 
@@ -53,7 +66,7 @@ Figlet fonts is located at:
 
 ## List of applications dont belong to any package manager
 -  recoll mapped to */opt/local/bin/recoll* => Pdf oranizer and storring notes.
-- 
+-
 
 
 ## List of Applications I am using:
