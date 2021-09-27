@@ -8,20 +8,26 @@ I  have shifted my dotfiles now to be stored and recover with `Gnu-Stow` as a fa
 - To stow any changes use:
 ```sh
 # At current dot file
-stow . --verbose=2
-
+stow . --verbose=1
 ```
 
-- to remove any stow simylink and rest to default (no simylink)
+- To remove any stow simylink and rest to default (no simylink)
 
 ```
 stow -D .
 
 ```
 
+## List of Alfred Workflow
+
+```sh
+
+```
+
 ## List of Applications I am using:
 
 - Alacritty
+- Memory Cleaner 4.4
 - Alfred
 - Amethyst
 - AnyDesk
