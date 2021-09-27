@@ -127,20 +127,32 @@ vim.cmd[[let g:clap_theme = 'material_design_dark']]
 --vim.cmd[[let g:clap_layout = {'width': '10%', 'height': '13%', 'row': '33%', 'col': '17%'}]]
 --vim.api.nvim_set_keymap('i','<leader>cf',"<cmd>Clap filer<CR>",{noremap = true, silent = true})
 
--- Replace with the register (you need a plugin  vim-scripts/ReplaceWithRegister)
--- vim.api.nvim_set_keymap('n','<leader>cr','<Plug>ReplaceWithRegisterOperator',{noremap  = true, silent = true})
--- vim.api.nvim_set_keymap('n','<leader>crr','<Plug>ReplaceWithRegisterLine',{noremap  = true, silent = true})
--- vim.api.nvim_set_keymap('x','<leader>cr','<Plug>ReplaceWithRegisterVisual',{noremap  = true, silent = true})
+-- replace with the register (you need a plugin  vim-scripts/replacewithregister)
+-- vim.api.nvim_set_keymap('n','<leader>cr','<plug>replacewithregisteroperator',{noremap  = true, silent = true})
+-- vim.api.nvim_set_keymap('n','<leader>crr','<plug>replacewithregisterline',{noremap  = true, silent = true})
+-- vim.api.nvim_set_keymap('x','<leader>cr','<plug>replacewithregistervisual',{noremap  = true, silent = true})
 vim.cmd[[
-    nmap <Leader>cr  <Plug>ReplaceWithRegisterOperator
-    nmap <Leader>crr <Plug>ReplaceWithRegisterLine
-    xmap <Leader>cr  <Plug>ReplaceWithRegisterVisual
+    nmap <leader>cr  <plug>replacewithregisteroperator
+    nmap <leader>crr <plug>replacewithregisterline
+    xmap <leader>cr  <plug>replacewithregistervisual
 ]]
 
--- Using Vista with Clap to see all the functions definitions and their implementation,
-vim.api.nvim_set_keymap('n','<leader>vt','<cmd>Clap tags<CR>',{noremap  = true, silent = true})
-vim.api.nvim_set_keymap('i','<leader>vt','<cmd>Clap tags<CR>',{noremap  = true, silent = true})
+-- using vista with clap to see all the functions definitions and their implementation,
+vim.api.nvim_set_keymap('n','<leader>vt','<cmd>clap tags<cr>',{noremap  = true, silent = true})
+vim.api.nvim_set_keymap('i','<leader>vt','<cmd>clap tags<cr>',{noremap  = true, silent = true})
 
 -- close windows without affecting other buffers
-vim.api.nvim_set_keymap('n','<leader>w','<cmd>Bdelete<CR>',{noremap  = true, silent = false})
+vim.api.nvim_set_keymap('n','<leader>w','<cmd>bdelete<cr>',{noremap  = true, silent = false})
 
+
+--  mapping j and k with  vim plugin acceleration (need rhysd/accelerated-jk plugin)
+vim.cmd[[
+nmap j <plug>(accelerated_jk_gj_position)
+nmap k <plug>(accelerated_jk_gk_position)
+]]
+
+-- open a link in vim in browser: in linux use : xdg-open instead of open (for mac).
+-- source: "https://stackoverflow.com/questions/9458294/open-url-under-cursor-in-vim-with-browser"
+--vim.cmd[[
+--nnoremap <silent> gx :execute 'silent! !xdg-open ' . shellescape(expand('<cWORD>'), 1)<cr>
+--]]

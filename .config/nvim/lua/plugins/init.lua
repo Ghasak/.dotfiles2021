@@ -253,12 +253,19 @@ require('packer').startup({function()
 
   }
     -- Nvim-Tree for navigation
-    use {"kyazdani42/nvim-tree.lua",
-    config = function ()
-      vim.g.nvim_tree_indent_markers = 1
-      require("plugins.configs.myNvimTree")
-    end
-  }
+    use {
+    'kyazdani42/nvim-tree.lua',
+    requires = 'kyazdani42/nvim-web-devicons',
+    config = function()
+          require("plugins.configs.myNvimTree")
+        end}
+
+--     use {"kyazdani42/nvim-tree.lua",
+--     config = function ()
+--       vim.g.nvim_tree_indent_markers = 1
+--       require("plugins.configs.myNvimTree")
+--     end
+--   }
 
   -- Ctrl + P searching
   use {'ctrlpvim/ctrlp.vim',
@@ -316,43 +323,43 @@ require('packer').startup({function()
     use{'mhinz/vim-signify'}
 
 -- ===========================================================================
---                          Others Plugins
+--                          Other Plugins
 -- ===========================================================================
-    -- At the moment I am using spell checking from coc, only
-   --  use {'neoclide/coc.nvim', branch = 'release',
-   --  setup = function()
-   --       require("core.utils").packer_lazy_load "vim-matchup"
-   --    end,
-   --  }
+      -- At the moment I am using spell checking from coc, only
+      --  use {'neoclide/coc.nvim', branch = 'release',
+      --  setup = function()
+      --       require("core.utils").packer_lazy_load "vim-matchup"
+      --    end,
+      --  }
 
-   --  -- Spell Checker
-   -- Spell checking
-    use{'kamykn/spelunker.vim',
-        config = function ()
-            require("plugins.configs.spellChecking").setup()
-        end
-        }
-   -- configure
-    use {
-          'lewis6991/spellsitter.nvim',
-          config = function()
-            require('spellsitter').setup()
+      --  -- Spell Checker
+      -- Spell checking
+      use{'kamykn/spelunker.vim',
+          config = function ()
+              require("plugins.configs.spellChecking").setup()
           end
-        }
+      }
+      -- configure
+      use {
+      'lewis6991/spellsitter.nvim',
+          config = function()
+              require('spellsitter').setup()
+          end
+      }
 
-    -- This is necessary to create popmenu to the spell checking
-    use {'kamykn/popup-menu.nvim'}
-    -- Using next word
-    --  use{'prabirshrestha/asyncomplete.vim'}
-    --  use{'prabirshrestha/async.vim'}
-    --  use{'high-moctane/asyncomplete-nextword.vim'}
-    -- Replace word with register
-    use {'vim-scripts/ReplaceWithRegister'}
-   --  -- Copy and paste from clipboard into your nvim
-    use {'christoomey/vim-system-copy'}
-
-
-
+      -- This is necessary to create popmenu to the spell checking
+      use {'kamykn/popup-menu.nvim'}
+      -- Using next word
+      --  use{'prabirshrestha/asyncomplete.vim'}
+      --  use{'prabirshrestha/async.vim'}
+      --  use{'high-moctane/asyncomplete-nextword.vim'}
+      -- Replace word with register
+      use {'vim-scripts/ReplaceWithRegister'}
+      --  -- Copy and paste from clipboard into your nvim
+      use {'christoomey/vim-system-copy'}
+      -- Using accelerator for j and k
+      -- Source: https://github.com/rhysd/accelerated-jk
+      use {"rhysd/accelerated-jk"}
 end,
 -- ===========================================================================
 --             Packer Feature (floating window and profiling )
@@ -361,7 +368,6 @@ end,
 config = {
   display = {
     open_fn =  require('packer.util').float,
-
 
   },
 

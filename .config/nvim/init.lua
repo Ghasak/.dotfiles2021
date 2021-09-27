@@ -1,4 +1,4 @@
-
+-- following options are the default
 local init_modules = {
   "core",
   "plugins",
@@ -13,7 +13,6 @@ for _, module in ipairs(init_modules) do
     error("Error in loading modules ...< " .. module .. " > " .. "\n\n" .. err)
   end
 end
-
 
 -- Configurations of the neovide
 require("modules.neovideConfig").neovide_config()
