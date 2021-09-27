@@ -1,0 +1,40 @@
+{
+    "initial_working_directory": "~",
+    "font_size_points": 16,
+    "editor_theme": "rscodeio",
+    "posix_terminal_shell": "bash",
+    "highlight_selected_line": true,
+    "show_indent_guides": true,
+    "highlight_r_function_calls": true,
+    "panes": {
+        "quadrants": [
+            "Source",
+            "TabSet1",
+            "Console",
+            "TabSet2"
+        ],
+        "tabSet1": [
+            "Environment",
+            "History",
+            "Connections",
+            "Build",
+            "VCS",
+            "Tutorial",
+            "Presentation"
+        ],
+        "tabSet2": [
+            "Files",
+            "Plots",
+            "Packages",
+            "Help",
+            "Viewer"
+        ],
+        "hiddenTabSet": [],
+        "console_left_on_top": false,
+        "console_right_on_top": true,
+        "additional_source_columns": 0
+    },
+    "python_type": "system",
+    "python_version": "3.8.2",
+    "python_path": "/usr/bin/python3"
+}

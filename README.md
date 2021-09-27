@@ -1,11 +1,11 @@
 
-#  My dot-files configuration and setup (for MACBOOK Setups):
+# Gnu-Stow restore my dot-files configuration and setup (for MACBOOK Setups):
 
 I  have shifted my dotfiles now to be stored and recover with `Gnu-Stow` as a farm of symilinks.
-
-- You must be inside the dotfile directory to allow `stow` to intract with the home directory  (parent directory).
-
+- [import] You must be inside the dotfile directory to allow `stow` to intract with the home directory (parent directory).
+- When you stow files, ensure the directory of recovering the files is empty, otherwise (stow) command will not work.
 - To stow any changes use:
+
 ```sh
 # At current dot file
 stow . --verbose=1
@@ -18,11 +18,43 @@ stow -D .
 
 ```
 
-## List of Alfred Workflow
+# Restore non-stow command files
+
+To restore the files, remove the (application name -) of each directory and store them to where they belong:
+
+## Alfred workflow directory
+
+Alfred workflow is located at:
 
 ```sh
+*~/Library/Application Support/Alfred/Alfred.alfredpreferences/workflows/*
 
 ```
+
+## MacBook Fonts
+
+Macbook main fonts for daily usage.
+
+```sh
+/Library/Fonts
+
+```
+
+## Figlet Fonts
+
+Figlet fonts is located at:
+
+```sh
+/usr/local/Cellar/figlet/2.2.5/share/figlet/fonts*
+
+```
+
+# Applications and Libraries
+
+## List of applications dont belong to any package manager
+-  recoll mapped to */opt/local/bin/recoll* => Pdf oranizer and storring notes.
+- 
+
 
 ## List of Applications I am using:
 
