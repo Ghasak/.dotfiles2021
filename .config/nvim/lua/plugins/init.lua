@@ -131,6 +131,22 @@ require('packer').startup({function()
     end
   }
 
+  -- sidebar.nvim
+  use {'GustavoKatel/sidebar.nvim',
+        config = function()
+              require("sidebar-nvim").setup({
+                      disable_default_keybindings = 0,
+                      bindings = nil,
+                      open = false,
+                      side = "right",
+                      initial_width = 35,
+                      update_interval = 1000,
+                      sections = { "datetime", "git-status", "lsp-diagnostics" },
+                      section_separator = "-----"
+              })
+        end
+    }
+
 -- ===========================================================================
 -- 	                       Aesthetics Plugins
 -- ===========================================================================
@@ -308,6 +324,15 @@ require('packer').startup({function()
     config = function()
       require("plugins.configs.dashboard").setup()
     end,
+  }
+
+  -- vim-eftt (highlight the f/t/F/T mappings)
+  -- Source, https://github.com/hrsh7th/vim-eft
+  use{"hrsh7th/vim-eft",
+    config = function ()
+      require("plugins.configs.myVim_eft").setup()
+    end
+
   }
 
 

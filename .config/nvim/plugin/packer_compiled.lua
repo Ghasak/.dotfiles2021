@@ -292,6 +292,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ghasak.ibrahim/.local/share/nvim/site/pack/packer/start/rnvimr"
   },
+  ["sidebar.nvim"] = {
+    config = { "\27LJ\2\nä\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\rsections\1\4\0\0\rdatetime\15git-status\20lsp-diagnostics\1\0\6 disable_default_keybindings\3\0\18initial_width\3#\20update_interval\3è\a\topen\1\tside\nright\22section_separator\n-----\nsetup\17sidebar-nvim\frequire\0" },
+    loaded = true,
+    path = "/Users/ghasak.ibrahim/.local/share/nvim/site/pack/packer/start/sidebar.nvim"
+  },
   ["spellsitter.nvim"] = {
     config = { "\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16spellsitter\frequire\0" },
     loaded = true,
@@ -337,6 +342,11 @@ _G.packer_plugins = {
   ["vim-devicons"] = {
     loaded = true,
     path = "/Users/ghasak.ibrahim/.local/share/nvim/site/pack/packer/start/vim-devicons"
+  },
+  ["vim-eft"] = {
+    config = { "\27LJ\2\nG\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\30plugins.configs.myVim_eft\frequire\0" },
+    loaded = true,
+    path = "/Users/ghasak.ibrahim/.local/share/nvim/site/pack/packer/start/vim-eft"
   },
   ["vim-floaterm"] = {
     loaded = true,
@@ -384,13 +394,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Setup for: vim-matchup
-time([[Setup for vim-matchup]], true)
-try_loadstring("\27LJ\2\nS\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\16vim-matchup\21packer_lazy_load\15core.utils\frequire\0", "setup", "vim-matchup")
-time([[Setup for vim-matchup]], false)
-time([[packadd for vim-matchup]], true)
-vim.cmd [[packadd vim-matchup]]
-time([[packadd for vim-matchup]], false)
 -- Setup for: nvim-lspinstall
 time([[Setup for nvim-lspinstall]], true)
 try_loadstring("\27LJ\2\n/\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\16silent! e %\bcmd\bvimy\1\0\4\0\a\0\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\0016\0\4\0009\0\5\0003\2\6\0)\3\0\0B\0\3\1K\0\1\0\0\rdefer_fn\bvim\20nvim-lspinstall\21packer_lazy_load\15core.utils\frequire\0", "setup", "nvim-lspinstall")
@@ -398,6 +401,69 @@ time([[Setup for nvim-lspinstall]], false)
 time([[packadd for nvim-lspinstall]], true)
 vim.cmd [[packadd nvim-lspinstall]]
 time([[packadd for nvim-lspinstall]], false)
+-- Setup for: vim-matchup
+time([[Setup for vim-matchup]], true)
+try_loadstring("\27LJ\2\nS\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\16vim-matchup\21packer_lazy_load\15core.utils\frequire\0", "setup", "vim-matchup")
+time([[Setup for vim-matchup]], false)
+time([[packadd for vim-matchup]], true)
+vim.cmd [[packadd vim-matchup]]
+time([[packadd for vim-matchup]], false)
+-- Config for: sidebar.nvim
+time([[Config for sidebar.nvim]], true)
+try_loadstring("\27LJ\2\nä\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\rsections\1\4\0\0\rdatetime\15git-status\20lsp-diagnostics\1\0\6 disable_default_keybindings\3\0\18initial_width\3#\20update_interval\3è\a\topen\1\tside\nright\22section_separator\n-----\nsetup\17sidebar-nvim\frequire\0", "config", "sidebar.nvim")
+time([[Config for sidebar.nvim]], false)
+-- Config for: ctrlp.vim
+time([[Config for ctrlp.vim]], true)
+try_loadstring("\27LJ\2\n˜\1\0\0\4\0\3\0\0066\0\0\0009\0\1\0\18\1\0\0'\3\2\0B\1\2\1K\0\1\0u          let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']\n        \bcmd\bvim\0", "config", "ctrlp.vim")
+time([[Config for ctrlp.vim]], false)
+-- Config for: spellsitter.nvim
+time([[Config for spellsitter.nvim]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16spellsitter\frequire\0", "config", "spellsitter.nvim")
+time([[Config for spellsitter.nvim]], false)
+-- Config for: dashboard-nvim
+time([[Config for dashboard-nvim]], true)
+try_loadstring("\27LJ\2\nG\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\30plugins.configs.dashboard\frequire\0", "config", "dashboard-nvim")
+time([[Config for dashboard-nvim]], false)
+-- Config for: spelunker.vim
+time([[Config for spelunker.vim]], true)
+try_loadstring("\27LJ\2\nK\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\"plugins.configs.spellChecking\frequire\0", "config", "spelunker.vim")
+time([[Config for spelunker.vim]], false)
+-- Config for: symbols-outline.nvim
+time([[Config for symbols-outline.nvim]], true)
+try_loadstring("\27LJ\2\nM\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\tinit%plugins.configs.mySymbolsOutline\frequire\0", "config", "symbols-outline.nvim")
+time([[Config for symbols-outline.nvim]], false)
+-- Config for: vim-sneak
+time([[Config for vim-sneak]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\26plugins.configs.sneak\frequire\0", "config", "vim-sneak")
+time([[Config for vim-sneak]], false)
+-- Config for: blamer.nvim
+time([[Config for blamer.nvim]], true)
+try_loadstring("\27LJ\2\nQ\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\18BlamerSetting plugins.configs.myGitBlamer\frequire\0", "config", "blamer.nvim")
+time([[Config for blamer.nvim]], false)
+-- Config for: undotree
+time([[Config for undotree]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0%plugins.configs.myUndoTreeConfig\frequire\0", "config", "undotree")
+time([[Config for undotree]], false)
+-- Config for: bufferline.nvim
+time([[Config for bufferline.nvim]], true)
+try_loadstring("\27LJ\2\nL\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup#plugins.configs.myBufferConfig\frequire\0", "config", "bufferline.nvim")
+time([[Config for bufferline.nvim]], false)
+-- Config for: rnvimr
+time([[Config for rnvimr]], true)
+try_loadstring("\27LJ\2\nF\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nStyle\29plugins.configs.myRanger\frequire\0", "config", "rnvimr")
+time([[Config for rnvimr]], false)
+-- Config for: vim-cool
+time([[Config for vim-cool]], true)
+try_loadstring("\27LJ\2\n2\0\0\2\0\3\0\0056\0\0\0009\0\1\0)\1\1\0=\1\2\0K\0\1\0\21CoolTotalMatches\6g\bvim\0", "config", "vim-cool")
+time([[Config for vim-cool]], false)
+-- Config for: glow.nvim
+time([[Config for glow.nvim]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\31plugins.configs.myGlowMark\frequire\0", "config", "glow.nvim")
+time([[Config for glow.nvim]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0 plugins.configs.myTelescope\frequire\0", "config", "telescope.nvim")
+time([[Config for telescope.nvim]], false)
 -- Config for: neoscroll.nvim
 time([[Config for neoscroll.nvim]], true)
 try_loadstring("\27LJ\2\nH\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\14neoscroll\27plugins.configs.others\frequire\0", "config", "neoscroll.nvim")
@@ -406,58 +472,10 @@ time([[Config for neoscroll.nvim]], false)
 time([[Config for nvim-tree.lua]], true)
 try_loadstring("\27LJ\2\n:\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\31plugins.configs.myNvimTree\frequire\0", "config", "nvim-tree.lua")
 time([[Config for nvim-tree.lua]], false)
--- Config for: rnvimr
-time([[Config for rnvimr]], true)
-try_loadstring("\27LJ\2\nF\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nStyle\29plugins.configs.myRanger\frequire\0", "config", "rnvimr")
-time([[Config for rnvimr]], false)
--- Config for: undotree
-time([[Config for undotree]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0%plugins.configs.myUndoTreeConfig\frequire\0", "config", "undotree")
-time([[Config for undotree]], false)
--- Config for: glow.nvim
-time([[Config for glow.nvim]], true)
-try_loadstring("\27LJ\2\n:\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\31plugins.configs.myGlowMark\frequire\0", "config", "glow.nvim")
-time([[Config for glow.nvim]], false)
--- Config for: spellsitter.nvim
-time([[Config for spellsitter.nvim]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16spellsitter\frequire\0", "config", "spellsitter.nvim")
-time([[Config for spellsitter.nvim]], false)
--- Config for: blamer.nvim
-time([[Config for blamer.nvim]], true)
-try_loadstring("\27LJ\2\nQ\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\18BlamerSetting plugins.configs.myGitBlamer\frequire\0", "config", "blamer.nvim")
-time([[Config for blamer.nvim]], false)
--- Config for: ctrlp.vim
-time([[Config for ctrlp.vim]], true)
-try_loadstring("\27LJ\2\n˜\1\0\0\4\0\3\0\0066\0\0\0009\0\1\0\18\1\0\0'\3\2\0B\1\2\1K\0\1\0u          let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']\n        \bcmd\bvim\0", "config", "ctrlp.vim")
-time([[Config for ctrlp.vim]], false)
--- Config for: spelunker.vim
-time([[Config for spelunker.vim]], true)
-try_loadstring("\27LJ\2\nK\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\"plugins.configs.spellChecking\frequire\0", "config", "spelunker.vim")
-time([[Config for spelunker.vim]], false)
--- Config for: vim-cool
-time([[Config for vim-cool]], true)
-try_loadstring("\27LJ\2\n2\0\0\2\0\3\0\0056\0\0\0009\0\1\0)\1\1\0=\1\2\0K\0\1\0\21CoolTotalMatches\6g\bvim\0", "config", "vim-cool")
-time([[Config for vim-cool]], false)
--- Config for: dashboard-nvim
-time([[Config for dashboard-nvim]], true)
-try_loadstring("\27LJ\2\nG\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\30plugins.configs.dashboard\frequire\0", "config", "dashboard-nvim")
-time([[Config for dashboard-nvim]], false)
--- Config for: vim-sneak
-time([[Config for vim-sneak]], true)
-try_loadstring("\27LJ\2\n5\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\26plugins.configs.sneak\frequire\0", "config", "vim-sneak")
-time([[Config for vim-sneak]], false)
--- Config for: bufferline.nvim
-time([[Config for bufferline.nvim]], true)
-try_loadstring("\27LJ\2\nL\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup#plugins.configs.myBufferConfig\frequire\0", "config", "bufferline.nvim")
-time([[Config for bufferline.nvim]], false)
--- Config for: symbols-outline.nvim
-time([[Config for symbols-outline.nvim]], true)
-try_loadstring("\27LJ\2\nM\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\tinit%plugins.configs.mySymbolsOutline\frequire\0", "config", "symbols-outline.nvim")
-time([[Config for symbols-outline.nvim]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0 plugins.configs.myTelescope\frequire\0", "config", "telescope.nvim")
-time([[Config for telescope.nvim]], false)
+-- Config for: vim-eft
+time([[Config for vim-eft]], true)
+try_loadstring("\27LJ\2\nG\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\30plugins.configs.myVim_eft\frequire\0", "config", "vim-eft")
+time([[Config for vim-eft]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-lspconfig ]]
@@ -472,7 +490,7 @@ vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
 vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-cmp'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au BufRead * ++once lua require("packer.load")({'nvim-treesitter', 'indent-blankline.nvim', 'nvim-colorizer.lua'}, { event = "BufRead *" }, _G.packer_plugins)]]
+vim.cmd [[au BufRead * ++once lua require("packer.load")({'indent-blankline.nvim', 'nvim-colorizer.lua', 'nvim-treesitter'}, { event = "BufRead *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles(1) end

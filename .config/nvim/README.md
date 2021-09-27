@@ -134,6 +134,63 @@ Commands
 You can use `Bdelete` we will map this to <leader>w, this will allow to close
 the given window without closing all the other buffers.
 
+## Highlight words  in vim with (f/t/F/T)
+- [vim-eft plugin](https://github.com/hrsh7th/vim-eft)
 
 
 
+## Launching time testing
+
+```sh
+─ ghasak.ibrahim   JPC02DW0YWML86 on ~/.config/nvim   
+├─ﮧ    (38m|(main|樂4 )
+╰綠﨡  vim-startuptime                                                                                                                                                                                                                                                                                                  祥:21ms  [   Sep 28, 2021-   12:42:51 AM]
+Extra options: []
+Measured: 10 times
+
+Total Average: 22.435800 msec
+Total Max:     24.060000 msec
+Total Min:     20.174000 msec
+
+  AVERAGE       MAX       MIN
+------------------------------
+11.569000 12.739000 10.341000: inits 1
+ 3.585200  4.335000  2.999000: loading plugins
+ 2.868600  3.374000  2.632000: shell init
+ 1.073000  1.277000  0.920000: sourcing vimrc file(s)
+ 0.409100  0.641000  0.355000: /usr/share/vim/vim82/plugin/netrwPlugin.vim
+ 0.329700  0.397000  0.292000: Termcap init
+ 0.240800  0.314000  0.198000: locale set
+ 0.240000  0.281000  0.225000: /usr/share/vim/vim82/plugin/logiPat.vim
+ 0.190900  0.226000  0.175000: /usr/share/vim/vim82/plugin/matchparen.vim
+ 0.180700  0.310000  0.152000: reading viminfo
+ 0.179600  0.208000  0.159000: /usr/share/vim/vim82/plugin/gzip.vim
+ 0.178100  0.230000  0.145000: $VIM/vimrc
+ 0.162300  0.217000  0.139000: /usr/share/vim/vim82/plugin/zipPlugin.vim
+ 0.128200  0.209000  0.108000: /usr/share/vim/vim82/plugin/vimballPlugin.vim
+ 0.126100  0.219000  0.105000: loading packages
+ 0.123800  0.177000  0.099000: /usr/share/vim/vim82/plugin/tohtml.vim
+ 0.120100  0.182000  0.085000: opening buffers
+ 0.114800  0.140000  0.102000: /usr/share/vim/vim82/plugin/tarPlugin.vim
+ 0.103400  0.109000  0.100000: init highlight
+ 0.099900  0.145000  0.075000: /usr/share/vim/vim82/plugin/getscriptPlugin.vim
+ 0.074000  0.078000  0.072000: Allocated generic buffers
+ 0.055400  0.072000  0.047000: $VIMRUNTIME/defaults.vim
+ 0.052900  0.113000  0.027000: /usr/share/vim/vim82/plugin/spellfile.vim
+ 0.044900  0.075000  0.034000: BufEnter autocommands
+ 0.034500  0.053000  0.029000: /usr/share/vim/vim82/plugin/manpager.vim
+ 0.033500  0.054000  0.028000: loading after plugins
+ 0.021400  0.041000  0.016000: /usr/share/vim/vim82/plugin/rrhelper.vim
+ 0.020800  0.028000  0.016000: setting raw mode
+ 0.017100  0.021000  0.015000: inits 2
+ 0.014200  0.018000  0.013000: parsing arguments
+ 0.009300  0.016000  0.007000: clearing screen
+ 0.008000  0.010000  0.006000: start termcap
+ 0.006500  0.008000  0.005000: --- VIM STARTING ---
+ 0.005700  0.011000  0.005000: window checked
+ 0.005700  0.009000  0.005000: inits 3
+ 0.004500  0.005000  0.004000: clipboard setup
+ 0.003300  0.005000  0.003000: editing files in windows
+ 0.000800  0.001000  0.000000: expanding arguments
+
+```
