@@ -109,9 +109,9 @@ Commands
 | `:GFiles [OPTS]`  | Git files (`git ls-files`)                                                            |
 | `:GFiles?`        | Git files (`git status`)                                                              |
 | `:Buffers`        | Open buffers                                                                          |
-| `:Colors`         | Color schemes                                                                         |
 | `:Ag [PATTERN]`   | [ag][ag] search result (`ALT-A` to select all, `ALT-D` to deselect all)               |
 | `:Rg [PATTERN]`   | [rg][rg] search result (`ALT-A` to select all, `ALT-D` to deselect all)               |
+| `:Colors`         | Color schemes                                                                         |
 | `:Lines [QUERY]`  | Lines in loaded buffers                                                               |
 | `:BLines [QUERY]` | Lines in the current buffer                                                           |
 | `:Tags [QUERY]`   | Tags in the project (`ctags -R`)                                                      |
@@ -194,3 +194,5 @@ Total Min:     20.174000 msec
  0.000800  0.001000  0.000000: expanding arguments
 
 ```
+
+

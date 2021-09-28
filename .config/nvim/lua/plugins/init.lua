@@ -124,6 +124,7 @@ require('packer').startup({function()
    use {"liuchengxu/vista.vim",
   }
 
+
   -- Adding symbols outline (similar to vista)
   use {'simrat39/symbols-outline.nvim',
   config = function ()
@@ -146,6 +147,24 @@ require('packer').startup({function()
               })
         end
     }
+
+  -- Code running
+  use {
+      "michaelb/sniprun",
+      run = "bash install.sh",
+      config = function()
+        require("plugins.configs.mySniprun").setup()
+      end,
+}
+  -- Code formatting
+  -- Null-ls.nvim allow to inject LSP diagnostics, code actions and more via lua.
+  use({ "jose-elias-alvarez/null-ls.nvim"})
+  use({'sbdchd/neoformat'})
+
+  -- Sending code to jupyternotebook
+  -- Source: https://github.com/untitled-ai/jupyter_ascending.vim
+  use { "untitled-ai/jupyter_ascending.vim"}
+
 
 -- ===========================================================================
 -- 	                       Aesthetics Plugins
@@ -335,6 +354,8 @@ require('packer').startup({function()
 
   }
 
+  -- vim-visual-multi (multi-cursor similar to vscode)
+  use {'mg979/vim-visual-multi', branch = 'master'}
 
 -- ===========================================================================
 --                            Git and Diff

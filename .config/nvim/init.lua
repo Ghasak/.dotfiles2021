@@ -1,5 +1,5 @@
--- following options are the default
 local init_modules = {
+  -- following options are the default
   "core",
   "plugins",
   "colors",
@@ -16,9 +16,3 @@ end
 
 -- Configurations of the neovide
 require("modules.neovideConfig").neovide_config()
-
-
-
-
-
-

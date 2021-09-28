@@ -152,7 +152,7 @@ nmap k <plug>(accelerated_jk_gk_position)
 ]]
 
 -- open a link in vim in browser: in linux use : xdg-open instead of open (for mac).
--- source: "https://stackoverflow.com/questions/9458294/open-url-under-cursor-in-vim-with-browser"
+-- source: " https://stackoverflow.com/questions/9458294/open-url-under-cursor-in-vim-with-browser "
 -- nnoremap <silent> gx :execute 'silent! !open ' . shellescape(expand('<cWORD>'), 1)<cr>
 
 -- let path="/Applications/Safari.app", the web-link should have soome space
@@ -187,3 +187,16 @@ fun! Google()
 endfun
 
 ]]
+
+
+-- Move to beginning and end of line in normal mode
+vim.api.nvim_set_keymap('n','<leader>h','<ESC>^',{noremap  = true, silent = false})
+vim.api.nvim_set_keymap('n','<leader>l','<ESC>$',{noremap  = true, silent = false})
+
+
+-- Sending code to the jupyternotebook
+vim.cmd[[
+nmap <space>gr <Plug>JupyterExecute
+nmap <space>gR <Plug>JupyterExecuteAll
+]]
+
