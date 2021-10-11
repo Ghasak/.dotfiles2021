@@ -10,7 +10,6 @@ I  have shifted my dotfiles now to be stored and recover with `Gnu-Stow` as a fa
 # At current dot file
 stow . --verbose=1
 ```
-
 - To remove any stow simylink and rest to default (no simylink)
 
 ```
@@ -29,7 +28,7 @@ Here I store the configurations that are hard to be configured by the command `s
 - [x] Node-js global libraries list
 - [x] jupyterNotebook configurations
 - [x] Stow files structure for better restoration.
-- [ ] Create bash script to automate installing the necessary libraries and packages.
+- [x] Create bash script to automate installing the necessary libraries and packages.
 
 # Restore non-stow command files
 
