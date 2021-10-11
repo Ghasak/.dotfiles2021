@@ -21,7 +21,7 @@
 require("plugins.plugins-loader").init()
 
 
-local use = require('packer').use
+
 
 require('packer').startup({function()
      -- Packer can manage itself
@@ -73,11 +73,6 @@ require('packer').startup({function()
       requires = {
         "hrsh7th/cmp-buffer",
         "octaltree/cmp-look",
-        --"hrsh7th/cmp-path",
-        --"hrsh7th/cmp-calc",
-        -- "f3fora/cmp-spell",
-        -- "hrsh7th/cmp-emoji",
-        -- "ray-x/cmp-treesitter",
       },
       event = "InsertEnter",
       config = function()
@@ -119,6 +114,17 @@ require('packer').startup({function()
       "rafamadriz/friendly-snippets",
       after = "cmp-buffer",
    }
+   use{
+        "hrsh7th/cmp-calc",
+        after = "cmp-buffer"
+   }
+
+   use{"f3fora/cmp-spell", after = "cmp-buffer"}
+   use{"hrsh7th/cmp-path" ,after = "cmp-buffer"}
+   use{"hrsh7th/cmp-emoji", after = "cmp-buffer"}
+   use{"ray-x/cmp-treesitter", after = "cmp-buffer"}
+
+
   -- tags with vista (compatible with clap)
   -- Showing all funtions and parameters in the buffer, see also <ctags>
    use {"liuchengxu/vista.vim",
@@ -164,6 +170,23 @@ require('packer').startup({function()
   -- Sending code to jupyternotebook
   -- Source: https://github.com/untitled-ai/jupyter_ascending.vim
   use { "untitled-ai/jupyter_ascending.vim"}
+
+  -- highly  performing neovim completion plugin with 9000 built-in snippets
+  -- reasons to remove: keybindings doesnt turn-off
+--   use {
+--      'ms-jpq/coq_nvim',
+--      branch = 'coq',
+--      event = "VimEnter",
+--      config = 'vim.cmd[[COQnow]]'
+--    }
+--   use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
+-- TabNine auto-compleletions
+    use {
+      "tzachar/cmp-tabnine",
+      run = "./install.sh",
+      requires = "hrsh7th/nvim-cmp",
+      after = "cmp-buffer"
+    }
 
 
 -- ===========================================================================

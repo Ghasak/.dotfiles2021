@@ -138,7 +138,6 @@ the given window without closing all the other buffers.
 - [vim-eft plugin](https://github.com/hrsh7th/vim-eft)
 
 
-
 ## Launching time testing
 
 ```sh
@@ -194,5 +193,4 @@ Total Min:     20.174000 msec
  0.000800  0.001000  0.000000: expanding arguments
 
 ```
-
 

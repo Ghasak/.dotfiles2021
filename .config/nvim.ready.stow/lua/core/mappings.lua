@@ -200,3 +200,9 @@ nmap <space>gr <Plug>JupyterExecute
 nmap <space>gR <Plug>JupyterExecuteAll
 ]]
 
+
+-- Turn-off the default key-bindings of the coq-nvim code snippets +9000
+vim.cmd[[
+    " Set recommended to false
+    let g:coq_settings = { "keymap.recommended": v:false }
+]]

@@ -152,6 +152,5 @@ end
 
 -- Language server for R
 -- I have installed first the language server supprot for R language.
-
 require'lspconfig'.r_language_server.setup{ cmd = { "R", "--slave", "-e", "languageserver::run()"}}
 
