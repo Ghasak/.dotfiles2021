@@ -22,4 +22,46 @@ async def main(connection):
         print("No current window")
 # Make a connection to iTerm2 and invoke the main function in an asyncio event loop.
 # When main returns the program terminates.
-iterm2.run_until_complete(main)
+iterm2.run_until_complete(main)a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

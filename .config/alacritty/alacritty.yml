@@ -28,7 +28,7 @@ colors:
     #env:
     #TERM: xterm-256color
 
-background_opacity: 0.95
+background_opacity: 0.80
 
 font:
   normal:
@@ -45,10 +45,10 @@ font:
     style: Regular
 
   # Point size
-  size: 15
+  size: 19
 
   offset:
-    x: -1
+    x: -3
     y: -3
   glyph_offset:
     x: 0

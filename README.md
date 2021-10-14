@@ -133,7 +133,8 @@ Figlet fonts is located at:
 
 ## List of global npm libraries:
 
-```
+```sh
+
 /usr/local/lib
 ├── asciicast2gif@0.2.1
 ├── bash-language-server@1.17.0
@@ -149,18 +150,22 @@ Figlet fonts is located at:
 ├── markdown-pdf@10.0.0
 ├── n@7.3.0
 ├── neovim@4.10.0
+├── npkill@0.8.2
 ├── npm-gui@3.1.1
-├── npm@7.21.1
+├── npm@7.24.0
 ├── pm2@5.1.0
-├── prettier@2.3.1
+├── prettier@2.4.1
 ├── pyright@1.1.165
+├── qoa@0.2.0
 ├── speed-test@2.1.0
 ├── sql-language-server@0.12.0
 ├── standard@16.0.3
 ├── taskbook@0.3.0
 ├── typescript@4.3.5
 ├── vscode-json-languageservice@4.1.4
-└── wikit@4.4.1
+├── wikit@4.4.1
+└── write-good@1.0.8
+
 
 ```
 

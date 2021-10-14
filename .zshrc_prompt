@@ -51,25 +51,25 @@ DESKTOP_TOWER_ICON=$'\uf6c4'
 SERVER_ICON=$'\u'
 GO_BACK_ARROWS_ICON=$'\u2B82'
 
-MULTILINE_FIRST_PROMPT_PREFIX=$'\u256D\U2500'      # ╭─
-MULTILINE_NEWLINE_PROMPT_PREFIX=$'\u251C\U2500'    # ├─
-MULTILINE_LAST_PROMPT_PREFIX=$'\u2570\U2500 '      # ╰─
-RULER_CHAR=$'\u2500'                               #  ─
-CARRIAGE_RETURN_ICON=$'\u21B5'                     # ↵
-PROXY_ICON=$'\u2194'                               # ↔
-VCS_REMOTE_BRANCH_ICON=$'\u2192'                   # →
-DIRENV_ICON=$'\u25BC'                              # ▼
-ETC_ICON=$'\u2699'                                 # ⚙
-VCS_UNSTAGED_ICON=$'\u25CF'                        # ●
-VCS_STASH_ICON=$'\u235F'                           # ⍟
-VCS_INCOMING_CHANGES_ICON=$'\u2193'                # ↓
-VCS_OUTGOING_CHANGES_ICON=$'\u2191'                # ↑
-VCS_REMOTE_BRANCH_ICON=$'\u2192'                   # →
-VCS_BOOKMARK_ICON=$'\u263F'                        # ☿
-LEFT_SEGMENT_SEPARATOR=$'\u2B80'                    # ⮀
-RIGHT_SEGMENT_SEPARATOR=$'\u2B82'                   # ⮂
+MULTILINE_FIRST_PROMPT_PREFIX=$'\u256D\U2500'   # ╭─
+MULTILINE_NEWLINE_PROMPT_PREFIX=$'\u251C\U2500' # ├─
+MULTILINE_LAST_PROMPT_PREFIX=$'\u2570\U2500 '   # ╰─
+RULER_CHAR=$'\u2500'                            #  ─
+CARRIAGE_RETURN_ICON=$'\u21B5'                  # ↵
+PROXY_ICON=$'\u2194'                            # ↔
+VCS_REMOTE_BRANCH_ICON=$'\u2192'                # →
+DIRENV_ICON=$'\u25BC'                           # ▼
+ETC_ICON=$'\u2699'                              # ⚙
+VCS_UNSTAGED_ICON=$'\u25CF'                     # ●
+VCS_STASH_ICON=$'\u235F'                        # ⍟
+VCS_INCOMING_CHANGES_ICON=$'\u2193'             # ↓
+VCS_OUTGOING_CHANGES_ICON=$'\u2191'             # ↑
+VCS_REMOTE_BRANCH_ICON=$'\u2192'                # →
+VCS_BOOKMARK_ICON=$'\u263F'                     # ☿
+LEFT_SEGMENT_SEPARATOR=$'\u2B80'                # ⮀
+RIGHT_SEGMENT_SEPARATOR=$'\u2B82'               # ⮂
 MEMEORY=$'\uf85a'
-GIT_BRANCH_ICON=$'\ue0a0'                           #  => \uf418
+GIT_BRANCH_ICON=$'\ue0a0' #  => \uf418
 
 # =============================================================================
 # Load version control information
@@ -95,8 +95,8 @@ else
     limegreen="%F{green}"
 fi
 
-COLOR_ARRY=(red blue yellow green )
-RANDOM_COLOR=$((1 + RANDOM % ${#COLOR_ARRY[@]}));
+COLOR_ARRY=(red blue yellow green)
+RANDOM_COLOR=$((1 + RANDOM % ${#COLOR_ARRY[@]}))
 SELECTED_COLOR=$(echo "${COLOR_ARRY[$RANDOM_COLOR]}")
 #SELECTED_DICE=$(echo ${DICE_ARRAY[RANDOM_DICE]})
 ######
@@ -182,13 +182,11 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[grey]%} ✱"
 # ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%} ═"
 # ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} ✭"
 
-
-
 # Git sometimes goes into a detached head state. git_prompt_info doesn't
 # return anything in this case. So wrap it in another function and check
 # for an empty string.
 function check_git_prompt_info() {
-    if git rev-parse --git-dir > /dev/null 2>&1; then
+    if git rev-parse --git-dir >/dev/null 2>&1; then
         if [[ -z $(git_prompt_info) ]]; then
             echo "%{$fg[magenta]%}detached-head%{$reset_color%})"
         else
@@ -207,7 +205,7 @@ function check_git_prompt_info() {
 # Determine if we are using a gemset.
 function rvm_gemset() {
     if hash rvm 2>/dev/null; then
-        GEMSET=`rvm gemset list | grep '=>' | cut -b4-`
+        GEMSET=$(rvm gemset list | grep '=>' | cut -b4-)
         if [[ -n $GEMSET ]]; then
             echo "%{$fg[yellow]%}$GEMSET%{$reset_color%}|"
         fi
@@ -217,24 +215,24 @@ function rvm_gemset() {
 # Determine the time since last commit. If branch is clean,
 # use a neutral color, otherwise colors will vary according to time.
 function git_time_since_commit() {
-    if git rev-parse --git-dir > /dev/null 2>&1; then
+    if git rev-parse --git-dir >/dev/null 2>&1; then
         # Only proceed if there is actually a commit.
-        if [[ $(git log 2>&1 > /dev/null | grep -c "^fatal: bad default revision") == 0 ]]; then
+        if [[ $(git log 2>&1 >/dev/null | grep -c "^fatal: bad default revision") == 0 ]]; then
             # Get the last commit.
-            last_commit=`git log --pretty=format:'%at' -1 2> /dev/null`
-            now=`date +%s`
-            seconds_since_last_commit=$((now-last_commit))
+            last_commit=$(git log --pretty=format:'%at' -1 2>/dev/null)
+            now=$(date +%s)
+            seconds_since_last_commit=$((now - last_commit))
 
             # Totals
             MINUTES=$((seconds_since_last_commit / 60))
-            HOURS=$((seconds_since_last_commit/3600))
+            HOURS=$((seconds_since_last_commit / 3600))
 
             # Sub-hours and sub-minutes
             DAYS=$((seconds_since_last_commit / 86400))
             SUB_HOURS=$((HOURS % 24))
             SUB_MINUTES=$((MINUTES % 60))
 
-            if [[ -n $(git status -s 2> /dev/null) ]]; then
+            if [[ -n $(git status -s 2>/dev/null) ]]; then
                 if [ "$MINUTES" -gt 30 ]; then
                     COLOR="$ZSH_THEME_GIT_TIME_SINCE_COMMIT_LONG"
                 elif [ "$MINUTES" -gt 10 ]; then
@@ -272,7 +270,6 @@ function git_time_since_commit() {
 #    echo "Time Elapsed : ${min} minutes and ${secs} seconds."
 #}
 
-
 # =============================================================================
 # Time at the session started
 # =============================================================================
@@ -307,30 +304,28 @@ function git_time_since_commit() {
 #autoload -U colors && colors
 #export PROMPT='%n %~ %F{blue}🌿$(parse_git_branch)%f > '
 
-
-
 # =============================================================================
 #                       Checking directry and flip the icon
 # =============================================================================
-function Iam_at_home(){
-  local temp_var=$(echo $(git branch 2>/dev/null)) # Send the error message to not be printed.
+function Iam_at_home() {
+    local temp_var=$(echo $(git branch 2>/dev/null)) # Send the error message to not be printed.
 
-  if [ "$PWD" = "$HOME" ]; then
-    local MYDIR='\uf015'
-    echo $MYDIR
-  elif [ "$PWD" = "$HOME/Desktop" ]; then
-     local MYDIR='\uf498'
-    echo $MYDIR
-#  elif [ -z $(git branch >/dev/null 2>/dev/null) ]; then
-  elif [ ! -z "${temp_var}" ]; then
-     local MYDIR='\uf408' #'\ue5fb'
-      echo $MYDIR
-  else
-    local MYDIR='\uf115'
-    echo $MYDIR
-  fi
+    if [ "$PWD" = "$HOME" ]; then
+        local MYDIR='\uf015'
+        echo $MYDIR
+    elif [ "$PWD" = "$HOME/Desktop" ]; then
+        local MYDIR='\uf498'
+        echo $MYDIR
+        #  elif [ -z $(git branch >/dev/null 2>/dev/null) ]; then
+    elif [ ! -z "${temp_var}" ]; then
+        local MYDIR='\uf408' #'\ue5fb'
+        echo $MYDIR
+    else
+        local MYDIR='\uf115'
+        echo $MYDIR
+    fi
 
-  unset MYDIR
+    unset MYDIR
 }
 
 # =============================================================================
@@ -341,32 +336,32 @@ function Iam_at_home(){
 zmodload zsh/datetime
 
 prompt_preexec() {
-  prompt_prexec_realtime=${EPOCHREALTIME}
+    prompt_prexec_realtime=${EPOCHREALTIME}
 }
 
 prompt_precmd() {
-  if (( prompt_prexec_realtime )); then
-    local -rF elapsed_realtime=$(( EPOCHREALTIME - prompt_prexec_realtime ))
-    local -rF s=$(( elapsed_realtime%60 ))
-    local -ri elapsed_s=${elapsed_realtime}
-    local -ri m=$(( (elapsed_s/60)%60 ))
-    local -ri h=$(( elapsed_s/3600 ))
-    if (( h > 0 )); then
-      printf -v prompt_elapsed_time '%ih%im' ${h} ${m}
-    elif (( m > 0 )); then
-      printf -v prompt_elapsed_time '%im%is' ${m} ${s}
-    elif (( s >= 10 )); then
-      printf -v prompt_elapsed_time '%.2fs' ${s} # 12.34s
-    elif (( s >= 1 )); then
-      printf -v prompt_elapsed_time '%.3fs' ${s} # 1.234s
+    if ((prompt_prexec_realtime)); then
+        local -rF elapsed_realtime=$((EPOCHREALTIME - prompt_prexec_realtime))
+        local -rF s=$((elapsed_realtime % 60))
+        local -ri elapsed_s=${elapsed_realtime}
+        local -ri m=$(((elapsed_s / 60) % 60))
+        local -ri h=$((elapsed_s / 3600))
+        if ((h > 0)); then
+            printf -v prompt_elapsed_time '%ih%im' ${h} ${m}
+        elif ((m > 0)); then
+            printf -v prompt_elapsed_time '%im%is' ${m} ${s}
+        elif ((s >= 10)); then
+            printf -v prompt_elapsed_time '%.2fs' ${s} # 12.34s
+        elif ((s >= 1)); then
+            printf -v prompt_elapsed_time '%.3fs' ${s} # 1.234s
+        else
+            printf -v prompt_elapsed_time '%ims' $((s * 1000))
+        fi
+        unset prompt_prexec_realtime
     else
-      printf -v prompt_elapsed_time '%ims' $(( s*1000 ))
+        # Clear previous result when hitting ENTER with no command to execute
+        unset prompt_elapsed_time
     fi
-    unset prompt_prexec_realtime
- else
-    # Clear previous result when hitting ENTER with no command to execute
-    unset prompt_elapsed_time
-  fi
 }
 
 setopt nopromptbang prompt{cr,percent,sp,subst}
@@ -379,19 +374,17 @@ add-zsh-hook precmd prompt_precmd
 
 # =============================================================================
 
+function dice() {
+    DICE_ARRAY[1]=$'\uf6c9'
+    DICE_ARRAY[2]=$'\uf6ca'
+    DICE_ARRAY[3]=$'\uf6cb'
+    DICE_ARRAY[4]=$'\uf6cc'
+    DICE_ARRAY[5]=$'\uf6cd'
+    DICE_ARRAY[6]=$'\uf6ce'
 
-function dice()
-{
-    DICE_ARRAY[1]=$'\uf6c9';
-    DICE_ARRAY[2]=$'\uf6ca';
-    DICE_ARRAY[3]=$'\uf6cb';
-    DICE_ARRAY[4]=$'\uf6cc';
-    DICE_ARRAY[5]=$'\uf6cd';
-    DICE_ARRAY[6]=$'\uf6ce';
-
-    nb=$[$RANDOM % 6 + 1];
+    nb=$(($RANDOM % 6 + 1))
     #RPROMPT="${DICE_ARRAY[$nb]}";
-    TEMP_DIC="${DICE_ARRAY[$nb]}";
+    TEMP_DIC="${DICE_ARRAY[$nb]}"
     psvar[1]=${TEMP_DIC}
 
 }
@@ -408,21 +401,21 @@ add-zsh-hook precmd dice
 # =============================================================================
 #                      Battery checking status
 # =============================================================================
-function battary_charge_percentage(){
-  if [ -f ~/.GScript/.batcharge.py ]; then
-    BATTARY_STATUS=$(echo "$(~/.GScript/.batcharge.py)" | awk '{print $1}')
-    BATTARY_PERCENTAGE=$(echo "$(~/.GScript/.batcharge.py)" | awk '{print $2 $3}')
-    #BATTARY_VARIABLE=$(echo "%F{#9370DB}$(~/.GScript/.batcharge.py)% %{$reset_color%}")
-    BATTARY_VARIABLE=$(echo "%F{#9370DB}$BATTARY_STATUS %{$reset_color%}%F{red}  $BATTARY_PERCENTAGE %% %{$reset_color%}")
+function battary_charge_percentage() {
+    if [ -f ~/.GScript/.batcharge.py ]; then
+        BATTARY_STATUS=$(echo "$(~/.GScript/.batcharge.py)" | awk '{print $1}')
+        BATTARY_PERCENTAGE=$(echo "$(~/.GScript/.batcharge.py)" | awk '{print $2 $3}')
+        #BATTARY_VARIABLE=$(echo "%F{#9370DB}$(~/.GScript/.batcharge.py)% %{$reset_color%}")
+        BATTARY_VARIABLE=$(echo "%F{#9370DB}$BATTARY_STATUS %{$reset_color%}%F{red}  $BATTARY_PERCENTAGE %% %{$reset_color%}")
 
-    #psvar[2]=$(echo "${BATTARY_VARIABLE}")
-   # psvar[2]=$(echo "$BATTARY_STATUS")
-   # psvar[3]=$(echo "$BATTARY_PERCENTAGE")
-   echo "${BATTARY_VARIABLE}"
-  else
-    BATTARY_VARIABLE=""
-   # psvar[2]=$(echo "${BATTARY_VARIABLE}")
-  fi
+        #psvar[2]=$(echo "${BATTARY_VARIABLE}")
+        # psvar[2]=$(echo "$BATTARY_STATUS")
+        # psvar[3]=$(echo "$BATTARY_PERCENTAGE")
+        echo "${BATTARY_VARIABLE}"
+    else
+        BATTARY_VARIABLE=""
+        # psvar[2]=$(echo "${BATTARY_VARIABLE}")
+    fi
 }
 
 #autoload -Uz add-zsh-hook
@@ -435,9 +428,9 @@ function battary_charge_percentage(){
 PATH=$PATH:/$HOME/zsh-git-prompt/src/.bin
 GIT_PROMPT_EXECUTABLE="haskell"
 source /Users/ghasak.ibrahim/zsh-git-prompt/zshrc.sh
-function Modified_git_status(){
-  temp_var1=$(echo $(git_super_status) | awk -F ':' '{print $2}')
-  echo "$temp_var1"
+function Modified_git_status() {
+    temp_var1=$(echo $(git_super_status) | awk -F ':' '{print $2}')
+    echo "$temp_var1"
 }
 
 # =============================================================================
@@ -445,26 +438,25 @@ function Modified_git_status(){
 #               Check the docker containers if they are running
 # =============================================================================
 
+function running_docker() {
+    local temp_var=$(echo $(docker container ps -a -q))
+    local temp_current_running_container_name=$(echo $(docker ps --format '{{.Names}}'))
 
-function running_docker(){
-  local temp_var=$(echo $(docker container ps -a -q))
-  local temp_current_running_container_name=$(echo $(docker ps --format '{{.Names}}'))
-
-  if [ -z "${temp_var}" ]; then
-    psvar[4]=""
-  else
-    How_many_containers=$(echo $(docker ps -q | wc -l))
-    if [ $How_many_containers != 0 ]; then
-      local CONTAINER_IS_RUNNING=$(for ((i = 0; i < $How_many_containers; i++)); do echo -n '\ue7b0  ' ; done | awk -F '$' '{print $1}')
+    if [ -z "${temp_var}" ]; then
+        psvar[4]=""
     else
-      local CONTAINER_IS_RUNNING=""
+        How_many_containers=$(echo $(docker ps -q | wc -l))
+        if [ $How_many_containers != 0 ]; then
+            local CONTAINER_IS_RUNNING=$(for ((i = 0; i < $How_many_containers; i++)); do echo -n '\ue7b0  '; done | awk -F '$' '{print $1}')
+        else
+            local CONTAINER_IS_RUNNING=""
+        fi
+        #local CONTAINER_IS_RUNNING=$(echo $(repeatChar '\ue7b0' $How_many_containers))
+        #echo $CONTAINER_IS_RUNNING
+        #echo "$CONTAINER_IS_RUNNING (${temp_current_running_container_name})"
+        #psvar[4]=$(echo "$CONTAINER_IS_RUNNING")
+        echo "${CONTAINER_IS_RUNNING}"
     fi
-    #local CONTAINER_IS_RUNNING=$(echo $(repeatChar '\ue7b0' $How_many_containers))
-    #echo $CONTAINER_IS_RUNNING
-    #echo "$CONTAINER_IS_RUNNING (${temp_current_running_container_name})"
-    #psvar[4]=$(echo "$CONTAINER_IS_RUNNING")
-    echo "${CONTAINER_IS_RUNNING}"
-  fi
 }
 
 #autoload -Uz add-zsh-hook
@@ -473,12 +465,12 @@ function running_docker(){
 # =============================================================================
 #                       CPU USAGE
 # =============================================================================
-function CPU_USAGE(){
-  MAX_CPU_USAGE=$(ps aux | head | sort -nrk3,3 | awk '{print $3,$11}' |head -n1 | awk '{print $1}')
-  CPU_JOB_NAME=$(ps aux | head | sort -nrk3,3 | awk '{print $3,$11}' |head -n1 | awk '{print $2}')
-  #psvar[5]=$(echo "$MAX_CPU_USAGE")
-  #psvar[6]=$(echo "${CPU_JOB_NAME##*/}") # Getting  the last part of a directory using (##*/)
-  echo " ${MAX_CPU_USAGE}%% \uf423  ${CPU_JOB_NAME##*/}"
+function CPU_USAGE() {
+    MAX_CPU_USAGE=$(ps aux | head | sort -nrk3,3 | awk '{print $3,$11}' | head -n1 | awk '{print $1}')
+    CPU_JOB_NAME=$(ps aux | head | sort -nrk3,3 | awk '{print $3,$11}' | head -n1 | awk '{print $2}')
+    #psvar[5]=$(echo "$MAX_CPU_USAGE")
+    #psvar[6]=$(echo "${CPU_JOB_NAME##*/}") # Getting  the last part of a directory using (##*/)
+    echo " ${MAX_CPU_USAGE}%% \uf423  ${CPU_JOB_NAME##*/}"
 
 }
 #autoload -Uz add-zsh-hook
@@ -486,9 +478,9 @@ function CPU_USAGE(){
 # =============================================================================
 #                            Memory usage
 # =============================================================================
-function memory_uasge(){
-  temp_var=$(echo $(ps -caxm -orss= | awk '{ sum += $1 } END { print "" sum/(1024 * 1000)}'))
-  echo "$temp_var/32.0GB"
+function memory_uasge() {
+    temp_var=$(echo $(ps -caxm -orss= | awk '{ sum += $1 } END { print "" sum/(1024 * 1000)}'))
+    echo "$temp_var/32.0GB"
 }
 # =============================================================================
 #                            Configruations
@@ -497,7 +489,7 @@ function memory_uasge(){
 #
 #\u2570
 # PROMPT=$'\n'
-PROMPT=$'\n%F{blue}\u256D\U2500${OS_ICON} %F{208}%n%f${AT_SYMPOLE} ${MAC_ICON}  %F{226}%m%  on %F{30}%~%f%F{%(0?.green.red)} %(0?.\uf11e.\uf071)  $(Iam_at_home)  '
+PROMPT=$'\n%F{blue}\u256D\U2500${OS_ICON} %F{208}%n%f ${AT_SYMPOLE}  ${MAC_ICON}  %F{226}%m%  on %F{30}%~%f%F{%(0?.green.red)} %(0?.\uf11e.\uf071)  $(Iam_at_home)  '
 #PS1+=$'\n%F{blue}${MULTILINE_NEWLINE_PROMPT_PREFIX}%f%F{120}%F{180}\uf9c4 %F{white}% \u2B82 $(CPU_USAGE) %F{red}${MEMEORY} %F{cyan}$(memory_uasge) %F{blue}\ufa1a${prompt_elapsed_time} %F{yellow}%1v%{$reset_color%} $(git_time_since_commit)$(Modified_git_status) '
 #PS1+=$'\n%F{blue}${MULTILINE_NEWLINE_PROMPT_PREFIX}%4v%f%F{120} %2v%F{180} %3v \uf0e4 %F{white} %5v %% \u2B82  %6v'
 ColoredIcon=$'\u'
@@ -506,7 +498,7 @@ PS1+=$'\n%F{blue}${MULTILINE_NEWLINE_PROMPT_PREFIX}\ufba7%4v%f%F{120}%F{180}%F{b
 #S1+=$'\n%F{blue}\u2570\U2500%F{blue}\uf553%{$reset_color%} '  #
 #PS1+=$'\n%F{blue}\u2570\uf553%F{blue}%{$reset_color%}  '  #
 #PS1+=$'\n%F{blue}\u2570\ufa21\uf93d%F{blue}%{$reset_color%} '  #
-PS1+=$'\n%F{blue}\u2570\uf93d\ufa21\uf7c6%F{blue}%{$reset_color%}  '  #
+PS1+=$'\n%F{blue}\u2570\uf93d\ufa21\uf7c6%F{blue}%{$reset_color%}  ' #
 #PS1+=$'\n%F{blue}\u2570\U2500%F{blue}\uf1ce%{$reset_color%}  '
 #RPROMPT=$'%F{blue}\ufa1a${prompt_elapsed_time} %F{yellow}%1v%{$reset_color%} $(git_time_since_commit)$(Modified_git_status) %F{yellow}${SYNC_ICON}%{$reset_color%} %{$fg[magenta]%}[ ${Date_ICON}  %D{%b %d, %Y}- ${CLOCK_ICON}  %D{%L:%M:%S %p}]%{$reset_color%}'
 RPROMPT=$'%F{blue}\ufa1a:${prompt_elapsed_time} %F{yellow}${SYNC_ICON}%{$reset_color%} %{$fg[magenta]%}[ ${Date_ICON}  %D{%b %d, %Y}- ${CLOCK_ICON}  %D{%L:%M:%S %p}]%{$reset_color%}'
