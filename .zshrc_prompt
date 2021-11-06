@@ -318,7 +318,7 @@ function Iam_at_home() {
         echo $MYDIR
         #  elif [ -z $(git branch >/dev/null 2>/dev/null) ]; then
     elif [ ! -z "${temp_var}" ]; then
-        local MYDIR='\uf408' #'\ue5fb'
+        local MYDIR='\uf1d3' #'\uf408' #'\ue5fb' #\uf1d3
         echo $MYDIR
     else
         local MYDIR='\uf115'
@@ -482,6 +482,19 @@ function memory_uasge() {
     temp_var=$(echo $(ps -caxm -orss= | awk '{ sum += $1 } END { print "" sum/(1024 * 1000)}'))
     echo "$temp_var/32.0GB"
 }
+
+# =============================================================================
+#                           Virtual Env status
+# =============================================================================
+# colorscheme: https://stackoverflow.com/questions/4842424/list-of-ansi-color-escape-sequences
+function virtualenv_info {
+    [ $VIRTUAL_ENV ] && echo -e "\033[37m"'\ufbf2  ''('`basename $VIRTUAL_ENV`') '
+}
+# \ufbf2 => ﯲ
+# \uf233 =>
+
+#  RED="\e[31m"
+#       echo -n -e  "=> ${LIGHT_YELLOW}\uf128  ${ENDCOLOR} "  && echo  "${file}"
 # =============================================================================
 #                            Configruations
 #                   zsh-bar of the right/left prompt
@@ -489,12 +502,13 @@ function memory_uasge() {
 #
 #\u2570
 # PROMPT=$'\n'
-PROMPT=$'\n%F{blue}\u256D\U2500${OS_ICON} %F{208}%n%f ${AT_SYMPOLE}  ${MAC_ICON}  %F{226}%m%  on %F{30}%~%f%F{%(0?.green.red)} %(0?.\uf11e.\uf071)  $(Iam_at_home)  '
+#PROMPT=$'\n%F{blue}\u256D\U2500${OS_ICON} %F{208}%n%f ${AT_SYMPOLE}  ${MAC_ICON}  %F{226}%m%  on %F{30}%~%f%F{%(0?.green.red)} %(0?.\uf11e.\uf071)  $(Iam_at_home)  '
+PROMPT=$'\n%F{blue}\u256D\U2500${OS_ICON} %F{208}%n%f ${AT_SYMPOLE}  ${MAC_ICON}  %F{226}%m%  on %F{30}%~%f%F{%(0?.green.red)} %(0?.\uf08b.\uf071)  %F{140}$(Iam_at_home)  '
 #PS1+=$'\n%F{blue}${MULTILINE_NEWLINE_PROMPT_PREFIX}%f%F{120}%F{180}\uf9c4 %F{white}% \u2B82 $(CPU_USAGE) %F{red}${MEMEORY} %F{cyan}$(memory_uasge) %F{blue}\ufa1a${prompt_elapsed_time} %F{yellow}%1v%{$reset_color%} $(git_time_since_commit)$(Modified_git_status) '
 #PS1+=$'\n%F{blue}${MULTILINE_NEWLINE_PROMPT_PREFIX}%4v%f%F{120} %2v%F{180} %3v \uf0e4 %F{white} %5v %% \u2B82  %6v'
 ColoredIcon=$'\u'
 #PS1+=$'\n%F{blue}${MULTILINE_NEWLINE_PROMPT_PREFIX}\ufba7%4v%f%F{120}%F{180}%F{blue}%{$reset_color%}  %F{yellow}%1v  $(git_time_since_commit)$(Modified_git_status) %F{blue}\ufa81 %F{yellow}\ufa81 %F{red}\ufa81 %F{blue}\ufa81 %F{yellow}\ufa81 %F{red}\ufa81%{$reset_color%}'
-PS1+=$'\n%F{blue}${MULTILINE_NEWLINE_PROMPT_PREFIX}\ufba7%4v%f%F{120}%F{180}%F{blue}%{$reset_color%}  %F{yellow}%1v%{$reset_color%}  $(git_time_since_commit)$(Modified_git_status)%{$reset_color%}'
+PS1+=$'\n%F{blue}${MULTILINE_NEWLINE_PROMPT_PREFIX}\ufba7%4v%f%F{120}%F{180}%F{blue}%{$reset_color%}  %F{yellow}%1v%{$reset_color%}  $(git_time_since_commit)$(Modified_git_status)%{$reset_color%} $(virtualenv_info)'
 #S1+=$'\n%F{blue}\u2570\U2500%F{blue}\uf553%{$reset_color%} '  #
 #PS1+=$'\n%F{blue}\u2570\uf553%F{blue}%{$reset_color%}  '  #
 #PS1+=$'\n%F{blue}\u2570\ufa21\uf93d%F{blue}%{$reset_color%} '  #

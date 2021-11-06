@@ -722,8 +722,13 @@ alias luamake=/Users/ghasak.ibrahim/.config/nvim/language_servers/lua-language-s
 ###################################################
 #           Correct Cmake Path
 ###################################################
-export PATH="/usr/local/bin:$PATH"
-
+# export PATH="/usr/local/bin:$PATH"
+###################################################
+#     This is for pipenv error message
+###################################################
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
 ###################################################
 #           Anaconda Installation
 ###################################################
@@ -741,3 +746,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+alias aflac="cd ~/EY/EY/分析用チャネル/work"

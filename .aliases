@@ -195,6 +195,15 @@ fif() {
 #
 ## find any item matching search query in file name
 #------------------------------------------------------------------------------
+#		     File List in Given Directory	
+#  Source:https://stackoverflow.com/questions/51306276/awk-get-file-name-from-ls
+#------------------------------------------------------------------------------
+file_list(){
+  for file in *; do
+    printf '%s\n' "${file%.*}"
+  done
+  }
+#------------------------------------------------------------------------------
 #			Searching Utilties
 #------------------------------------------------------------------------------
 # https://superuser.com/questions/226566/how-do-i-find-a-file-by-filename-in-mac-osx-terminal
@@ -232,6 +241,9 @@ rga-fzf() {
 	xdg-open "$file"
 }
 
+pdf_deep_search(){
+  rga -i -L -n  --no-messages --column -F --stats "$1"
+  }
 #------------------------------------------------------------------------------
 #       This function will fetch all bookmarks \
 #           of your goolge chrome websbrowser
@@ -572,6 +584,7 @@ function newTab(){
 #                      Check also (colorize) at (~/.GScript/)
 #                      Reference:
 #                      https://unix.stackexchange.com/questions/276471/piping-a-command-through-a-color-filter
+#                      colorscheme: https://stackoverflow.com/questions/4842424/list-of-ansi-color-escape-sequences
 #                      Formula:
 #                       => echo '    foo\n    bar' | red
 #------------------------------------------------------------------------------

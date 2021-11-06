@@ -10,8 +10,8 @@
     // Path to Python, you can use a custom version of Python by modifying this setting to include the full path.
     // ========================================================================================
     //"python.pythonPath": "/opt/anaconda3/bin/python",
-    "python.defaultInterpreterPath": "/Users/ghasak.ibrahim/opt/anaconda3/bin/python",
-    "python.pythonPath": "$HOME/opt/anaconda3/bin/python",
+    //"python.defaultInterpreterPath": "$HOME/opt/anaconda3/bin/python3",
+    //"python.pythonPath": "$HOME/opt/anaconda3/bin/python3",
     "python.formatting.provider": "black",
     "window.zoomLevel": 0,
     "window.closeWhenEmpty": false,
@@ -155,6 +155,11 @@
                 - [x] Turn off all settings below this line
     */
     // ========================================================================================
+   // "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+   // "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
+   // "vscode-neovim.neovimInitVimPaths.darwin": "$HOME/.config/nvim/utils/lv-vscode/init.vim",
+   // "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/utils/lv-vscode/init.vim",
+
     //"extends": ["$HOME/Library/Application Support/Code/User/GSetting"] ,
     // Since I installed (nvim 5.0) in a new directory called ~/dev/bin/nvim
     // I created a symlink to point to this (nvim)
@@ -168,7 +173,7 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "terminal.integrated.inheritEnv": false,
-    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "workbench.colorTheme": "Gruvbox Material Dark",
     "files.autoSave": "afterDelay",
     "kite.showWelcomeNotificationOnStartup": false,
     "python.languageServer": "Pylance",
@@ -1315,6 +1320,7 @@
       "editorRuler.foreground": "#737575"
     },
     "redhat.telemetry.enabled": true,
-    "workbench.iconTheme": "ayu"
+    "workbench.iconTheme": "ayu",
+    "terminal.explorerKind": "external"
 
 }

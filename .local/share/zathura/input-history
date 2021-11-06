@@ -12,6 +12,25 @@
 :q
 :open /Users/ghasak.ibrahim/Documents/Learning/Books/Django/William\ S.\ Vincent\ -\ Django\ for\ Professionals_\ Production\ Websites\ with\ Python\ &\ Django\ (2019).pdf
 :open /Users/ghasak.ibrahim/Documents/Learning/Books/Deep\ Learning\ thoretical\ Books
-:open /Users/ghasak.ibrahim/Documents/Learning/Books/Advanced\ Statistical\ Books\ /Introduction\ to\ Modern\ Statistics.pdf
 :open /Users/ghasak.ibrahim/Documents/Learning/Books/iBook/21ED9B15E69B46CB7D309DA1FE00E6EF.epub
 :open /Users/ghasak.ibrahim/Documents/Learning/Books/iBook/Jaime\ Buelta\ -\ Hands-On\ Docker\ for\ Microservices\ with\ Python_\ Design,\ deploy,\ and\ operate\ a\ complex\ system\ with\ multiple\ microservices\ using\ Docker\ and\ Kubernetes-Packt\ Publishing\ (2019)\ 2.pdf
+:open /Users/ghasak.ibrahim/Documents/EYProjects/projects2021_2022/P02_MROI/References/MarketingROI/ref/MMM/marketing_mix_v5.pdf
+:open /Users/ghasak.ibrahim/Documents/EYProjects/projects2021_2022/P02_MROI/References/MarketingROI/ref/MMM/【Thinkvine】How_It_Works.pdf
+:open /Users/ghasak.ibrahim/Documents/EYProjects/projects2021_2022/P02_MROI/References/MarketingROI/ref/MMM/marketshare_casestudy_carrefour.pdf
+:open /Users/ghasak.ibrahim/Downloads/Marketingreturnoninvestment_AppliedMarketingAnalytics2015.pdf
+:open /Users/ghasak.ibrahim/Documents/EYProjects/projects2021_2022/P02_MROI/References/MarketingROI/ref/MMM/01_Marketshare
+:open /Users/ghasak.ibrahim/Documents/EYProjects/projects2021_2022/P02_MROI/References/MarketingROI/ref/MMM/marketsharecasestudy_progressive.pdf
+:open /Users/ghasak.ibrahim/Documents/EYProjects/projects2021_2022/P02_MROI/References/MarketingROI/ref/MMM/ms_expedia_case_study.pdf
+:open /Users/ghasak.ibrahim/Documents/EYProjects/projects2021_2022/P02_MROI/References/MarketingROI/ref/MMM/marketsharecasestudy_internet\ services.pdf
+:open /Users/ghasak.ibrahim/Documents/Learning/Books/Advanced\ Statistical\ Books\ /Introduction\ to\ Modern\ Statistics.pdf
+:open /Users/ghasak.ibrahim/Documents/Learning/Books/CheetSheets
+:open /Users/ghasak.ibrahim/EY/EY/分析用チャネル/work/Ghasak/Aflac_Nov_3_2021_About_predictive_modeling_topic_modeling_for_call_center_data/Books/[SpringerBriefs\ in\ Electrical\ and\ Computer\ Engineering]\ Sunil\ Kumar\ Kopparapu\ (auth.)\ -\ Non-Linguistic\ Analysis\ of\ Call\ Center\ Conversations\ (2015,\ Springer\ International\ Publishing)\ -\ libgen.lc.pdf
+:open /Users/ghasak.ibrahim/EY/EY/分析用チャネル/work/Ghasak/Aflac_Nov_3_2021_About_predictive_modeling_topic_modeling_for_call_center_data/Books/Konstantinos\ Tsiptsis,\ Antonios\ Chorianopoulos(auth.)\ -\ Data\ Mining\ Techniques\ in\ CRM_\ Inside\ Customer\ Segmentation\ (2009,\ John\ Wiley\ &\ Sons,\ Ltd)\ -\ libgen.lc.pdf
+:open /Users/ghasak.ibrahim/EY/EY/分析用チャネル/work/Ghasak/Aflac_Nov_3_2021_About_predictive_modeling_topic_modeling_for_call_center_data/Books/[Studies\ in\ Big\ Data\ 3]\ Katsutoshi\ Yada\ (auth.),\ Katsutoshi\ Yada\ (eds.)\ -\ Data\ Mining\ for\ Service\ (2014,\ Springer-Verlag\ Berlin\ Heidelberg)\ -\ libgen.lc.pdf
+/pos
+/POS
+:bmark "Text Mining of Business-Oriented Converstations at a call center"
+:blist
+:blist Text\ Mining\ of\ Business-Oriented\ Converstations\ at\ a\ call\ center
+:write
+:write "Note"

@@ -1,6 +1,8 @@
 {
 	"folder_history":
 	[
+		"/Users/ghasak.ibrahim/Desktop/config.old",
+		"/Users/ghasak.ibrahim/.jupyter",
 		"/Users/ghasak.ibrahim/.ssh",
 		"/Users/ghasak.ibrahim/.config/nvim/modules",
 		"/Users/ghasak.ibrahim/.config/nvim/Vundle-plug-manager-packages/gruvbox-material/colors",
@@ -9,13 +11,13 @@
 		"/Users/ghasak.ibrahim",
 		"/Users/ghasak.ibrahim/Documents/ALPFILES"
 	],
-	"last_version": 4107,
-	"last_window_id": 85,
+	"last_version": 4113,
+	"last_window_id": 124,
 	"log_indexing": false,
 	"settings":
 	{
 		"new_window_full_screen": false,
-		"new_window_height": 475.0,
+		"new_window_height": 807.0,
 		"new_window_maximized": false,
 		"new_window_settings":
 		{
@@ -27,6 +29,22 @@
 			},
 			"build_system_choices":
 			[
+				[
+					[
+						[
+							"Packages/Python/Python.sublime-build",
+							""
+						],
+						[
+							"Packages/Python/Python.sublime-build",
+							"Syntax Check"
+						]
+					],
+					[
+						"Packages/Python/Python.sublime-build",
+						""
+					]
+				],
 				[
 					[
 						[
@@ -84,6 +102,9 @@
 			},
 			"file_history":
 			[
+				"/Users/ghasak.ibrahim/Desktop/Safari_Automate_PDF.scpt",
+				"/Users/ghasak.ibrahim/Documents/EYProjects/MA_WebScrapping/src/experiments/readPDF/scriptPDF.py",
+				"/Users/ghasak.ibrahim/Desktop/epochTime.txt",
 				"/Users/ghasak.ibrahim/.config/nvim/init.vim",
 				"/Users/ghasak.ibrahim/Applications (Parallels)/Icon\r",
 				"/Users/ghasak.ibrahim/Documents/.dotfiles2021/.GScript/my_cron_backup.txt",
@@ -134,13 +155,13 @@
 			"menu_visible": true,
 			"output.exec":
 			{
-				"height": 34.0
+				"height": 279.0
 			},
 			"output.find_results":
 			{
 				"height": 0.0
 			},
-			"pinned_build_system": "",
+			"pinned_build_system": "Packages/Python/Python.sublime-build",
 			"replace":
 			{
 				"height": 44.0
@@ -183,7 +204,7 @@
 			{
 			}
 		},
-		"new_window_width": 1255.0
+		"new_window_width": 695.0
 	},
 	"windows":
 	[
@@ -196,22 +217,26 @@
 			},
 			"buffers":
 			[
-				{
-					"file": "/Users/ghasak.ibrahim/Desktop/epochTime.txt",
-					"settings":
-					{
-						"buffer_size": 124042,
-						"encoding": "Western (Windows 1252)",
-						"line_ending": "Unix"
-					},
-					"undo_stack":
-					[
-					]
-				}
 			],
 			"build_system": "",
 			"build_system_choices":
 			[
+				[
+					[
+						[
+							"Packages/Python/Python.sublime-build",
+							""
+						],
+						[
+							"Packages/Python/Python.sublime-build",
+							"Syntax Check"
+						]
+					],
+					[
+						"Packages/Python/Python.sublime-build",
+						""
+					]
+				],
 				[
 					[
 						[
@@ -269,6 +294,9 @@
 			},
 			"file_history":
 			[
+				"/Users/ghasak.ibrahim/Desktop/Safari_Automate_PDF.scpt",
+				"/Users/ghasak.ibrahim/Documents/EYProjects/MA_WebScrapping/src/experiments/readPDF/scriptPDF.py",
+				"/Users/ghasak.ibrahim/Desktop/epochTime.txt",
 				"/Users/ghasak.ibrahim/.config/nvim/init.vim",
 				"/Users/ghasak.ibrahim/Applications (Parallels)/Icon\r",
 				"/Users/ghasak.ibrahim/Documents/.dotfiles2021/.GScript/my_cron_backup.txt",
@@ -313,36 +341,6 @@
 				{
 					"sheets":
 					[
-						{
-							"buffer": 0,
-							"file": "/Users/ghasak.ibrahim/Desktop/epochTime.txt",
-							"selected": true,
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 124042,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										24364,
-										24364
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/Text/Plain text.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 110298.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 0,
-							"stack_multiselect": false,
-							"type": "text"
-						}
 					]
 				}
 			],
@@ -379,14 +377,14 @@
 			"menu_visible": true,
 			"output.exec":
 			{
-				"height": 34.0
+				"height": 279.0
 			},
 			"output.find_results":
 			{
 				"height": 0.0
 			},
-			"pinned_build_system": "",
-			"position": "9 0 1285 19 1255 503 0 0 2560 1055 ",
+			"pinned_build_system": "Packages/Python/Python.sublime-build",
+			"position": "10 0 725 20 695 835 0 0 1440 875 ",
 			"project": "",
 			"replace":
 			{
@@ -433,7 +431,7 @@
 			"template_settings":
 			{
 			},
-			"window_id": 85,
+			"window_id": 124,
 			"workspace_name": ""
 		}
 	],
