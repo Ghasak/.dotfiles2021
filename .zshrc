@@ -29,6 +29,7 @@ ZSH_DISABLE_COMPFIX=true
 export ZSH="/Users/ghasak.ibrahim/.oh-my-zsh"
 source $HOME/.zshrc_prompt
 source $HOME/.aliases
+source $HOME/.ey_project_dirs
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -746,4 +747,14 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-alias aflac="cd ~/EY/EY/分析用チャネル/work"
+
+###################################################
+#          Local Postgresql
+#                 V.14
+# Located at: "/Applications/PostgreSQL 14/SQL Shell (psql).app"
+# Data storage and command line: /Library/PostgreSQL/14/bin
+###################################################
+#export PATH="/Library/PostgreSQL/14/bin/:$PATH"
+# Put the path of Postgresql at the end
+export PATH="$PATH:/Library/PostgreSQL/14/bin/"
+#export PATH="$PATH:/Library/PostgreSQL/14/bin/"

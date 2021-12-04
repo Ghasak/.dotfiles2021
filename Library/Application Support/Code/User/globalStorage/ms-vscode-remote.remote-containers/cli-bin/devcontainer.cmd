@@ -3,7 +3,7 @@
 @REM and forwards to the currently installed version
 
 setlocal
-SET DEVCONTAINER_CLI_PATH=%0
+SET DEVCONTAINER_CLI_PATH=%~f0
 SET VSCODE_PATH=
 
 :vscode_path
@@ -32,6 +32,6 @@ exit 1
 
 :forwardcall
 set ELECTRON_RUN_AS_NODE=1
-"%VSCODE_PATH%" "%REMOTE_CONTAINERS_PATH%\dev-containers-user-cli\\cli.js" %*
+"%VSCODE_PATH%" --ms-enable-electron-run-as-node "%REMOTE_CONTAINERS_PATH%\dev-containers-user-cli\\cli.js" %*
 
 endlocal

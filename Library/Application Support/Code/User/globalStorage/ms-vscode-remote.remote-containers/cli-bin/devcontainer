@@ -44,11 +44,11 @@ if [ $IN_WSL = true ]; then
 
         # TODO - piping to `cat` is a temporary workaround for the CRLF->LF conversion
         # that occurs when calling Windows Electron binary from WSL
-        IN_WSL=$IN_WSL DEVCONTAINER_CLI_PATH="$DEVCONTAINER_CLI_PATH" ELECTRON_RUN_AS_NODE=1 "$ELECTRON" "$CLI" "$@" | cat
+        IN_WSL=$IN_WSL DEVCONTAINER_CLI_PATH="$DEVCONTAINER_CLI_PATH" ELECTRON_RUN_AS_NODE=1 "$ELECTRON" --ms-enable-electron-run-as-node "$CLI" "$@" | cat
         exit $?
 else
         ELECTRON="$VSCODE_PATH"
         CLI=$REMOTE_CONTAINERS_PATH/dev-containers-user-cli/cli.js
-        DEVCONTAINER_CLI_PATH="$DEVCONTAINER_CLI_PATH" ELECTRON_RUN_AS_NODE=1 "$ELECTRON" "$CLI" "$@"
+        DEVCONTAINER_CLI_PATH="$DEVCONTAINER_CLI_PATH" ELECTRON_RUN_AS_NODE=1 "$ELECTRON" --ms-enable-electron-run-as-node "$CLI" "$@"
         exit $?
 fi

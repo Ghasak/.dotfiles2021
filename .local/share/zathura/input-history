@@ -34,3 +34,12 @@
 :blist Text\ Mining\ of\ Business-Oriented\ Converstations\ at\ a\ call\ center
 :write
 :write "Note"
+:open /Users/ghasak.ibrahim/Desktop/books/nlp/17_nltk_introduction.pdf
+:version
+:exec fzf
+:info
+:!search 
+:!search "nlk"
+:! fzf
+:open /Users/ghasak.ibrahim/Desktop/books/nlp/Foundations\ of\ Statistical\ Natural\ Language\ Processing\ -\ Christopher\ D.\ Manning.pdf
+:open /Users/ghasak.ibrahim/Desktop/books/nlp/databricks-spark-reference-applications.pdf

@@ -1,155 +1,0 @@
-Script started on Wed Jun 23 15:32:26 2021
-
-]1337;RemoteHost=ghasak.ibrahim@JPC02DW0YWML86]1337;CurrentDir=/Applications/Neovide.app/Contents/MacOS]1337;ShellIntegrationVersion=12;shell=zsh[1m[7m%[27m[1m[0m                                                                                                                                                           ]2;ghasak.ibrahim@JPC02DW0YWML86:/Applications/Neovide.app/Contents/MacOS]1;..ontents/MacOS]133;D;0]1337;RemoteHost=ghasak.ibrahim@JPC02DW0YWML86]1337;CurrentDir=/Applications/Neovide.app/Contents/MacOS[0m[27m[24m[J]133;A(base) 
-[34m╭─ [38;5;208mghasak.ibrahim[39m   [38;5;226mJPC02DW0YWML86 on [38;5;30m/Applications/Neovide.app/Contents/MacOS[39m[32m     
-[34m├─[39m[38;5;120m[38;5;180m龍 [37m⮂  41.8%   mds_stores [31m [36m11.2888/32.0GB
-[34m╰─[34m[00m ]133;B[K[109C[34m祥 [33m[00m  [33m[00m [35m[   Jun 23, 2021-   3:32:28 PM][00m[34m[150D[?1h=[?2004hv[90mim . [39mv[39mi[39mm[39m [39m [39m [?1l>[?2004l
-]2;nvim]1;vim]133;C;]11;?[?1049h[22;0;0t[?1h=[H[2J[?2004h[?25h[?25l(B[m[H[2J[K
-[94m~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-~[K
-(B[0;1;7m[No Name]                                                                                                                                0,0-1          All[20;67H(B[mNVIM v0.5.0-dev+63b64eb[22;56HNvim is open source and freely distributable[23;67Hhttps://neovim.io/#chat[25;55Htype  :help nvim[38;5;81m<Enter>(B[m       if you are new! [26;55Htype  :checkhealth[38;5;81m<Enter>(B[m     to optimize Nvim[27;55Htype  :q[38;5;81m<Enter>(B[m               to exit         [28;55Htype  :help[38;5;81m<Enter>(B[m            for help        [30;64HBecome a registered Vim user![31;55Htype  :help register[38;5;81m<Enter>(B[m   for information ]112[2 q]112[2 q[H[?25h[?25l[?25h[?25l[?1004h[?25h[?25l[51;145H:         [H[?25h[?25l[50B[J:]112[2 q[?25h[?25lq[?25h[?25l[51;1H[?25h[?25l]112[2 q[?25h[?25l]112[2 q(B[m[?25h[?1l>[?1049l[23;0;0t[?2004l[?1004l[?25h[1m[7m%[27m[1m[0m                                                                                                                                                           ]2;ghasak.ibrahim@JPC02DW0YWML86:/Applications/Neovide.app/Contents/MacOS]1;..ontents/MacOS]133;D;0]1337;RemoteHost=ghasak.ibrahim@JPC02DW0YWML86]1337;CurrentDir=/Applications/Neovide.app/Contents/MacOSc[0m[27m[24m[J]133;A(base) 
-[34m╭─ [38;5;208mghasak.ibrahim[39m   [38;5;226mJPC02DW0YWML86 on [38;5;30m/Applications/Neovide.app/Contents/MacOS[39m[32m     
-[34m├─[39m[38;5;120m[38;5;180m龍 [37m⮂  35.5%   mds_stores [31m [36m11.3789/32.0GB
-[34m╰─[34m[00m ]133;B[K[103C[34m祥1.464s [33m[00m  [33m[00m [35m[   Jun 23, 2021-   3:32:31 PM][00m[34m[150D[?1h=[?2004hc[90mlear[39mc[39ml[39me[39ma[39mr[?1l>[?2004l
-]2;clear]1;clear]133;C;[H[2J[3J[1m[7m%[27m[1m[0m                                                                                                                                                           ]2;ghasak.ibrahim@JPC02DW0YWML86:/Applications/Neovide.app/Contents/MacOS]1;..ontents/MacOS]133;D;0]1337;RemoteHost=ghasak.ibrahim@JPC02DW0YWML86]1337;CurrentDir=/Applications/Neovide.app/Contents/MacOS[0m[27m[24m[J]133;A(base) 
-[34m╭─ [38;5;208mghasak.ibrahim[39m   [38;5;226mJPC02DW0YWML86 on [38;5;30m/Applications/Neovide.app/Contents/MacOS[39m[32m     
-[34m├─[39m[38;5;120m[38;5;180m龍 [37m⮂  36.7%   mds_stores [31m [36m11.4198/32.0GB
-[34m╰─[34m[00m ]133;B[K[105C[34m祥21ms [33m[00m  [33m[00m [35m[   Jun 23, 2021-   3:32:31 PM][00m[34m[150D[?1h=[?2004hn[90meovide . &[39m[10Dn[39me[39mo[39mv[39mi[39md[39me[39m [39m.[39m [39m&[?1l>[?2004l
-]2;neovide . &]1;neovide]133;C;[1] 9842
-[1m[7m%[27m[1m[0m                                                                                                                                                           ]2;ghasak.ibrahim@JPC02DW0YWML86:/Applications/Neovide.app/Contents/MacOS]1;..ontents/MacOS[1]  + 9842 done       neovide .
-]133;D;0]1337;RemoteHost=ghasak.ibrahim@JPC02DW0YWML86]1337;CurrentDir=/Applications/Neovide.app/Contents/MacOSIgnored client type property: "methods"
-Ignored client type property: "attributes"
-[0m[27m[24m[J]133;A(base) 
-[34m╭─ [38;5;208mghasak.ibrahim[39m   [38;5;226mJPC02DW0YWML86 on [38;5;30m/Applications/Neovide.app/Contents/MacOS[39m[32m     
-[34m├─[39m[38;5;120m[38;5;180m龍 [37m⮂  25.1%   WindowServer [31m [36m11.5135/32.0GB
-[34m╰─[34m[00m ]133;B[K[105C[34m祥25ms [33m[00m  [33m[00m [35m[   Jun 23, 2021-   3:32:34 PM][00m[34m[150D[?1h=[?2004hneovide . &[90m&[39m[90m [90m.[90m [90me[90md[90mi[90mv[90mo[39mn[90me[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [11D.[90m/neovide . &[39m[12D.[39m/[39mn[39me[39mo[39mv[39mi[39md[39me[39m [39m.[39m [39m&[90m&[39m[39m [?1l>[?2004l
-]2;./neovide .]1;./neovide]133;C;zsh: exec format error: ./neovide
-[1m[7m%[27m[1m[0m                                                                                                                                                           ]2;ghasak.ibrahim@JPC02DW0YWML86:/Applications/Neovide.app/Contents/MacOS]1;..ontents/MacOS]133;D;126]1337;RemoteHost=ghasak.ibrahim@JPC02DW0YWML86]1337;CurrentDir=/Applications/Neovide.app/Contents/MacOS[0m[27m[24m[J]133;A(base) 
-[34m╭─ [38;5;208mghasak.ibrahim[39m   [38;5;226mJPC02DW0YWML86 on [38;5;30m/Applications/Neovide.app/Contents/MacOS[39m[31m     
-[34m├─[39m[38;5;120m[38;5;180m龍 [37m⮂  107.0%   Application [31m [36m11.6386/32.0GB
-[34m╰─[34m[00m ]133;B[K[105C[34m祥16ms [33m[00m  [33m[00m [35m[   Jun 23, 2021-   3:33:08 PM][00m[34m[150D[?1h=[?2004h./neovide . [90m [39m[90m.[39m[39m [39m [?1l>[?2004l
-]2;./neovide]1;./neovide]133;C;zsh: exec format error: ./neovide
-[1m[7m%[27m[1m[0m                                                                                                                                                           ]2;ghasak.ibrahim@JPC02DW0YWML86:/Applications/Neovide.app/Contents/MacOS]1;..ontents/MacOS]133;D;126]1337;RemoteHost=ghasak.ibrahim@JPC02DW0YWML86]1337;CurrentDir=/Applications/Neovide.app/Contents/MacOS[0m[27m[24m[J]133;A(base) 
-[34m╭─ [38;5;208mghasak.ibrahim[39m   [38;5;226mJPC02DW0YWML86 on [38;5;30m/Applications/Neovide.app/Contents/MacOS[39m[31m     
-[34m├─[39m[38;5;120m[38;5;180m龍 [37m⮂  101.8%   Application [31m [36m11.7376/32.0GB
-[34m╰─[34m[00m ]133;B[K[105C[34m祥19ms [33m[00m  [33m[00m [35m[   Jun 23, 2021-   3:33:11 PM][00m[34m[150D[?1h=[?2004h./neovide [90m [39m[90me[90md[90mi[90mv[90mo[90me[90mn[39m.[90m/[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [10Dn[90meovide . &[39m[10Dn[39me[39mo[39mv[39mi[39md[39me[39m [39m.[39m [39m&[90m&[39m[90m [90m.[90m [90me[90md[90mi[90mv[90mo[39mn[90me[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [11Dj[90m Desktop [39m[9Dj[39m [39mD[39me[39ms[39mk[39mt[39mo[39mp[39m [?1l>[?2004l
-]2;j Desktop]1;j]133;C;[31m/Users/ghasak.ibrahim/Desktop[0m
-[1m[7m%[27m[1m[0m                                                                                                                                                           ]2;ghasak.ibrahim@JPC02DW0YWML86:~/Desktop]1;~/Desktop]133;D;0]1337;RemoteHost=ghasak.ibrahim@JPC02DW0YWML86]1337;CurrentDir=/Users/ghasak.ibrahim/Desktop[0m[27m[24m[J]133;A(base) 
-[34m╭─ [38;5;208mghasak.ibrahim[39m   [38;5;226mJPC02DW0YWML86 on [38;5;30m~/Desktop[39m[32m     
-[34m├─[39m[38;5;120m[38;5;180m龍 [37m⮂  110.5%   Application [31m [36m12.0047/32.0GB
-[34m╰─[34m[00m ]133;B[K[104C[34m祥125ms [33m[00m  [33m[00m [35m[   Jun 23, 2021-   3:33:21 PM][00m[34m[150D[?1h=[?2004hc[90mlear[39mc[39md[90m [90m/[90mA[90mpplications/Neovide.app/Contents/MacOS[39m[41D[39m [39mp[90my[90mt[90mh[90mo[90mn[90mP[90mr[90mo[90mj[90me[90mc[90mt[90mT[90me[90ms[90mt[90mi[90mn[90mg[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39D[39my[39mt[39mh[39mo[39mn[39mP[39mr[39mo[39mj[39me[39mc[39mt[39mT[39me[39ms[39mt[39mi[39mn[39mg[1m/[0m[0m [?1l>[?2004l
-]2;cd pythonProjectTesting]1;cd]133;C;[1m[7m%[27m[1m[0m                                                                                                                                                           ]2;ghasak.ibrahim@JPC02DW0YWML86:~/Desktop/pythonProjectTesting]1;..rojectTesting]133;D;0]1337;RemoteHost=ghasak.ibrahim@JPC02DW0YWML86]1337;CurrentDir=/Users/ghasak.ibrahim/Desktop/pythonProjectTesting[0m[27m[24m[J]133;A(base) 
-[34m╭─ [38;5;208mghasak.ibrahim[39m   [38;5;226mJPC02DW0YWML86 on [38;5;30m~/Desktop/pythonProjectTesting[39m[32m     
-[34m├─[39m[38;5;120m[38;5;180m龍 [37m⮂  106.0%   Application [31m [36m12.165/32.0GB
-[34m╰─[34m[00m ]133;B[K[105C[34m祥50ms [33m[00m  [33m[00m [35m[   Jun 23, 2021-   3:33:23 PM][00m[34m[150D[?1h=[?2004hl[90msd[39ml[39ms[39md[?1l>[?2004l
-]2;colorls -lA --sd]1;lsd]133;C;  [38;5;77mr[0m[38;5;186mw[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m   3   [38;5;230mghasak.ibrahim[0m   [38;5;186mstaff[0m   [38;5;230m  96 B  [0m   [38;5;72mTue Jun 15 02:29:08 2021[0m  [38;5;39m  .mypy_cache/[0m
-  [38;5;77mr[0m[38;5;186mw[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m   4   [38;5;230mghasak.ibrahim[0m   [38;5;186mstaff[0m   [38;5;230m 128 B  [0m   [38;5;72mSat Apr 24 22:17:56 2021[0m  [38;5;39m  src/[0m
-  [38;5;77mr[0m[38;5;186mw[0m[38;5;174m-[0m[38;5;77mr[0m[38;5;174m-[0m[38;5;174m-[0m[38;5;77mr[0m[38;5;174m-[0m[38;5;174m-[0m   1   [38;5;230mghasak.ibrahim[0m   [38;5;186mstaff[0m   [38;5;230m 984 B  [0m   [38;5;49mWed Jun 23 09:50:39 2021[0m  [33m  dataClassesInDepth02.py [0m
-  [38;5;77mr[0m[38;5;186mw[0m[38;5;174m-[0m[38;5;77mr[0m[38;5;174m-[0m[38;5;174m-[0m[38;5;77mr[0m[38;5;174m-[0m[38;5;174m-[0m   1   [38;5;230mghasak.ibrahim[0m   [38;5;186mstaff[0m   [38;5;230m   1 KiB[0m   [38;5;49mWed Jun 23 13:30:21 2021[0m  [33m  scriptx.py [0m
-  [38;5;77mr[0m[38;5;186mw[0m[38;5;174m-[0m[38;5;77mr[0m[38;5;174m-[0m[38;5;174m-[0m[38;5;77mr[0m[38;5;174m-[0m[38;5;174m-[0m   1   [38;5;230mghasak.ibrahim[0m   [38;5;186mstaff[0m   [38;5;230m 647 B  [0m   [38;5;49mWed Jun 23 03:33:11 2021[0m  [33m  scriptx02.py [0m
-  [38;5;77mr[0m[38;5;186mw[0m[38;5;174m-[0m[38;5;174m-[0m[38;5;174m-[0m[38;5;174m-[0m[38;5;174m-[0m[38;5;174m-[0m[38;5;174m-[0m   1   [38;5;230mghasak.ibrahim[0m   [38;5;186mstaff[0m   [38;5;230m  17 MiB[0m   [38;5;72mWed Apr 28 01:51:27 2021[0m  [38;5;226m  tags [0m
-[1m[7m%[27m[1m[0m                                                                                                                                                           ]2;ghasak.ibrahim@JPC02DW0YWML86:~/Desktop/pythonProjectTesting]1;..rojectTesting]133;D;0]1337;RemoteHost=ghasak.ibrahim@JPC02DW0YWML86]1337;CurrentDir=/Users/ghasak.ibrahim/Desktop/pythonProjectTesting[0m[27m[24m[J]133;A(base) 
-[34m╭─ [38;5;208mghasak.ibrahim[39m   [38;5;226mJPC02DW0YWML86 on [38;5;30m~/Desktop/pythonProjectTesting[39m[32m     
-[34m├─[39m[38;5;120m[38;5;180m龍 [37m⮂  106.6%   Application [31m [36m12.3901/32.0GB
-[34m╰─[34m[00m ]133;B[K[104C[34m祥268ms [33m[00m  [33m[00m [35m[   Jun 23, 2021-   3:33:25 PM][00m[34m[150D[?1h=[?2004hn[90meovide . &[39m[10Dn[39mv[90mi[90mm[90m [39m[39m [39m [39m [39m [39m [39m [9D[39mi[39mm[39m [90m [39m[90mm[90mi[39mn[90me[90mo[90mv[90mi[90mde . &[39m[10D [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [11Dn[90meovide . &[39m[10Dn[39me[39mo[39mv[39mi[39md[39me[39m [39m.[39m [39m& & [1C &s &c &riptx &. &p &y[1m [0m &[0m & [?1l>[?2004l
-]2;neovide scriptx.py &]1;neovide]133;C;[1] 10241
-[1m[7m%[27m[1m[0m                                                                                                                                                           [1]  + 10241 done       neovide scriptx.py
-]2;ghasak.ibrahim@JPC02DW0YWML86:~/Desktop/pythonProjectTesting]1;..rojectTestingIgnored client type property: "methods"
-Ignored client type property: "attributes"
-]133;D;0]1337;RemoteHost=ghasak.ibrahim@JPC02DW0YWML86]1337;CurrentDir=/Users/ghasak.ibrahim/Desktop/pythonProjectTesting[0m[27m[24m[J]133;A(base) 
-[34m╭─ [38;5;208mghasak.ibrahim[39m   [38;5;226mJPC02DW0YWML86 on [38;5;30m~/Desktop/pythonProjectTesting[39m[32m     
-[34m├─[39m[38;5;120m[38;5;180m龍 [37m⮂  104.1%   Application [31m [36m12.955/32.0GB
-[34m╰─[34m[00m ]133;B[K[105C[34m祥16ms [33m[00m  [33m[00m [35m[   Jun 23, 2021-   3:33:38 PM][00m[34m[150D[?1h=[?2004hc[90md pythonProjectTesting[39m[22Dc[39ml[90me[90ma[90mr[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [21D[39me[39ma[39mr[?1l>[?2004l
-]2;clear]1;clear]133;C;[H[2J[3J[1m[7m%[27m[1m[0m                                                                                                                                                           ]2;ghasak.ibrahim@JPC02DW0YWML86:~/Desktop/pythonProjectTesting]1;..rojectTesting]133;D;0]1337;RemoteHost=ghasak.ibrahim@JPC02DW0YWML86]1337;CurrentDir=/Users/ghasak.ibrahim/Desktop/pythonProjectTesting[0m[27m[24m[J]133;A(base) 
-[34m╭─ [38;5;208mghasak.ibrahim[39m   [38;5;226mJPC02DW0YWML86 on [38;5;30m~/Desktop/pythonProjectTesting[39m[32m     
-[34m├─[39m[38;5;120m[38;5;180m龍 [37m⮂  99.0%   Application [31m [36m9.7883/32.0GB
-[34m╰─[34m[00m ]133;B[K[105C[34m祥53ms [33m[00m  [33m[00m [35m[   Jun 23, 2021-   3:35:34 PM][00m[34m[150D[?1h=[?2004hl[90msd[39ml[39m [39m [?1l>[?2004l
-]2;ls -G -lah]1;l]133;C;total 17952
-drwxr-xr-x@  8 ghasak.ibrahim  staff   256B Jun 15 02:29 [1m[36m.[39;49m[0m
-drwx------@ 34 ghasak.ibrahim  staff   1.1K Jun 23 15:35 [1m[36m..[39;49m[0m
-drwxr-xr-x   3 ghasak.ibrahim  staff    96B Jun 15 02:29 [1m[36m.mypy_cache[39;49m[0m
--rw-r--r--@  1 ghasak.ibrahim  staff   984B Jun 23 09:50 dataClassesInDepth02.py
--rw-r--r--   1 ghasak.ibrahim  staff   1.7K Jun 23 13:30 scriptx.py
--rw-r--r--   1 ghasak.ibrahim  staff   647B Jun 23 03:33 scriptx02.py
-drwxr-xr-x   4 ghasak.ibrahim  staff   128B Apr 24 22:17 [1m[36msrc[39;49m[0m
--rw-------   1 ghasak.ibrahim  staff    18M Apr 28 01:51 tags
-[1m[7m%[27m[1m[0m                                                                                                                                                           ]2;ghasak.ibrahim@JPC02DW0YWML86:~/Desktop/pythonProjectTesting]1;..rojectTesting]133;D;0]1337;RemoteHost=ghasak.ibrahim@JPC02DW0YWML86]1337;CurrentDir=/Users/ghasak.ibrahim/Desktop/pythonProjectTestingcl[0m[27m[24m[J]133;A(base) 
-[34m╭─ [38;5;208mghasak.ibrahim[39m   [38;5;226mJPC02DW0YWML86 on [38;5;30m~/Desktop/pythonProjectTesting[39m[32m     
-[34m├─[39m[38;5;120m[38;5;180m龍 [37m⮂  102.4%   Application [31m [36m9.82289/32.0GB
-[34m╰─[34m[00m ]133;B[K[105C[34m祥26ms [33m[00m  [33m[00m [35m[   Jun 23, 2021-   3:35:35 PM][00m[34m[150D[?1h=[?2004hccl[90mear[39m[39me[39ma[39mr[?1l>[?2004l
-]2;clear]1;clear]133;C;[H[2J[3J[1m[7m%[27m[1m[0m                                                                                                                                                           ]2;ghasak.ibrahim@JPC02DW0YWML86:~/Desktop/pythonProjectTesting]1;..rojectTesting]133;D;0]1337;RemoteHost=ghasak.ibrahim@JPC02DW0YWML86]1337;CurrentDir=/Users/ghasak.ibrahim/Desktop/pythonProjectTestings[0m[27m[24m[J]133;A(base) 
-[34m╭─ [38;5;208mghasak.ibrahim[39m   [38;5;226mJPC02DW0YWML86 on [38;5;30m~/Desktop/pythonProjectTesting[39m[32m     
-[34m├─[39m[38;5;120m[38;5;180m龍 [37m⮂  112.6%   Application [31m [36m9.85264/32.0GB
-[34m╰─[34m[00m ]133;B[K[105C[34m祥23ms [33m[00m  [33m[00m [35m[   Jun 23, 2021-   3:35:36 PM][00m[34m[150D[?1h=[?2004hs[90mcript[39ms[39mc[39mi[39m [39m [39m [90mr[90mipt[39ms[90mc[39m [39m [39m [39m [39m [39m j[90m Desktop [39m[9Dj[39m [39m.[90mG[39m[39m [39m [39m [39m [39m [39m [90mD[90me[90msktop [39m[8Dj[90m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [10Dj[90m Desktop [39m[9Dj[39m j[90m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [10Dj[90m Desktop [39m[9Dj[39m [39m.[90mG[39m[39m [39m [39m [39m [39m [39m [39mc[90monfig [39m[39mo[39mn[39mf[39mi[39mg[39m [90m [39m[39m [?1l>[?2004l
-]2;j .config]1;j]133;C;[31m/Users/ghasak.ibrahim/.config[0m
-[1m[7m%[27m[1m[0m                                                                                                                                                           ]2;ghasak.ibrahim@JPC02DW0YWML86:~/.config]1;~/.config]133;D;0]1337;RemoteHost=ghasak.ibrahim@JPC02DW0YWML86]1337;CurrentDir=/Users/ghasak.ibrahim/.configc[0m[27m[24m[J]133;A(base) 
-[34m╭─ [38;5;208mghasak.ibrahim[39m   [38;5;226mJPC02DW0YWML86 on [38;5;30m~/.config[39m[32m     
-[34m├─[39m[38;5;120m[38;5;180m龍 [37m⮂  95.8%   Application [31m [36m10.4402/32.0GB
-[34m╰─[34m[00m ]133;B[K[104C[34m祥198ms [33m[00m  [33m[00m [35m[   Jun 23, 2021-   3:35:51 PM][00m[34m[150D[?1h=[?2004hc[90mlear[39mc[39ml[39me[39ma[39mr[?1l>[?2004l
-]2;clear]1;clear]133;C;[H[2J[3J[1m[7m%[27m[1m[0m                                                                                                                                                           ]2;ghasak.ibrahim@JPC02DW0YWML86:~/.config]1;~/.config]133;D;0]1337;RemoteHost=ghasak.ibrahim@JPC02DW0YWML86]1337;CurrentDir=/Users/ghasak.ibrahim/.configl[0m[27m[24m[J]133;A(base) 
-[34m╭─ [38;5;208mghasak.ibrahim[39m   [38;5;226mJPC02DW0YWML86 on [38;5;30m~/.config[39m[32m     
-[34m├─[39m[38;5;120m[38;5;180m龍 [37m⮂  105.5%   Application [31m [36m10.4659/32.0GB
-[34m╰─[34m[00m ]133;B[K[105C[34m祥21ms [33m[00m  [33m[00m [35m[   Jun 23, 2021-   3:35:51 PM][00m[34m[150D[?1h=[?2004hlls[90md[39m[39md[?1l>[?2004l
-]2;colorls -lA --sd]1;lsd]133;C;  [38;5;77mr[0m[38;5;186mw[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m    4   [38;5;230mghasak.ibrahim[0m   [38;5;186mstaff[0m   [38;5;230m 128 B  [0m   [38;5;72mMon Jun  7 15:32:30 2021[0m  [38;5;39m  Recoll.org/[0m
-  [38;5;77mr[0m[38;5;186mw[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m    3   [38;5;230mghasak.ibrahim[0m   [38;5;186mstaff[0m   [38;5;230m  96 B  [0m   [38;5;72mMon Jun 14 18:22:06 2021[0m  [38;5;39m  alacritty/[0m
-  [38;5;77mr[0m[38;5;186mw[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m    2   [38;5;230mghasak.ibrahim[0m   [38;5;186mstaff[0m   [38;5;230m  64 B  [0m   [38;5;72mThu Feb 18 22:13:23 2021[0m  [38;5;39m  azure-datalake-store/[0m
-  [38;5;77mr[0m[38;5;186mw[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m    5   [38;5;230mghasak.ibrahim[0m   [38;5;186mstaff[0m   [38;5;230m 160 B  [0m   [38;5;72mWed Feb 17 22:24:13 2021[0m  [38;5;39m  bpytop/[0m
-  [38;5;77mr[0m[38;5;186mw[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m    4   [38;5;230mghasak.ibrahim[0m   [38;5;186mstaff[0m   [38;5;230m 128 B  [0m   [38;5;72mMon Apr 12 18:27:22 2021[0m  [38;5;39m  broot/[0m
-  [38;5;77mr[0m[38;5;186mw[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m   20   [38;5;230mghasak.ibrahim[0m   [38;5;186mstaff[0m   [38;5;230m 640 B  [0m   [38;5;72mFri Apr 23 21:50:37 2021[0m  [38;5;39m  coc/[0m
-  [38;5;77mr[0m[38;5;186mw[0m[31mx[0m[38;5;174m-[0m[38;5;174m-[0m[38;5;174m-[0m[38;5;174m-[0m[38;5;174m-[0m[38;5;174m-[0m    3   [38;5;230mghasak.ibrahim[0m   [38;5;186mstaff[0m   [38;5;230m  96 B  [0m   [38;5;72mTue Jun  8 02:27:55 2021[0m  [38;5;39m  configstore/[0m
-  [38;5;77mr[0m[38;5;186mw[0m[31mx[0m[38;5;174m-[0m[38;5;174m-[0m[38;5;174m-[0m[38;5;174m-[0m[38;5;174m-[0m[38;5;174m-[0m    3   [38;5;230mghasak.ibrahim[0m   [38;5;186mstaff[0m   [38;5;230m  96 B  [0m   [38;5;72mThu Apr 29 20:22:51 2021[0m  [38;5;39m  gtk-2.0/[0m
-  [38;5;77mr[0m[38;5;186mw[0m[31mx[0m[38;5;174m-[0m[38;5;174m-[0m[38;5;174m-[0m[38;5;174m-[0m[38;5;174m-[0m[38;5;174m-[0m    3   [38;5;230mghasak.ibrahim[0m   [38;5;186mstaff[0m   [38;5;230m  96 B  [0m   [38;5;72mTue Apr 20 22:04:29 2021[0m  [38;5;39m  htop/[0m
-  [38;5;77mr[0m[38;5;186mw[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m    3   [38;5;230mghasak.ibrahim[0m   [38;5;186mstaff[0m   [38;5;230m  96 B  [0m   [38;5;72mTue Feb 16 20:47:04 2021[0m  [38;5;39m  iterm2/[0m
-  [38;5;77mr[0m[38;5;186mw[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m    9   [38;5;230mghasak.ibrahim[0m   [38;5;186mstaff[0m   [38;5;230m 288 B  [0m   [38;5;49mWed Jun 23 00:56:33 2021[0m  [38;5;39m  joplin-desktop/[0m
-  [38;5;77mr[0m[38;5;186mw[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m    4   [38;5;230mghasak.ibrahim[0m   [38;5;186mstaff[0m   [38;5;230m 128 B  [0m   [38;5;72mTue Feb 23 12:22:53 2021[0m  [38;5;39m  ranger/[0m
-  [38;5;77mr[0m[38;5;186mw[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m[38;5;77mr[0m[38;5;174m-[0m[31mx[0m    6   [38;5;230mghasak.ibrahim[0m   [38;5;186mstaff[0m   [38;5;230m 192 B  [0m   [38;5;72mWed Feb 17 22:49:16 2021[0m  [38;5;39m  rstudio/[0m
-[1m[7m%[27m[1m[0m                                                                                                                                                           ]2;ghasak.ibrahim@JPC02DW0YWML86:~/.config]1;~/.config]133;D;0]1337;RemoteHost=ghasak.ibrahim@JPC02DW0YWML86]1337;CurrentDir=/Users/ghasak.ibrahim/.config[0m[27m[24m[J]133;A(base) 
-[34m╭─ [38;5;208mghasak.ibrahim[39m   [38;5;226mJPC02DW0YWML86 on [38;5;30m~/.config[39m[32m     
-[34m├─[39m[38;5;120m[38;5;180m龍 [37m⮂  104.7%   Application [31m [36m10.2533/32.0GB
-[34m╰─[34m[00m ]133;B[K[104C[34m祥377ms [33m[00m  [33m[00m [35m[   Jun 23, 2021-   3:35:52 PM][00m[34m[150D[?1h=[?2004h
