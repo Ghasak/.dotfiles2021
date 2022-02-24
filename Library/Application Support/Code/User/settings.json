@@ -165,7 +165,7 @@
     // I created a symlink to point to this (nvim)
     // Using :: ln -s ~/dev/bin/nvim  /usr/local/bin/nvim
     "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
-    //"vscode-neovim.neovimExecutablePaths.darwin": " /Users/ghasak.ibrahim/dev/bin//nvim",
+    //"vscode-neovim.neovimExecutablePaths.darwin": " /Users/ghasak.ibrahim/dev/bin/nvim",
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.darwin": "$HOME/.config/nvim/VSCode_setting/init.vim",
     //"vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/vimscript/nv-vscode/init.vim",
@@ -1322,6 +1322,19 @@
     "redhat.telemetry.enabled": true,
     "workbench.iconTheme": "ayu",
     "terminal.explorerKind": "external",
-    "git.ignoreLegacyWarning": true
+    "git.ignoreLegacyWarning": true,
+    "notebook.lineNumbers": "on",
+    "bracket-pair-colorizer-2.depreciation-notice": false,
+    "bracketPairColorizer.depreciation-notice": false,
+    "editor.inlineSuggest.enabled": true,
+    "http.systemCertificates": false,
+    "workbench.productIconTheme": "icons-carbon",
+    "github.copilot.enable": {
+      "*": true,
+      "yaml": false,
+      "plaintext": false,
+      "markdown": false,
+      "code-runner-output": false
+    }
 
 }

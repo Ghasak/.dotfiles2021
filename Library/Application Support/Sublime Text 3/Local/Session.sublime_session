@@ -11,10 +11,10 @@
 		"/Users/ghasak.ibrahim",
 		"/Users/ghasak.ibrahim/Documents/ALPFILES"
 	],
-	"last_version": 4121,
-	"last_window_id": 138,
+	"last_version": 4126,
+	"last_window_id": 152,
 	"log_indexing": false,
-	"next_update_check": 1638412851,
+	"next_update_check": 1644891045,
 	"settings":
 	{
 		"new_window_full_screen": false,
@@ -103,6 +103,8 @@
 			},
 			"file_history":
 			[
+				"/Users/ghasak.ibrahim/Desktop/ascii-art.txt",
+				"/Users/ghasak.ibrahim/Documents/EYProjects/projects2021_2022/AFLAC/testingTranscription/TranscriptedFiles/001UF27SUKDET1SB19TOA85AES0I7MMT_20181004160416_230701983.json",
 				"/Users/ghasak.ibrahim/EY/EY/分析用チャネル/reference/Structured_Topic_Model.Rmd",
 				"/Users/ghasak.ibrahim/EY/EY/分析用チャネル/work/Masubuchi/01_分析環境(OSより上)/docker/Dockerfile",
 				"/Users/ghasak.ibrahim/Desktop/Safari_Automate_PDF.scpt",
@@ -117,31 +119,31 @@
 			],
 			"find":
 			{
-				"height": 34.0
+				"height": 24.0
 			},
 			"find_in_files":
 			{
-				"height": 0.0,
+				"height": 99.0,
 				"where_history":
 				[
 				]
 			},
 			"find_state":
 			{
-				"case_sensitive": false,
+				"case_sensitive": true,
 				"find_history":
 				[
 				],
 				"highlight": true,
 				"in_selection": false,
 				"preserve_case": false,
-				"regex": false,
+				"regex": true,
 				"replace_history":
 				[
 				],
 				"reverse": false,
 				"scrollbar_highlights": true,
-				"show_context": true,
+				"show_context": false,
 				"use_buffer2": true,
 				"use_gitignore": true,
 				"whole_word": false,
@@ -207,7 +209,7 @@
 			{
 			}
 		},
-		"new_window_width": 2520.0
+		"new_window_width": 1880.0
 	},
 	"windows":
 	[

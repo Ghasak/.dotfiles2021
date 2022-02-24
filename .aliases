@@ -195,7 +195,7 @@ fif() {
 #
 ## find any item matching search query in file name
 #------------------------------------------------------------------------------
-#		     File List in Given Directory	
+#		     File List in Given Directory
 #  Source:https://stackoverflow.com/questions/51306276/awk-get-file-name-from-ls
 #------------------------------------------------------------------------------
 file_list(){
@@ -262,7 +262,7 @@ b() {
 #  Resources:
 #       - https://github.com/junegunn/fzf
 #       - https://www.youtube.com/watch?v=qgG5Jhi_Els
-alias search="echo '
+alias searchx="echo '
 █▀▀ ▀█ █▀▀
 █▀░ █▄ █▀░' | lolcat  && sleep 1 && find . -type f | fzf"
 
@@ -638,3 +638,27 @@ function  zathura_kill_all(){
 function personal_app_authentications(){
   xattr -r -d com.apple.quarantine "/Applications/$1"
   }
+#------------------------------------------------------------------------------
+#                    Japanese language APIs
+#------------------------------------------------------------------------------
+# The following libraries:
+# 1. romkan https://github.com/soimort/python-romkan
+# python -c "import romkan; print(romkan.to_roma('にんじゃ'))"
+# 2. pykakasi (lightweight library) https://github.com/miurahr/pykakasi
+alias koora="open -a safari 'https://hd.onlinekora.tv/'"
+
+#------------------------------------------------------------------------------
+#                    Testing nvim lunching speed
+#------------------------------------------------------------------------------
+function nvim_speed_test(){
+  RED="\e[31m"
+  GREEN="\e[32m"
+  LIGHT_YELLOW="\e[93m"
+  ENDCOLOR="\e[0m"
+  for ((i = 1; i < 10; i++)); do
+    echo "${RED}\uf9c4 ${GREEN}\ue7c5 ${LIGHT_YELLOW} \uf432  Trial no. ${RED}\ue27a  ${GREEN}${i}${ENDCOLOR}\n";
+    vim-startuptime --vimpath=nvim | head -n 4 | grep "Total Average";
+    echo "${GREEN}\uf6fb \uf6fb \uf6fb \uf6fb \uf6fb \uf6fb \uf6fb${ENDCOLOR}";
+  done
+  }
+

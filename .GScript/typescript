@@ -1,0 +1,33 @@
+Script started on Sun Dec 12 23:22:34 2021
+
+]1337;RemoteHost=ghasak.ibrahim@JPC02DW0YWML86]1337;CurrentDir=/Users/ghasak.ibrahim/.GScript]1337;ShellIntegrationVersion=12;shell=zsh[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                                                                                                                                      ]2;ghasak.ibrahim@JPC02DW0YWML86:~/.GScript]1;~/.GScript]133;D;0]1337;RemoteHost=ghasak.ibrahim@JPC02DW0YWML86]1337;CurrentDir=/Users/ghasak.ibrahim/.GScript[0m[27m[24m[J]133;A(base) 
+[34m╭─ [38;5;208mghasak.ibrahim[39m     [38;5;226mJPC02DW0YWML86 on [38;5;30m~/.GScript[39m[32m   [38;5;140m  
+[34m├─ﮧ[39m[38;5;120m[38;5;180m[34m[00m  [33m[00m  (8d3h38m[00m|([38;5;151mmain[00m|[38;5;20m[30m[34m樂20[00m [00m[00m)[00m 
+[34m╰[34m[33m[31m[34m[00m ]133;B[K[312C[34m祥: [33m[00m [35m[   Dec 12, 2021-   11:22:36 PM][00m[34m[352D[?1h=[?2004hscriptmyKanji "テーブル間の結合"[?1l>[?2004l
+]2;myKanji "テーブル間の結合"]1;myKanji]133;C;テーブル: kana [32m'テーブル'[0m, hiragana [32m'てーぶる'[0m, romaji: [32m'teeburu'[0m
+間の: kana [32m'マノ'[0m, hiragana [32m'まの'[0m, romaji: [32m'mano'[0m
+結合: kana [32m'ケツゴウ'[0m, hiragana [32m'けつごう'[0m, romaji: [32m'ketsugou'[0m
+--------------------------------
+Join between tables
+テーブル間の結合 [1;36m0[0m
+Traceback (most recent call last):
+  File "/Users/ghasak.ibrahim/.GScript/myKanji", line 31, in <module>
+    wakati = MeCab.Tagger("-Owakati -d /usr/local/lib/mecab/mecab-ipadic-neologd")
+  File "/Users/ghasak.ibrahim/opt/anaconda3/lib/python3.8/site-packages/MeCab/__init__.py", line 99, in __init__
+    super(Tagger, self).__init__(*args)
+RuntimeError
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                                                                                                                                      ]2;ghasak.ibrahim@JPC02DW0YWML86:~/.GScript]1;~/.GScript]133;D;1]1337;RemoteHost=ghasak.ibrahim@JPC02DW0YWML86]1337;CurrentDir=/Users/ghasak.ibrahim/.GScript[0m[27m[24m[J]133;A(base) 
+[34m╭─ [38;5;208mghasak.ibrahim[39m     [38;5;226mJPC02DW0YWML86 on [38;5;30m~/.GScript[39m[31m   [38;5;140m  
+[34m├─ﮧ[39m[38;5;120m[38;5;180m[34m[00m  [33m[00m  (8d3h38m[00m|([38;5;151mmain[00m|[38;5;20m[30m[34m樂20[00m [00m[00m)[00m 
+[34m╰[34m[33m[31m[34m[00m ]133;B[K[306C[34m祥:1.437s [33m[00m [35m[   Dec 12, 2021-   11:22:40 PM][00m[34m[352D[?1h=[?2004hm[90myKanji "テーブル間の結合"[39m[25D [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [26Dm[90myKanji "テーブル間の結合"[39m[25Dm[39my[39mc[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [23Da [90mK[90manji "テーブル間の結合"[39m[24D[39mC[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [23D[90mK[90manji "テーブル間の結合"[39m[24Dm[90my[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [26Dm[90myKanji "テーブル間の結合"[39m[25Dm[39me[90mc[90ma[90mb[90m [90m-[90md[90m [90m/[90mu[90ms[90mr[90m/[90ml[90mo[90mc[90ma[90ml[90m/[90ml[90mi[90mb[90m/[90mm[90me[90mcab/dic/mecab-ipadic-neologd[39m[52D[39mc[39ma[39mb[39m [39m-[39md[39m [39m/[39mu[39ms[39mr[39m/[39ml[39mo[39mc[39ma[39ml[39m/[39ml[39mi[39mb[39m/[39mm[39me[39mc[39ma[39mb[39m/[39md[39mi[39mc[39m/[39mm[39me[39mc[39ma[39mb[39m-[39mi[39mp[39ma[39md[39mi[39mc[39m-[39mn[39me[39mo[39ml[39mo[39mg[39md[?1l>[?2004l
+]2;mecab -d /usr/local/lib/mecab/dic/mecab-ipadic-neologd]1;mecab]133;C;テーブル間の結合
+テーブル	名詞,一般,*,*,*,*,テーブル,テーブル,テーブル
+間	名詞,接尾,一般,*,*,*,間,カン,カン
+の	助詞,連体化,*,*,*,*,の,ノ,ノ
+結合	名詞,サ変接続,*,*,*,*,結合,ケツゴウ,ケツゴー
+EOS
+^C
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                                                                                                                                      ]2;ghasak.ibrahim@JPC02DW0YWML86:~/.GScript]1;~/.GScript]133;D;130]1337;RemoteHost=ghasak.ibrahim@JPC02DW0YWML86]1337;CurrentDir=/Users/ghasak.ibrahim/.GScript[0m[27m[24m[J]133;A(base) 
+[34m╭─ [38;5;208mghasak.ibrahim[39m     [38;5;226mJPC02DW0YWML86 on [38;5;30m~/.GScript[39m[31m   [38;5;140m  
+[34m├─ﮧ[39m[38;5;120m[38;5;180m[34m[00m  [33m[00m  (8d3h39m[00m|([38;5;151mmain[00m|[38;5;20m[30m[34m樂20[00m [00m[00m)[00m 
+[34m╰[34m[33m[31m[34m[00m ]133;B[K[306C[34m祥:25.81s [33m[00m [35m[   Dec 12, 2021-   11:23:20 PM][00m[34m[352D[?1h=[?2004h

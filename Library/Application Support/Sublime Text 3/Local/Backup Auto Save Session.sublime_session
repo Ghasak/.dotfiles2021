@@ -1,6 +1,8 @@
 {
 	"folder_history":
 	[
+		"/Users/ghasak.ibrahim/Desktop/config.old",
+		"/Users/ghasak.ibrahim/.jupyter",
 		"/Users/ghasak.ibrahim/.ssh",
 		"/Users/ghasak.ibrahim/.config/nvim/modules",
 		"/Users/ghasak.ibrahim/.config/nvim/Vundle-plug-manager-packages/gruvbox-material/colors",
@@ -9,9 +11,10 @@
 		"/Users/ghasak.ibrahim",
 		"/Users/ghasak.ibrahim/Documents/ALPFILES"
 	],
-	"last_version": 4107,
-	"last_window_id": 85,
+	"last_version": 4121,
+	"last_window_id": 143,
 	"log_indexing": false,
+	"next_update_check": 1642596900,
 	"settings":
 	{
 		"new_window_full_screen": false,
@@ -27,6 +30,22 @@
 			},
 			"build_system_choices":
 			[
+				[
+					[
+						[
+							"Packages/Python/Python.sublime-build",
+							""
+						],
+						[
+							"Packages/Python/Python.sublime-build",
+							"Syntax Check"
+						]
+					],
+					[
+						"Packages/Python/Python.sublime-build",
+						""
+					]
+				],
 				[
 					[
 						[
@@ -84,6 +103,13 @@
 			},
 			"file_history":
 			[
+				"/Users/ghasak.ibrahim/Desktop/ascii-art.txt",
+				"/Users/ghasak.ibrahim/Documents/EYProjects/projects2021_2022/AFLAC/testingTranscription/TranscriptedFiles/001UF27SUKDET1SB19TOA85AES0I7MMT_20181004160416_230701983.json",
+				"/Users/ghasak.ibrahim/EY/EY/分析用チャネル/reference/Structured_Topic_Model.Rmd",
+				"/Users/ghasak.ibrahim/EY/EY/分析用チャネル/work/Masubuchi/01_分析環境(OSより上)/docker/Dockerfile",
+				"/Users/ghasak.ibrahim/Desktop/Safari_Automate_PDF.scpt",
+				"/Users/ghasak.ibrahim/Documents/EYProjects/MA_WebScrapping/src/experiments/readPDF/scriptPDF.py",
+				"/Users/ghasak.ibrahim/Desktop/epochTime.txt",
 				"/Users/ghasak.ibrahim/.config/nvim/init.vim",
 				"/Users/ghasak.ibrahim/Applications (Parallels)/Icon\r",
 				"/Users/ghasak.ibrahim/Documents/.dotfiles2021/.GScript/my_cron_backup.txt",
@@ -93,31 +119,31 @@
 			],
 			"find":
 			{
-				"height": 34.0
+				"height": 24.0
 			},
 			"find_in_files":
 			{
-				"height": 0.0,
+				"height": 99.0,
 				"where_history":
 				[
 				]
 			},
 			"find_state":
 			{
-				"case_sensitive": false,
+				"case_sensitive": true,
 				"find_history":
 				[
 				],
 				"highlight": true,
 				"in_selection": false,
 				"preserve_case": false,
-				"regex": false,
+				"regex": true,
 				"replace_history":
 				[
 				],
 				"reverse": false,
 				"scrollbar_highlights": true,
-				"show_context": true,
+				"show_context": false,
 				"use_buffer2": true,
 				"use_gitignore": true,
 				"whole_word": false,
@@ -134,13 +160,13 @@
 			"menu_visible": true,
 			"output.exec":
 			{
-				"height": 34.0
+				"height": 279.0
 			},
 			"output.find_results":
 			{
 				"height": 0.0
 			},
-			"pinned_build_system": "",
+			"pinned_build_system": "Packages/Python/Python.sublime-build",
 			"replace":
 			{
 				"height": 44.0
@@ -196,22 +222,26 @@
 			},
 			"buffers":
 			[
-				{
-					"file": "/Users/ghasak.ibrahim/Desktop/epochTime.txt",
-					"settings":
-					{
-						"buffer_size": 124042,
-						"encoding": "Western (Windows 1252)",
-						"line_ending": "Unix"
-					},
-					"undo_stack":
-					[
-					]
-				}
 			],
 			"build_system": "",
 			"build_system_choices":
 			[
+				[
+					[
+						[
+							"Packages/Python/Python.sublime-build",
+							""
+						],
+						[
+							"Packages/Python/Python.sublime-build",
+							"Syntax Check"
+						]
+					],
+					[
+						"Packages/Python/Python.sublime-build",
+						""
+					]
+				],
 				[
 					[
 						[
@@ -269,6 +299,13 @@
 			},
 			"file_history":
 			[
+				"/Users/ghasak.ibrahim/Desktop/ascii-art.txt",
+				"/Users/ghasak.ibrahim/Documents/EYProjects/projects2021_2022/AFLAC/testingTranscription/TranscriptedFiles/001UF27SUKDET1SB19TOA85AES0I7MMT_20181004160416_230701983.json",
+				"/Users/ghasak.ibrahim/EY/EY/分析用チャネル/reference/Structured_Topic_Model.Rmd",
+				"/Users/ghasak.ibrahim/EY/EY/分析用チャネル/work/Masubuchi/01_分析環境(OSより上)/docker/Dockerfile",
+				"/Users/ghasak.ibrahim/Desktop/Safari_Automate_PDF.scpt",
+				"/Users/ghasak.ibrahim/Documents/EYProjects/MA_WebScrapping/src/experiments/readPDF/scriptPDF.py",
+				"/Users/ghasak.ibrahim/Desktop/epochTime.txt",
 				"/Users/ghasak.ibrahim/.config/nvim/init.vim",
 				"/Users/ghasak.ibrahim/Applications (Parallels)/Icon\r",
 				"/Users/ghasak.ibrahim/Documents/.dotfiles2021/.GScript/my_cron_backup.txt",
@@ -278,31 +315,31 @@
 			],
 			"find":
 			{
-				"height": 34.0
+				"height": 24.0
 			},
 			"find_in_files":
 			{
-				"height": 0.0,
+				"height": 99.0,
 				"where_history":
 				[
 				]
 			},
 			"find_state":
 			{
-				"case_sensitive": false,
+				"case_sensitive": true,
 				"find_history":
 				[
 				],
 				"highlight": true,
 				"in_selection": false,
 				"preserve_case": false,
-				"regex": false,
+				"regex": true,
 				"replace_history":
 				[
 				],
 				"reverse": false,
 				"scrollbar_highlights": true,
-				"show_context": true,
+				"show_context": false,
 				"use_buffer2": true,
 				"use_gitignore": true,
 				"whole_word": false,
@@ -313,36 +350,6 @@
 				{
 					"sheets":
 					[
-						{
-							"buffer": 0,
-							"file": "/Users/ghasak.ibrahim/Desktop/epochTime.txt",
-							"selected": true,
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 124042,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										24408,
-										24408
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/Text/Plain text.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 110298.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 0,
-							"stack_multiselect": false,
-							"type": "text"
-						}
 					]
 				}
 			],
@@ -379,14 +386,14 @@
 			"menu_visible": true,
 			"output.exec":
 			{
-				"height": 34.0
+				"height": 279.0
 			},
 			"output.find_results":
 			{
 				"height": 0.0
 			},
-			"pinned_build_system": "",
-			"position": "9 0 20 20 2520 1015 0 0 2560 1055 ",
+			"pinned_build_system": "Packages/Python/Python.sublime-build",
+			"position": "YnBsaXN0MDDUAQIDBAUGBxhYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctgICQoLDA0ODxAREhMUFRYXXxAQX05TV2luZG93TGF5b3V0c1tOU0NsYXNzTmFtZVtOU1N0eWxlTWFza15OU1dpbmRvd051bWJlcl1OU1dpbmRvd0ZyYW1lXxAQTlNGaXJzdFJlc3BvbmRlcldOU1RpdGxlXxATTlNXaW5kb3dXb3Jrc3BhY2VJRIAFgAMQDxEE04ABgACAAoAErxAPGRobHB0eJy0uLzU7PD1AVSRudWxsXxAgMTI4NSAyMCAxMjU1IDEwMTUgMCAwIDI1NjAgMTA1NSBYdW50aXRsZWRYUFhXaW5kb3dfECRDNDg2MEFBQS1GRUNFLTQyNEYtQThFMC04ODdDOTMzNUU2MzjTHyAhIiQmV05TLmtleXNaTlMub2JqZWN0c1YkY2xhc3OhI4AGoSWACoAO0ygpISorLF8QGE5TU2NyZWVuTGF5b3V0VVVJRFN0cmluZ18QEk5TU2NyZWVuTGF5b3V0U2l6ZYAHgAiACV8QJEU0OENCRkRGLThFMUEtQTgzNC1GRjNCLTNERjI1MzREQTdDMFx7MjU2MCwgMTA4MH3SMDEyM1okY2xhc3NuYW1lWCRjbGFzc2VzXk5TU2NyZWVuTGF5b3V0ojI0WE5TT2JqZWN00zY3ITg5Ol8QGU5TV2luZG93TGF5b3V0V2luZG93RnJhbWVfEB9OU1dpbmRvd0xheW91dFNjcmVlbkxheW91dEZyYW1lgAuADIANXxAae3sxMjg1LCAyMH0sIHsxMjU1LCAxMDE1fX1fEBZ7ezAsIDB9LCB7MjU2MCwgMTA1NX190jAxPj9eTlNXaW5kb3dMYXlvdXSiPjTSMDFBQlxOU0RpY3Rpb25hcnmiQTQACAARABoAJAApADIANwBJAFoAbQB5AIUAlACiALUAvQDTANUA1wDZANwA3gDgAOIA5AD2APwBHwEoATEBWAFfAWcBcgF5AXsBfQF/AYEBgwGKAaUBugG8Ab4BwAHnAfQB+QIEAg0CHAIfAigCLwJLAm0CbwJxAnMCkAKpAq4CvQLAAsUC0gAAAAAAAAIBAAAAAAAAAEMAAAAAAAAAAAAAAAAAAALV",
 			"project": "",
 			"replace":
 			{
@@ -433,7 +440,7 @@
 			"template_settings":
 			{
 			},
-			"window_id": 85,
+			"window_id": 143,
 			"workspace_name": ""
 		}
 	],

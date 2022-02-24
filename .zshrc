@@ -30,6 +30,14 @@ export ZSH="/Users/ghasak.ibrahim/.oh-my-zsh"
 source $HOME/.zshrc_prompt
 source $HOME/.aliases
 source $HOME/.ey_project_dirs
+
+####################################################
+#                OpenAI API Key
+#         using openAI with coding (nvim)
+####################################################
+# veryfiy with echo "${OPENAI_API_KEY}"
+source $HOME/.openAI_API_key
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -758,3 +766,4 @@ unset __conda_setup
 # Put the path of Postgresql at the end
 export PATH="$PATH:/Library/PostgreSQL/14/bin/"
 #export PATH="$PATH:/Library/PostgreSQL/14/bin/"
+
