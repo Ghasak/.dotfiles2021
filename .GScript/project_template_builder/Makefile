@@ -23,7 +23,7 @@ setup:
 	pipenv --python 3.8.8
 	pipenv lock --pre
 	pipenv install -r requirements.txt # these requirements generated from previous project using : pipenv run pip freeze > requirements.txt
-	pipenv check
+	#pipenv check
 	@echo "Installing In-developemetn libraries"
 	#pipenv install pytest --dev
 	@echo "Activate the virtualenv .."
