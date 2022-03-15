@@ -22,12 +22,12 @@ setup:
 	@echo "with necessary python libraries ... "
 	pipenv --python 3.8.8
 	pipenv lock --pre
-	pipenv install -r basicPackages.txt
+	pipenv install -r requirements.txt # these requirements generated from previous project using : pipenv run pip freeze > requirements.txt
 	pipenv check
 	@echo "Installing In-developemetn libraries"
 	#pipenv install pytest --dev
 	@echo "Activate the virtualenv .."
-	@rm -f ./basicPackages.txt ./constructProject.sh ./basicPackages.txt
+	@rm -f ./constructProject.sh
 	pipenv shell
 
 clean:
@@ -39,7 +39,7 @@ clean:
 	rm -f Pipfile Pipfile.lock requirements.txt
 	sh -c "./cleaningScript.sh"
 	@echo "Please use manually the command exit to exit the virtualenv: <exit>"
-	rm -f Makefile cleaningScript.sh constructProject.sh basicPackages.txt
+	rm -f Makefile cleaningScript.sh constructProject.sh basicPackages.txt requirements.txt
 
 
 
