@@ -106,16 +106,18 @@
     "cSpell.language": "en",
     "breadcrumbs.enabled": true,
     "cSpell.userWords": [
-        "Autoregression",
-        "Densnet",
-        "ITARDA",
-        "Jupyter",
-        "dataset",
-        "inplace",
-        "inplance",
-        "lemmatizing",
-        "quantopian",
-        "sensei"
+      "Autoregression",
+      "dataset",
+      "Densnet",
+      "Flexbox",
+      "inplace",
+      "inplance",
+      "ITARDA",
+      "Jupyter",
+      "lemmatizing",
+      "plotly",
+      "quantopian",
+      "sensei"
     ],
     "C_Cpp.updateChannel": "Insiders",
     "editor.minimap.enabled": true,
@@ -1335,6 +1337,13 @@
       "plaintext": false,
       "markdown": false,
       "code-runner-output": false
+    },
+    // Format all files on save.
+    "editor.formatOnSave": true,
+
+  // Format per-language file on save.
+    "[javascript]": {
+      "editor.formatOnSave": false
     }
 
 }
