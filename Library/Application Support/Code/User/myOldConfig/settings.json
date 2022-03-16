@@ -1,0 +1,408 @@
+{
+  // ========================================================================================
+  // Path to Python, you can use a custom version of Python by modifying this setting to include the full path.
+  // ========================================================================================
+  //"python.pythonPath": "/opt/anaconda3/bin/python",
+  //"python.defaultInterpreterPath": "$HOME/opt/anaconda3/bin/python3",
+  //"python.pythonPath": "$HOME/opt/anaconda3/bin/python3",
+  "python.formatting.provider": "black",
+  "window.zoomLevel": 0,
+  "window.closeWhenEmpty": false,
+  "window.openFilesInNewWindow": "off",
+  "json.maxItemsComputed": 10000,
+  // "window.title": "${activeEditorShort}${separator}${rootName}",
+  // ========================================================================================
+  "workbench.editor.enablePreview": true,
+  "workbench.settings.editor": "json",
+  // This will allow you to change from ui setting showing to .json format
+  "workbench.settings.openDefaultSettings": true,
+  "workbench.settings.useSplitJSON": true,
+  // ========================================================================================
+  "editor.formatOnSave": true, // Once you Save the file will be auto-formatted.
+  "editor.emptySelectionClipboard": false,
+  "editor.dragAndDrop": true,
+  "editor.selectionHighlight": true,
+  "editor.overviewRulerBorder": true,
+  "editor.scrollBeyondLastLine": true,
+  "editor.mouseWheelScrollSensitivity": 5,
+  "editor.wordWrap": "on",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  // ========================================================================================
+  // Adding by Corey Schafer-User Setting
+  "editor.fontSize": 20,
+  "editor.fontWeight": "400",
+  "editor.lineHeight": 20,
+  // "editor.fontWeight": "bold",
+  "editor.fontFamily": "VictorMono Nerd Font", //"IBM Plex Mono",//"Victor Mono SemiBold",//"Roboto Mono Light for Powerline",//"SF Mono", //"Source Code Pro",// SF Pro Display// Default -> "Menlo, Monaco, 'Courier New', monospace"
+  "debug.console.fontFamily": "VictorMono Nerd Font", //"Roboto Mono Light for Powerline", //"Source Code Pro",
+  "debug.console.fontSize": 20,
+  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.fontFamily": "VictorMono Nerd Font", //"Hack Nerd Font",//"Roboto Mono Light for Powerline", //"Source Code Pro",
+  "terminal.integrated.fontWeight": "400",
+  "terminal.integrated.lineHeight": 0.1,
+  // ========================================================================================
+  // Code Runner -User Setting {Ghasak}
+  // this code will allow the runner to run the code script based on the python version that you are using
+  "code-runner.executorMap": {
+    "javascript": "node",
+    "python": "$pythonPath -u $fullFileName", //"python": "python",
+    "perl": "perl",
+    "go": "go run",
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+  },
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.runInTerminal": true,
+  // Python Specific Features - Setting {Ghasak}
+  "code-runner.showExecutionMessage": true, // This will make your command output clean and print only the things that you want
+  // ========================================================================================
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.associations": {
+    "*.gcf": "cpp",
+    "*.rmd": "markdown",
+    "*.R": "r"
+  },
+  "cSpell.enabledLanguageIds": [
+    "asciidoc",
+    "c",
+    "cpp",
+    "csharp",
+    "css",
+    "go",
+    "handlebars",
+    "html",
+    "jade",
+    "java",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "jsonc",
+    "latex",
+    "less",
+    "markdown",
+    "php",
+    "plaintext",
+    "pug",
+    "restructuredtext",
+    "rust",
+    "scala",
+    "scss",
+    "text",
+    "typescript",
+    "typescriptreact",
+    "yaml",
+    "yml"
+  ],
+  "cSpell.language": "en",
+  "breadcrumbs.enabled": true,
+  "cSpell.userWords": [
+    "Autoregression",
+    "dataset",
+    "Densnet",
+    "Flexbox",
+    "inplace",
+    "inplance",
+    "ITARDA",
+    "Jupyter",
+    "lemmatizing",
+    "plotly",
+    "quantopian",
+    "sensei"
+  ],
+  "C_Cpp.updateChannel": "Insiders",
+  "editor.minimap.enabled": true,
+  "editor.largeFileOptimizations": false,
+  "python.jediEnabled": false,
+  "jupyter.sendSelectionToInteractiveWindow": true,
+  "jupyter.alwaysTrustNotebooks": true,
+  "editor.accessibilitySupport": "off",
+
+  // R configurations
+
+  //"r.bracketedPaste": true, "r.rterm.windows": "*Path to radian executable*", //Use this only for Windows
+  //"r.rterm.linux": "*Path to radian executable*", //Use this only for Linux
+  //"r.rterm.mac": "/Users/ghasak.ibrahim/opt/anaconda3/bin/radian",/Use this only for a Mac
+  "r.rterm.mac": "/usr/local/bin/R",
+  //"r.lsp.path": "/usr/local/bin/R",
+  "r.rpath.mac": "/usr/local/bin/R",
+  "r.lsp.debug": true,
+  "r.lsp.diagnostics": true,
+  "r.rterm.option": [
+    "--no-save",
+    "--no-restore",
+    "--r-binary=*Path to R executable*"
+  ],
+  "tabnine.experimentalAutoImports": true,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+
+  // ========================================================================================
+  //      NEVIM CONFIGURATIONS
+  //      If you want to turn-off nvim simply disable the extension.
+  /*       What you will need is:
+                - [x] Turn off Neovim extension
+                - [x] Turn off the whichkey extension
+                - [x] Turn off keybind as keysbind.json
+                - [x] Turn off all settings below this line
+    */
+  // ========================================================================================
+  // "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+  // "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
+  // "vscode-neovim.neovimInitVimPaths.darwin": "$HOME/.config/nvim/utils/lv-vscode/init.vim",
+  // "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/utils/lv-vscode/init.vim",
+
+  //"extends": ["$HOME/Library/Application Support/Code/User/GSetting"] ,
+  // Since I installed (nvim 5.0) in a new directory called ~/dev/bin/nvim
+  // I created a symlink to point to this (nvim)
+  // Using :: ln -s ~/dev/bin/nvim  /usr/local/bin/nvim
+  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+  //"vscode-neovim.neovimExecutablePaths.darwin": " /Users/ghasak.ibrahim/dev/bin/nvim",
+  "//vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
+  //"vscode-neovim.neovimInitVimPaths.darwin": "$HOME/.config/nvim/VSCode_setting/init.vim",
+  //"vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/vimscript/nv-vscode/init.vim",
+
+  "vim.enableNeovim": true,
+  "vim.neovimConfigPath": true,
+  "vim.neovimUseConfigFile": "$HOME/.config/nvim/VSCode_setting/init.vim",
+
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "terminal.integrated.inheritEnv": false,
+  "workbench.colorTheme": "Gruvbox Material Dark",
+  "files.autoSave": "afterDelay",
+  "kite.showWelcomeNotificationOnStartup": false,
+  "python.languageServer": "Pylance",
+
+  //================================
+  // My VIM-KEYBINDING CONFIGURATION
+  //================================
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["lineBreakInsert"],
+      "silent": true
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [":"],
+      "commands": ["workbench.action.showCommands"],
+      "silent": true
+    }
+  ],
+  "cSpell.enableFiletypes": ["r"],
+  "editor.hover.delay": 0,
+
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "comment",
+          "punctuation.definition.comment",
+          "comment",
+          "comment.block",
+          "comment.block.documentation",
+          "comment.line",
+          "constant",
+          "constant.character",
+          "constant.character.escape",
+          "constant.numeric",
+          "constant.numeric.integer",
+          "constant.numeric.float",
+          "constant.numeric.hex",
+          "constant.numeric.octal",
+          "constant.other",
+          "constant.regexp",
+          "constant.rgb-value",
+          "emphasis",
+          "entity",
+          "entity.name",
+          "entity.name.class",
+          "entity.name.function",
+          "entity.name.method",
+          "entity.name.section",
+          "entity.name.selector",
+          "entity.name.tag",
+          "entity.name.type",
+          "entity.other",
+          "entity.other.attribute-name",
+          "entity.other.inherited-class",
+          "invalid",
+          "invalid.deprecated",
+          "invalid.illegal",
+          "keyword",
+          "keyword.control",
+          "keyword.operator",
+          "keyword.operator.new",
+          "keyword.operator.assignment",
+          "keyword.operator.arithmetic",
+          "keyword.operator.logical",
+          "keyword.other",
+          "markup",
+          "markup.bold",
+          "markup.changed",
+          "markup.deleted",
+          "markup.heading",
+          "markup.inline.raw",
+          "markup.inserted",
+          "markup.italic",
+          "markup.list",
+          "markup.list.numbered",
+          "markup.list.unnumbered",
+          "markup.other",
+          "markup.quote",
+          "markup.raw",
+          "markup.underline",
+          "markup.underline.link",
+          "meta",
+          "meta.block",
+          "meta.cast",
+          "meta.class",
+          "meta.function",
+          "meta.function-call",
+          "meta.preprocessor",
+          "meta.return-type",
+          "meta.selector",
+          "meta.tag",
+          "meta.type.annotation",
+          "meta.type",
+          "punctuation.definition.string.begin",
+          "punctuation.definition.string.end",
+          "punctuation.separator",
+          "punctuation.separator.continuation",
+          "punctuation.terminator",
+          "storage",
+          "storage.modifier",
+          "storage.type",
+          "string",
+          "string.interpolated",
+          "string.other",
+          "string.quoted",
+          "string.quoted.double",
+          "string.quoted.other",
+          "string.quoted.single",
+          "string.quoted.triple",
+          "string.regexp",
+          "string.unquoted",
+          "strong",
+          "support",
+          "support.class",
+          "support.constant",
+          "support.function",
+          "support.other",
+          "support.type",
+          "support.type.property-name",
+          "support.variable",
+          "variable",
+          "variable.language",
+          "variable.name",
+          "variable.other",
+          "variable.other.readwrite",
+          "variable.parameter",
+          "source.dart"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
+  "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWxcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwiZm9ybWF0V2lkdGhcIjpcIjI0MFwiLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODUwLFwiaGVpZ2h0XCI6MTEwMH0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9In0=",
+  "settingsSync.ignoredSettings": ["projectManager.any.ignoredFolders"],
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  // ShellCheck (linter for bash scripting)
+  "shellcheck.enable": true,
+  "shellcheck.enableQuickFix": true,
+  "shellcheck.run": "onType",
+  "shellcheck.executablePath": "", // Priority: user defined > bundled shellcheck binary > "shellcheck"
+  "shellcheck.exclude": [],
+  "shellcheck.customArgs": [],
+  "shellcheck.ignorePatterns": {
+    "**/*.zsh": true,
+    "**/*.zshrc": true,
+    "**/zshrc": true,
+    "**/*.zprofile": true,
+    "**/zprofile": true,
+    "**/*.zlogin": true,
+    "**/zlogin": true,
+    "**/*.zlogout": true,
+    "**/zlogout": true,
+    "**/*.zshenv": true,
+    "**/zshenv": true,
+    "**/*.zsh-theme": true
+  },
+  "shellcheck.ignoreFileSchemes": ["git", "gitfs"],
+
+  "editor.autoClosingBrackets": "always",
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[javascript]": {
+    "editor.autoClosingBrackets": "always",
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  // Adding features of the vscode:
+  // Vertical rule for the vscode editor:
+  "editor.rulers": [100], //[100, 120]
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#737575"
+  },
+  "redhat.telemetry.enabled": true,
+  "workbench.iconTheme": "ayu",
+  "terminal.explorerKind": "external",
+  "git.ignoreLegacyWarning": true,
+  "notebook.lineNumbers": "on",
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "bracketPairColorizer.depreciation-notice": false,
+  "editor.inlineSuggest.enabled": true,
+  "http.systemCertificates": false,
+  "workbench.productIconTheme": "icons-carbon",
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false,
+    "code-runner-output": false
+  },
+  "workbench.editor.labelFormat": "medium",
+  //"python.formatting.blackPath": "$HOME/opt/anaconda3/bin/black",
+  // for javaScript
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}

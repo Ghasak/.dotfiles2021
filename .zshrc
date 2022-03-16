@@ -701,7 +701,7 @@ export PATH="$HOME/.GScript/utility_functions/cliclick/:$PATH"
 #eval "$(mcfly init zsh)"
 
 ###################################################
-#         Nvim 5.0 Stable Release
+#         Nvim 6.0 Stable Release
 ###################################################
 #export PATH="$HOME/dev/nvim-os64/bin/:$PATH"
 #export PATH="$HOME/dev/nvim-os64/:$PATH"
